@@ -1,6 +1,6 @@
 # Minimum Viable Product Feature List
 
-### 1. Hosting on Heroku (Not Really a Feature)
+### 1. Hosting on Heroku
 * Hosted on a live link that never sleeps
 
 ### 2. New account creation, login, and guest/demo login
