@@ -9,9 +9,10 @@
 * Users cannot create/edit "sips" without being logged in
 
 ### 3. Coffee Sips (CRUD)
-* Users can "sip" a coffee that they are drinking and where they are drinking it (CREATE)
-    * When a user sips a coffee, they can review (leave comment), give "star" rating, and add the coffee's location/venue
-* Users can view all their "sips" on their profile page (READ)
+* All coffees will be seeded in the database, and a user can pick a coffee to create a "sip"
+* When users "sip" a coffee
+    * They can review (leave comment), give "star" rating, and upload a picture of their coffee
+* Users can view all their coffee "sips" on their profile page (READ)
 * Users can change/edit their "sip" comment/rating (UPDATE)
 * Users can delete their "sip" for a specific coffee (DELETE)
 

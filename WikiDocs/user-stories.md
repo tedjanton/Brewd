@@ -121,7 +121,7 @@ As an authorized user, I want to be able to see all of my recent "sips" activity
     * Then I will be taken to the coffee's detail page
 
 ## Coffee Sips
-As an authorized user, I want to be able to add a coffee to my "sips" list, so that I can add a comment, rating, and/or location for that coffee
+As an authorized user, I want to be able to add a coffee to my "sips" list, so that I can add a comment, rating, and/or picture of my coffee's "sip"
 
 ### Questions
 * Are there any restrictions on which coffees users can sip on?
@@ -131,8 +131,9 @@ As an authorized user, I want to be able to add a coffee to my "sips" list, so t
 * How many sips are allowed per user?
     * For now, unlimited sips per user
 * How do I sip a coffee?
-    * From wherever a coffee shows, a user can click on the name and be directed to that coffee's detail page
+    * From wherever a coffee displays, a user can click on the name and be directed to that coffee's detail page
     * Then a user can click on the "sip coffee" button
+    * And a modal will appear with a form to fill out your review, select your rating, and upload a picture
 * How do I edit/delete one of my sips?
     * Wherever a user sees their "sip" (The Coffee House, Top Rated, My Profile, Coffee Detail Page), edit and delete buttons will be visible for them to click
 
