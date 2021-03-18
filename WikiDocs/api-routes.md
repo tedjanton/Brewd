@@ -16,7 +16,7 @@ User authorization
 * ```POST /api/sips``` - create a new sip
 * ```POST /api/sips/:id``` - edit your sip
 * ```DELETE /api/sips/:id``` - delete a sip (including comments and like on sip)
-* ```POST /api/sips/:id/comment - create a new comment on a sip
+* ```POST /api/sips/:id/comment``` - create a new comment on a sip
 
 ## Coffees
 * ```GET /api/coffees``` - get all coffees on Top Rated feed
