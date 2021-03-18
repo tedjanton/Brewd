@@ -1,2 +1,0 @@
-## ```/api/users/:id/sips```
-*

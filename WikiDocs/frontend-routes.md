@@ -33,6 +33,6 @@
 * Nav bar
 
 ## ```/shops/:id```
-* Display all of the venue's details
+* Display all of the shop's details
 * Displays number of coffees at that shop
 * Feed of user's "sip" activity

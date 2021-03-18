@@ -39,8 +39,8 @@
 * Code snippets to highlight the best code
 
 ### 7. Bonus
-* Venues
-    * view venue details and coffees that are available at that location
+* Shops
+    * View shop details and coffees that are available at that location
 * Badges
 * Search
     * Search via location and coffee name
