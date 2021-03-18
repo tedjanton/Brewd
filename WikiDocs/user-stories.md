@@ -13,7 +13,7 @@ As an unauthorized user, I want to be able to login to the website via a form, s
 * Should logging in use session-based or use token-based authentication?
     * We will use session based authentication for now
 
-### ### Acceptance Criteria
+### Acceptance Criteria
 * When I try to fill out the form with an invalid email or password combination and press Enter or press the "Login" button
     * Then at the bottom of the form, the user will be prompted a message explaining the error
 * When I try to fill out the form with a valid email and password and press Enter or press the "Login" button
