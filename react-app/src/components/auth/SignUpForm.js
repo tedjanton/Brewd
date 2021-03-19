@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { Redirect } from 'react-router-dom';
-import { signUp } from '../../store/session';
+import { Redirect } from "react-router-dom";
+import { signUp } from "../../store/session";
+import { useDispatch } from "react-redux";
 
-const SignUpForm = ({authenticated, setAuthenticated}) => {
+const SignUpForm = ({ authenticated, setAuthenticated }) => {
+  const dispatch = useDispatch();
   const [username, setUsername] = useState("");
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
@@ -11,8 +15,15 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      const user = await signUp(username, email, password);
+      const user = await signUp(
+        username,
+        first_name,
+        last_name,
+        email,
+        password
+      );
       if (!user.errors) {
+        dispatch(signUp(user));
         setAuthenticated(true);
       }
     }
@@ -34,6 +45,14 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
     setRepeatPassword(e.target.value);
   };
 
+  const updateFirstName = (e) => {
+    setFirstName(e.target.value);
+  };
+
+  const updateLastName = (e) => {
+    setLastName(e.target.value);
+  };
+
   if (authenticated) {
     return <Redirect to="/" />;
   }
@@ -47,6 +66,24 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
           name="username"
           onChange={updateUsername}
           value={username}
+        ></input>
+      </div>
+      <div>
+        <label>First Name</label>
+        <input
+          type="text"
+          name="firstName"
+          onChange={updateFirstName}
+          value={first_name}
+        ></input>
+      </div>
+      <div>
+        <label>Last Name</label>
+        <input
+          type="text"
+          name="lastName"
+          onChange={updateLastName}
+          value={last_name}
         ></input>
       </div>
       <div>
