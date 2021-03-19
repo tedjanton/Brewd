@@ -1,3 +1,13 @@
+const GET_USER = '/session/get_user';
+
+const getUser = (user) => ({
+  type: GET_USER,
+  user
+});
+
+
+
+
 export const authenticate = async() => {
   const response = await fetch('/api/auth/',{
     headers: {
@@ -7,7 +17,7 @@ export const authenticate = async() => {
   return await response.json();
 }
 
-export const login = async (email, password) => {
+export const login = (email, password) => async (dispatch) => {
   const response = await fetch('/api/auth/login', {
     method: 'POST',
     headers: {
@@ -18,7 +28,13 @@ export const login = async (email, password) => {
       password
     })
   });
-  return await response.json();
+
+  if (response.ok){
+    let data = await response.json();
+    console.log(data)
+    dispatch(getUser(data))
+    return response;
+  }
 }
 
 export const logout = async () => {
@@ -45,3 +61,21 @@ export const signUp = async (username, email, password) => {
   });
   return await response.json();
 }
+
+let initialState = { user: null };
+
+const sessionReducer = (state = initialState, action) => {
+  let newState;
+  switch(action.type){
+    case GET_USER:
+      newState = Object.assign({}, state);
+      // console.log(action)
+      newState.user = action.user
+      return newState;
+      // console.log(action.user)
+    default:
+      return state;
+  }
+}
+
+export default sessionReducer;
