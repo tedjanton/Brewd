@@ -28,7 +28,7 @@ def authenticate():
     return {'errors': ['Unauthorized']}, 401
 
 
-@auth_routes.route('/login', methods=['POST'])
+@auth_routes.route('/login', methods=["GET", "POST"])
 def login():
     """
     Logs a user in

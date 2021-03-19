@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+// import { useDispatch } from "react-redux";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/NavBar";
@@ -28,7 +29,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <>
       <NavBar setAuthenticated={setAuthenticated} authenticated={authenticated} />
       <Switch>
         <Route path="/login" exact={true}>
@@ -47,10 +48,10 @@ function App() {
           <User />
         </ProtectedRoute>
         <Route path="/" exact={true}>
-          <Landing />
+          <Landing authenticated={authenticated} setAuthenticated={setAuthenticated} />
         </Route>
       </Switch>
-    </BrowserRouter>
+    </>
   );
 }
 
