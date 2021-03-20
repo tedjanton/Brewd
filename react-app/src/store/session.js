@@ -1,53 +1,60 @@
-const GET_USER = '/session/get_user';
+const GET_USER = "/session/get_user";
+const CREATE_USER = "/session/create_user";
 
 const getUser = (user) => ({
   type: GET_USER,
-  user
+  user,
 });
 
+const createUser = (user) => ({
+  type: CREATE_USER,
+  user,
+});
 
-
-
-export const authenticate = async() => {
-  const response = await fetch('/api/auth/',{
+export const authenticate = async () => {
+  const response = await fetch("/api/auth/", {
     headers: {
-      'Content-Type': 'application/json'
-    }
+      "Content-Type": "application/json",
+    },
   });
   return await response.json();
-}
+};
 
 export const login = (email, password) => async (dispatch) => {
-  const response = await fetch('/api/auth/login', {
-    method: 'POST',
+  const response = await fetch("/api/auth/login", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       email,
-      password
-    })
+      password,
+    }),
   });
 
-  if (response.ok){
+  if (response.ok) {
     let data = await response.json();
-    console.log(data)
-    dispatch(getUser(data))
+    dispatch(getUser(data));
     return response;
   }
-}
+};
 
 export const logout = async () => {
   const response = await fetch("/api/auth/logout", {
     headers: {
       "Content-Type": "application/json",
-    }
+    },
   });
   return await response.json();
 };
 
-
-export const signUp = async (username, email, password) => {
+export const signUp = (
+  username,
+  first_name,
+  last_name,
+  email,
+  password
+) => async (dispatch) => {
   const response = await fetch("/api/auth/signup", {
     method: "POST",
     headers: {
@@ -55,27 +62,37 @@ export const signUp = async (username, email, password) => {
     },
     body: JSON.stringify({
       username,
+      first_name,
+      last_name,
       email,
       password,
     }),
   });
-  return await response.json();
-}
+  if (response.ok) {
+    let data = await response.json();
+    dispatch(createUser(data));
+    return response;
+  }
+};
 
 let initialState = { user: null };
 
 const sessionReducer = (state = initialState, action) => {
   let newState;
-  switch(action.type){
+  switch (action.type) {
     case GET_USER:
       newState = Object.assign({}, state);
       // console.log(action)
-      newState.user = action.user
+      newState.user = action.user;
       return newState;
-      // console.log(action.user)
+    case CREATE_USER:
+      newState = Object.assign({}, state);
+      newState.user = action.user;
+      return newState;
+    // console.log(action.user)
     default:
       return state;
   }
-}
+};
 
 export default sessionReducer;
