@@ -15,15 +15,10 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      const user = await signUp(
-        username,
-        first_name,
-        last_name,
-        email,
-        password
+      const user = await dispatch(
+        signUp(username, first_name, last_name, email, password)
       );
       if (!user.errors) {
-        dispatch(signUp(user));
         setAuthenticated(true);
       }
     }
