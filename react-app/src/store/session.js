@@ -1,5 +1,6 @@
 const GET_USER = "/session/get_user";
 const CREATE_USER = "/session/create_user";
+const REMOVE_USER = "/session/remove_user";
 
 const getUser = (user) => ({
   type: GET_USER,
@@ -10,6 +11,10 @@ const createUser = (user) => ({
   type: CREATE_USER,
   user,
 });
+
+const removeUser = () => ({
+  type: REMOVE_USER
+})
 
 export const authenticate = async () => {
   const response = await fetch("/api/auth/", {
@@ -39,13 +44,15 @@ export const login = (email, password) => async (dispatch) => {
   }
 };
 
-export const logout = async () => {
+export const logout = () => async (dispatch) => {
   const response = await fetch("/api/auth/logout", {
     headers: {
       "Content-Type": "application/json",
     },
   });
-  return await response.json();
+  await response.json();
+  dispatch(removeUser());
+  return response;
 };
 
 export const signUp = (
@@ -82,14 +89,16 @@ const sessionReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_USER:
       newState = Object.assign({}, state);
-      // console.log(action)
       newState.user = action.user;
       return newState;
     case CREATE_USER:
       newState = Object.assign({}, state);
       newState.user = action.user;
       return newState;
-    // console.log(action.user)
+    case REMOVE_USER:
+      newState = Object.assign({}, state)
+      newState.user = null;
+      return newState;
     default:
       return state;
   }
