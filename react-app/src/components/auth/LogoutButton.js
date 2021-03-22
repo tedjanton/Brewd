@@ -1,9 +1,9 @@
 import React from "react";
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/session";
 
-const LogoutButton = ({setAuthenticated}) => {
+const LogoutButton = ({ setAuthenticated }) => {
   const dispatch = useDispatch();
   const history = useHistory();
 

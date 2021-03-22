@@ -132,7 +132,6 @@ def seed_coffees():
                       caffeine=93,
                       type="cold",
                       img_src="https://brewd.s3.amazonaws.com/coffee-pics/18-whipped-mocha-delight.jpeg")
-    # COFFEES lauren
 
     # alfred
     coffee19 = Coffee(name='Iced Vanilla Latte',
