@@ -12,7 +12,8 @@ class Coffee(db.Model):
     type = db.Column(db.String(4), nullable=False)
     img_src = db.Column(db.String)
 
-    shop = db.relationship("Shop")
+    shop = db.relationship("Shop", back_populates="coffees")
+    sips = db.relationship("Sip", back_populates="coffee")
 
 
     def to_dict(self):
