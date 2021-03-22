@@ -28,7 +28,7 @@ const topRatedReducer = (state = initialState, action) => {
       //   for (let sip of action.payload) {
       //     newState[sip.id] = sip;
       //   }
-      newState[action.payload.id] = action.payload;
+      newState = [...state, action.payload];
       console.log("NEW STATE", newState);
       return newState;
     default:

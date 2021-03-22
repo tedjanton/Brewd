@@ -7,8 +7,10 @@ import "./TopRated.css";
 
 function TopRatedPage() {
   const dispatch = useDispatch();
-  const { id } = useParams();
-  //   const coffee = useSelector((state) => state[id]);
+  //   const { id } = useParams();
+  //   const coffee = useSelector((state) => {
+  //     return state.topRated[0];
+  //   });
   //   console.log("COFFEE NAME", coffee.id);
   //   const { name, caffeine } = coffee;
 
