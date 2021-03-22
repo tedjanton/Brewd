@@ -118,9 +118,9 @@ def seed_sips():
 
     sip16 = Sip(user_id=6,
                 coffee_id=26,
-                review="",
+                review="Perfect americano. Merit has the best espresso in Austin and the baristas are so friendly!",
                 rating=5,
-                img_src="Perfect americano. Merit has the best espresso in Austin and the baristas are so friendly!",
+                img_src="",
                 created_at=(datetime(2019, 11, 30)))
 
     sip17 = Sip(user_id=7,
@@ -263,9 +263,9 @@ def seed_sips():
                 rating=None,
                 img_src="",
                 created_at=(datetime(2020, 9, 5)))
-    
+
     sip37 = Sip(user_id=19,
-                coffee_id=75,
+                coffee_id=74,
                 review="I just love Peanut Butter, especially with chocolate and up until now, I'd never got to try that combination in a coffee drink.  This was my fist time and I absolutely loved it!!!",
                 rating=5,
                 img_src="",
@@ -449,5 +449,5 @@ def seed_sips():
 
 
 def undo_sips():
-    db.session.execute('TRUNCATE sips;')
+    db.session.execute('TRUNCATE sips CASCADE;')
     db.session.commit()
