@@ -15,6 +15,8 @@ class Sip(db.Model):
 
     user = db.relationship("User", back_populates="sips")
     coffee = db.relationship("Coffee", back_populates="sips")
+    comments = db.relationship("Comment", back_populates="sip")
+    likes = db.relationship("Like", back_populates="sip")
 
     def to_dict(self):
         return {

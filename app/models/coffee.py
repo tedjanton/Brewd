@@ -13,6 +13,7 @@ class Coffee(db.Model):
     img_src = db.Column(db.String)
 
     shop = db.relationship("Shop", back_populates="coffees")
+    sips = db.relationship("Sip", back_populates="coffee")
 
 
     def to_dict(self):

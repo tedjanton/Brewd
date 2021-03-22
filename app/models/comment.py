@@ -9,8 +9,8 @@ class Comment(db.Model):
     sip_id = db.Column(db.Integer, db.ForeignKey("sips.id"), nullable=False)
     comment = db.Column(db.String(250), nullable=False)
 
-    user = db.relationship("User", back_populates="comment")
-    sip = db.relationship("Sip", back_populates="comment")
+    user = db.relationship("User", back_populates="comments")
+    sip = db.relationship("Sip", back_populates="comments")
 
     def to_dict(self):
         return {

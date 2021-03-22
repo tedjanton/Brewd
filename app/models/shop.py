@@ -14,6 +14,8 @@ class Shop(db.Model):
     zip_code = db.Column(db.Integer, nullable=False)
     logo_src = db.Column(db.String)
 
+    coffees = db.relationship("Coffee", back_populates="shop")
+
 
     def to_dict(self):
         return {
