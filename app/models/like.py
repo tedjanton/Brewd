@@ -8,8 +8,8 @@ class Like(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     sip_id = db.Column(db.Integer, db.ForeignKey("sips.id"), nullable=False)
 
-    user = db.relationship("User")
-    sip = db.relationship("Sip")
+    user = db.relationship("User", back_populates="like")
+    sip = db.relationship("Sip", back_populates="like")
 
     def to_dict(self):
         return {
