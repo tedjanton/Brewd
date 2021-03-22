@@ -1,8 +1,8 @@
-"""seed data
+"""migration
 
-Revision ID: 23c335979430
-Revises: c4342f514b04
-Create Date: 2021-03-22 12:36:22.125432
+Revision ID: 9d88179f0b81
+Revises: 3e6a27af5166
+Create Date: 2021-03-22 15:05:27.244006
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '23c335979430'
-down_revision = 'c4342f514b04'
+revision = '9d88179f0b81'
+down_revision = '3e6a27af5166'
 branch_labels = None
 depends_on = None
 
