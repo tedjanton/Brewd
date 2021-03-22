@@ -10,6 +10,7 @@ import Landing from "./components/Landing";
 import CoffeeHouse from "./components/CoffeeHouse"
 import { authenticate } from "./store/session";
 import TopRated from "./components/TopRated";
+import HomePage from "./components/HomePage";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -71,6 +72,9 @@ function App() {
         <Route path="/top_rated">
           <TopRated />
         </Route>
+        <ProtectedRoute path="/home" exact={true} authenticated={authenticated}>
+          <HomePage authenticated={authenticated}/>
+        </ProtectedRoute>
       </Switch>
     </BrowserRouter>
   );
