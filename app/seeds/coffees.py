@@ -452,6 +452,136 @@ def seed_coffees():
                       type="hot",
                       img_src="https://www.reanimatorpickup.com/uploads/1/3/1/2/131268903/s226671392685346693_p2_i1_w977.png")
 
+    coffee58 = Coffee(shop_id=19,
+                      name="Feel'n Good",
+                      description="Banhez Mezcal, Red Eye Eye, Espresso, Vanilla, and Cream.",
+                      caffeine=203,
+                      type="hot",
+                      img_src="../public/americano_lounge_feeln_good.jpg")
+
+    coffee59 = Coffee(shop_id=19,
+                      name="Espresso Martini",
+                      description="Wheatley Vodka, Red Eye Eye, Espresso, and Vanilla.",
+                      caffeine=210,
+                      type="cold",
+                      img_src="../public/americano_lounge_espresso_martini.jpg") 
+    coffee60 = Coffee(shop_id=19,
+                      name="Bohemia After Dark",
+                      description="Wheatley vodka, Libre Mind Chocolate, Giffard Menthepastille, Fernet and Cream.",
+                      caffeine=180,
+                      type="hot",
+                      img_src="../public/americano_lounge_bohemia_after_dark.jpg")
+
+    # 8th & Roast
+    coffee61 = Coffee(shop_id=20,
+                      name="Drip Coffee",
+                      description="Simple, yet tasty and rich.",
+                      caffeine=180,
+                      type="hot",
+                      img_src="../public/8thandRoast_drip_coffee.jpg")
+
+    coffee62 = Coffee(shop_id=20,
+                      name="Dulce De Leche Latte",
+                      description="House made latte infused with Dulce De Leche flavored organic syrup.",
+                      caffeine=170,
+                      type="hot",
+                      img_src="../public/8thandRoast_dulce_de_leche_latte.jpg")
+
+    coffee63 = Coffee(shop_id=20,
+                      name="Flash Chilled Nitro",
+                      description="House made dripped chilled instantly with our unique nitro machine",
+                      caffeine=212,
+                      type="cold",
+                      img_src="../public/8thandRoast_flash_chilled_nitro.jpg")
+
+    # Ugly Mugs
+    coffee64 = Coffee(shop_id=21,
+                      name="Hoodie",
+                      description="Honey, Vanilla, & Cinnamon Latte.",
+                      caffeine=190,
+                      type="hot",
+                      img_src="..public/ugly_mugs_hoodie.jpg")
+
+    coffee65 = Coffee(shop_id=21,
+                      name="Bingster",
+                      description="Latte with sweetened condensed milk.",
+                      caffeine=182,
+                      type="cold",
+                      img_src="../public/ugly_mugs_bingster.jpg")
+
+    coffee66 = Coffee(shop_id=21,
+                      name="Lavender Latte",
+                      description="Made with housemade lavender syrup.",
+                      caffeine=192,
+                      type="hot",
+                      img_src="../public/ugly_mugs_lavender_latte.jpg")
+
+    # Buddy Brew Coffee
+    coffee67 = Coffee(shop_id=22,
+                      name="Buddy Brew Screw",
+                      description="So screwed up, it just might be the cup of joe you were looking to fix your broken day.",
+                      caffeine=220,
+                      type="hot",
+                      img_src="../public/buddy_brew_coffee_buddy_brew_screw.jpg")
+
+    coffee68 = Coffee(shop_id=22,
+                      name="Cortado",
+                      description="Cortado (from the Spanish cortar, known as "Tallat" in Catalan, "Pingo" or "Garoto" in Portugal and "noisette" in France) is an espresso "cut" with a small amount of warm milk to reduce the acidity. The ratio of coffee to milk is between 1:1 - 1:2, and the milk is added after the espresso",
+                      caffeine=220,
+                      type="hot",
+                      img_src="..//public/buddy_brew_coffee_cortado.jpg")
+
+    coffee69 = Coffee(shop_id=22,
+                      name="Cold Brew Float",
+                      description="Our delicious house coffee steeped for 24 hours and then served over a refreshing cup of ice",
+                      caffeine=190,
+                      type="cold",
+                      img_src="../public/bennetts_fresh_roast_cold_brew.jpg")
+
+    # Bennett's Fresh Roast
+    coffee70 = Coffee(shop_id=23,
+                      name="The Biscoff Latte",
+                      description="We all love those delicious Biscoff Cookies. The Biscoff Latte is a Bennett's Latte with the special addition of Biscoff Butter, whipped cream and a crumbled Biscoff Cookie on top",
+                      caffeine=188,
+                      type="hot",
+                      img_src="../public/bennetts_fresh_roast_biscoff_latte.jpg")
+
+    coffee71 = Coffee(shop_id=23,
+                      name="Bennett's Colombian Cup In-House",
+                      description="Served in a Bennett's Fresh Roast Mug, this in-shop fresh roasted coffee is brewed in bold, mild, or decaf.",
+                      caffeine=190,
+                      type="hot",
+                      img_src="../public/bennetts_fresh_roast_colombian_in-house_brew.jpg")
+
+    coffee72 = Coffee(shop_id=23,
+                      name="Bennet's Cold Brew",
+                      description="Made in house and kept ice cold from start to finish, Bennett's Cold Brew steeps for up to 18 hours to bring out the smoothness of Cold Brew with all the flavor of Bennett's Fresh Roasted Coffee.",
+                      caffeine=220,
+                      type="cold",
+                      img_src="../public/bennetts_fresh_roast_cold_brew.jpg")
+
+    # Canes Corner and Coffee Store
+    coffee73 = Coffee(shop_id=24,
+                      name="Coconut White Macchiato",
+                      description="An espresso with a dash of frothy steamed coconut milk.",
+                      caffeine=150,
+                      type="hot",
+                      img_src="../public/canes_corner_and_coffee_coconut_machiatto.jpg")
+
+    coffee74 = Coffee(shop_id=24,
+                      name="Rasberry White Mocha",
+                      description="An espresso with a dash of frothy steamed milk and rasberry topping.",
+                      caffeine=130,
+                      type="hot",
+                      img_src="../public/canes_corner_and_corner_store_rasberry_white_mocha.jpg")
+
+    coffee75 = Coffee(shop_id=24,
+                      name="Peanut Butter Mocha",
+                      description="We blend mocha sauce and chocolate mocha chips with coffee, milk and ice, then top it off with whipped cream and a peanut butter drizzle to bring you endless java joy.",
+                      caffeine=93,
+                      type="cold",
+                      img_src="../public/canes_corner_and_coffee_store_peanut_butter_mocha.jpg")
+
     db.session.add(coffee1)
     db.session.add(coffee2)
     db.session.add(coffee3)
@@ -509,6 +639,23 @@ def seed_coffees():
     db.session.add(coffee55)
     db.session.add(coffee56)
     db.session.add(coffee57)
+    db.session.add(coffee58)
+    db.session.add(coffee60)
+    db.session.add(coffee61)
+    db.session.add(coffee62)
+    db.session.add(coffee63)
+    db.session.add(coffee64)
+    db.session.add(coffee65)
+    db.session.add(coffee66)
+    db.session.add(coffee67)
+    db.session.add(coffee68)
+    db.session.add(coffee69)
+    db.session.add(coffee70)
+    db.session.add(coffee71)
+    db.session.add(coffee72)
+    db.session.add(coffee73)
+    db.session.add(coffee74)
+    db.session.add(coffee75)
 
 
 
