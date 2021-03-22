@@ -367,7 +367,7 @@ def seed_coffees():
                       name="hot choc cold brew",
                       description="",
                       caffeine=345,
-                      type="",
+                      type="cold",
                       img_src="https://chowhound3.cbsistatic.com/resize/b4ef5bef6258f7f835ced9287bd8fa6605884bb6/2020/08/how-to-make-better-iced-coffee-hot-bloom-cold-brew-chowhound.jpg?fit=bounds&width=800")
 
     # Elixr Coffee Roasters
@@ -389,7 +389,7 @@ def seed_coffees():
                       name="Mocha",
                       description="Espresso, Milk, Chocoloate = YUM!",
                       caffeine=72,
-                      type="",
+                      type="cold",
                       img_src="https://www.elixrpickup.com/uploads/1/3/1/2/131257535/s667221471220806671_p257_i2_w1280.jpeg")
 
     # ReAnimator Coffee
