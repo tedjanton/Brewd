@@ -111,6 +111,116 @@ def seed_shops():
                   zip_code=78741,
                   logo_src="https://pbs.twimg.com/profile_images/534750859502964736/l8Su6pqm.jpeg")
 
+    shop13 = Shop(name="Brewed Awakenings Cafe",
+                  description="From carefully hand-crafted coffee to baked goods & soups made from scratch as well as sandwiches, paninis and salads, we proudly serve Saline area customers with the freshest local ingredients.",
+                  address_1="7025 E Michigan Avenue",
+                  address_2="",
+                  city="Saline",
+                  state="Michigan",
+                  zip_code=48176,
+                  logo_src="")
+
+    shop14 = Shop(name="Backyard Beans Coffee Company",
+                  description="Backyard Beans Coffee Company is a craft coffee roaster specializing in high quality coffee beans and cold brew.",
+                  address_1="408 W Main Street",
+                  address_2="",
+                  city="Landsdale",
+                  state="Pennsylvania",
+                  zip_code=19446,
+                  logo_src="")
+
+    shop15 = Shop(name="Zingerman's Coffee Company",
+                  description="Zingerman’s Coffee Company is a wholesale roaster supplying cafés, restaurants and businesses with great coffees. We also serve our single estate, small batch coffees at our coffee bar in Ann Arbor.",
+                  address_1="3723 Plaza Drive",
+                  address_2="",
+                  city="Ann Arbor",
+                  state="Michigan",
+                  zip_code=48108,
+                  logo_src="https://www.zingermanscoffee.com/app/themes/zingermanscoffee17/images/logo_green.svg")
+
+    shop16 = Shop(name="RoosRoast Liberty",
+                  description="Chill, comfy hangout featuring coffee, cold brew & espresso, plus breakfast bites & pastries.",
+                  address_1="117 E Liberty Street",
+                  address_2="",
+                  city="Ann Arbor",
+                  state="Michigan",
+                  zip_code=48104,
+                  logo_src="https://cdn.shopify.com/s/files/1/1461/7372/files/Round_logo_blue_coffee-01_500x.png?v=1603375215")
+
+    shop17 = Shop(name="Elixr Coffee Roasters",
+                  description="Elixr has become a mecca for desperate coffee lovers. Elixr has developed a reputation for serving real deal coffee in a modern, yet relaxed atmosphere.",
+                  address_1="315 N 12th Street",
+                  address_2="",
+                  city="Philadelphia",
+                  state="Pennsylvania",
+                  zip_code=19107,
+                  logo_src="https://cdn.shopify.com/s/files/1/2565/6836/files/elixrcoffeeroastersblue_x150@2x.png?v=1511318250")
+
+    shop18 = Shop(name="ReAnimator Coffee",
+                  description="Local micro coffee roasters share brews & expertise in a snug, chic hangout with hardwood floors.",
+                  address_1="1523 E Susquehanna Ave",
+                  address_2="",
+                  city="Philadelphia",
+                  state="Pennsylvania",
+                  zip_code=19125,
+                  logo_src="https://pbs.twimg.com/profile_images/833752955862052868/f59GA6nj_400x400.jpg")
+
+    shop19 = Shop(name="Americano Lounge",
+                  description="Whether you need a caffeine fix or spirited cocktail, Americano Lounge offers both in a New York-style lounge that was literally built by the owner, Cody Pellerin.  If you respect high-quality coffee and a tough team, visit this destination in Wedgewood-Houston",
+                  address_1="434 Houston St Suite 120",
+                  address_2="",
+                  city="Nashville",
+                  state="Tennessee",
+                  zip_code=37203,
+                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/americano_lounge.png")
+
+    shop20 = Shop(name="8th & Roast",
+                  description="After seeing success from their first coffee shop, 8th & Roast opened their second location on Charlotte Avenue in 2018. The West Nashville location is much bigger and more modern, but maintains the energy Nashvillians have grown to love. For a more intimate outing, venture to the original location on 8th Avenue South across from Zanies Comedy Club. The inside is warm and cozy with community tables, bar seating, and a calm atmosphere",
+                  address_1="2108 8th Ave S",
+                  address_2="",
+                  city="Nashville",
+                  state="Tennessee",
+                  zip_code=37204,
+                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/8thandRoast.jpg")
+
+    shop21 = Shop(name="Ugly Mugs",
+                  description="Cheers to drinking out of ugly mugs! Ugly Mugs in East Nashville offers a clean, friendly vibe along with really unattractive coffee mugs that you might expect to see on the clearance rack at Goodwill. The ugly mugs add a fun flavor that you won’t find anywhere else. There are a variety of seating options, from couches to a window bar.",
+                  address_1="1886 Eastland Avenue",
+                  address_2="",
+                  city="Nashville",
+                  state="Tennessee",
+                  zip_code=37206,
+                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/ugly_mugs.jpg")
+
+    shop22 = Shop(name="Buddy Brew Coffee",
+                  description="Buddy Brew Coffee has the rustic charm of a hole-in-the-wall coffee shop with the urban aesthetics of a New American-style brewery. As a speciality craft roaster, Buddy Brew promises coffee that challenges the status quo. Its coffee beans are sourced from hand-selected farmers from around the globe when they are at peak flavor. The highly skilled and passionate baristas at Buddy Brew can turn any cup of coffee into art, living up to the shop’s motto: 'Brew good, do good.'",
+                  address_1="2020 W Kennedy Blvd",
+                  address_2="",
+                  city="Tampa",
+                  state="Florida",
+                  zip_code=33606,
+                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/buddy_brew_coffee.jpg")
+
+    shop23 = Shop(name="Bennett's Fresh Roast",
+                  description="We roast nearly 800 pounds of coffee a month, fry up 15,000 from-scratch hand-cut donuts monthly and serve breakfast and lunch to thousands of hungry guests. We’re humbled every time a customer walks in the door and we promise we’ll never take a single one of you for granted. If you are ever dissatisfied with anything you buy from Bennett’s Fresh Roast, without so much as a wink, we simply won’t charge you. If you return something you are dissatisfied with, we’ll gladly refund your money. We don’t care when you bought it. As a wholly owned single family business, we believe that old fashioned good service, honesty, integrity and the desire to back up our products are the true hallmarks of our success.  ",
+                  address_1="2011 Bayside Parkway",
+                  address_2="",
+                  city="Fort Myers",
+                  state="Florida",
+                  zip_code=33901,
+                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/bennetts_fresh_roast.jpg")
+
+    shop24 = Shop(name="Canes Cafe and Corner Store",
+                  description="Canes Café and Corner Store offers a unique coffee house environment like no other. This Italian–Australian infused café simulates the experience of an Italian café while offering traditional Australian baked goods. Our hot pies are ready to grab and go or enjoy them in our sit in window. We have everything from espresso-based coffee drinks to fresh fruit smoothies. Complete your coffee with a toasted bagel or gourmet donut. Located in the heart of Palm Harbor, FL with access to the Pinellas trail.",
+                  address_1="1688 US-19 ALT",
+                  address_2="",
+                  city="Palm Harbor",
+                  state="Florida",
+                  zip_code=34683,
+                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/canes_corner_and_coffee_store.jpg")
+
+
+
     db.session.add(shop1)
     db.session.add(shop2)
     db.session.add(shop3)
@@ -123,6 +233,19 @@ def seed_shops():
     db.session.add(shop10)
     db.session.add(shop11)
     db.session.add(shop12)
+    db.session.add(shop13)
+    db.session.add(shop14)
+    db.session.add(shop15)
+    db.session.add(shop16)
+    db.session.add(shop17)
+    db.session.add(shop18)
+    db.session.add(shop19)
+    db.session.add(shop20)
+    db.session.add(shop21)
+    db.session.add(shop22)
+    db.session.add(shop23)
+    db.session.add(shop24)
+
     db.session.commit()
 
 

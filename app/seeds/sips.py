@@ -118,9 +118,9 @@ def seed_sips():
 
     sip16 = Sip(user_id=6,
                 coffee_id=26,
-                review="",
+                review="Perfect americano. Merit has the best espresso in Austin and the baristas are so friendly!",
                 rating=5,
-                img_src="Perfect americano. Merit has the best espresso in Austin and the baristas are so friendly!",
+                img_src="",
                 created_at=(datetime(2019, 11, 30)))
 
     sip17 = Sip(user_id=7,
@@ -180,6 +180,216 @@ def seed_sips():
                 img_src="",
                 created_at=(datetime(2021, 3, 1)))
 
+    sip25 = Sip(user_id=8,
+                coffee_id=41,
+                review="great holiday treat!",
+                rating=4,
+                img_src="",
+                created_at=(datetime(2020, 11, 22)))
+
+    sip26 = Sip(user_id=8,
+                coffee_id=43,
+                review="",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 7, 12)))
+
+    sip27 = Sip(user_id=8,
+                coffee_id=46,
+                review="pretty good",
+                rating=4,
+                img_src="",
+                created_at=(datetime(2020, 2, 2)))
+
+    sip28 = Sip(user_id=8,
+                coffee_id=47,
+                review="weird name",
+                rating=None,
+                img_src="",
+                created_at=(datetime(2020, 4, 7)))
+
+    sip29 = Sip(user_id=8,
+                coffee_id=48,
+                review="yummy!!",
+                rating=4,
+                img_src="",
+                created_at=(datetime(2020, 4, 16)))
+
+    sip30 = Sip(user_id=8,
+                coffee_id=49,
+                review="super delish and not too sweet",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 5, 8)))
+
+    sip31 = Sip(user_id=8,
+                coffee_id=50,
+                review="my favorite!!",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 8, 4)))
+
+    sip32 = Sip(user_id=8,
+                coffee_id=51,
+                review="",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 2, 10)))
+
+    sip33 = Sip(user_id=8,
+                coffee_id=52,
+                review="keeps me awake",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 12, 4)))
+
+    sip34 = Sip(user_id=8,
+                coffee_id=53,
+                review="",
+                rating=4,
+                img_src="",
+                created_at=(datetime(2020, 8, 11)))
+
+    sip35 = Sip(user_id=8,
+                coffee_id=54,
+                review="ok",
+                rating=3,
+                img_src="",
+                created_at=(datetime(2020, 7, 9)))
+
+    sip36 = Sip(user_id=8,
+                coffee_id=55,
+                review="classic staple",
+                rating=None,
+                img_src="",
+                created_at=(datetime(2020, 9, 5)))
+
+    sip37 = Sip(user_id=19,
+                coffee_id=74,
+                review="I just love Peanut Butter, especially with chocolate and up until now, I'd never got to try that combination in a coffee drink.  This was my fist time and I absolutely loved it!!!",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 5, 21)))
+
+    sip38 = Sip(user_id=16,
+                coffee_id=74,
+                review="This had a decent flavor but the rasberry topping was a bit overpowering if I'm being honest.",
+                rating=3,
+                img_src="",
+                created_at=(datetime(2020, 11, 9)))
+
+    sip39 = Sip(user_id=14,
+                coffee_id=73,
+                review="If you like coconut, you'll love this macchiato!",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2021, 12, 23)))
+
+    sip40 = Sip(user_id=11,
+                coffee_id=72,
+                review="I'm a regular here at Bennet's and this is my regular beverage.  I'd wager it's one of the best cold brews in town.",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2021, 7, 10)))
+
+    sip41 = Sip(user_id=8,
+                coffee_id=71,
+                review="The perfect version of a water-downed American drip coffee.",
+                rating=2,
+                img_src="",
+                created_at=(datetime(2021, 9, 1)))
+
+    sip42 = Sip(user_id=5,
+                coffee_id=70,
+                review="I can't start my day until I've had my Biscoff Latte!",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2021, 3, 3)))
+
+    sip43 = Sip(user_id=20,
+                coffee_id=69,
+                review="Pretty standard.",
+                rating=4,
+                img_src="",
+                created_at=(datetime(2019, 3, 2)))
+
+    sip44 = Sip(user_id=18,
+                coffee_id=68,
+                review="It's my first time trying espresso cut with milk... Verdict? I prefer the pure version without milk.",
+                rating=3,
+                img_src="",
+                created_at=(datetime(2020, 5, 19)))
+
+    sip45 = Sip(user_id=17,
+                coffee_id=67,
+                review="Man, there was so much caffeine in this bad boy, that I was spinning. I think I'll grab another on the way out!!",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2019, 6, 13)))
+
+    sip46 = Sip(user_id=16,
+                coffee_id=66,
+                review="Lavender belongs in a garden or in candles, not in coffee!!!",
+                rating=1,
+                img_src="",
+                created_at=(datetime(2021, 4, 27)))
+
+    sip47 = Sip(user_id=14,
+                coffee_id=65,
+                review="I love coffee and I love condensed milk, so how on earth could putting these two together go wrong? Trick question! It couldn't go wrong! This drink is amazing",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 4, 4)))
+
+    sip48 = Sip(user_id=12,
+                coffee_id=64,
+                review="Personally, I didn't find anyting special about this flavor combination and I actually found they didn't compliment each other well.",
+                rating=3,
+                img_src="",
+                created_at=(datetime(2021, 2, 18)))
+
+    sip49 = Sip(user_id=7,
+                coffee_id=63,
+                review="I wasn't really impressed with this coffee beverage.",
+                rating=2,
+                img_src="",
+                created_at=(datetime(2019, 9, 17)))
+
+    sip50 = Sip(user_id=5,
+                coffee_id=62,
+                review="Dulce de leche is my childhood favorite and this was an amazing way to bring me back to those days while enjoying a pretty decent cup of coffee.",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2019, 5, 23)))
+
+    sip51 = Sip(user_id=8,
+                coffee_id=61,
+                review="So flavorful and aromatic. By far better than any other drip coffee I've had in a long while.",
+                rating=4,
+                img_src="",
+                created_at=(datetime(2019, 10, 18)))
+
+    sip52 = Sip(user_id=16,
+                coffee_id=60,
+                review="A Bohemian coffee drink to fit my crazy Bohemian heritage!!! I got good and faced on these babies!",
+                rating=4,
+                img_src="",
+                created_at=(datetime(2020, 3, 30)))
+
+    sip53 = Sip(user_id=19,
+                coffee_id=59,
+                review="I don't know remember if these were good, but I know that I had enough that I had to take a cab home.",
+                rating=3,
+                img_src="",
+                created_at=(datetime(2019, 10, 24)))
+
+    sip54 = Sip(user_id=2,
+                coffee_id=58,
+                review="Never had alcohol and coffee together, but I loved this drink and now I'm wondering where this coffee cocktail was all my life!",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2019, 12, 21)))
+
     db.session.add(sip1)
     db.session.add(sip2)
     db.session.add(sip3)
@@ -204,9 +414,40 @@ def seed_sips():
     db.session.add(sip22)
     db.session.add(sip23)
     db.session.add(sip24)
+    db.session.add(sip25)
+    db.session.add(sip26)
+    db.session.add(sip27)
+    db.session.add(sip28)
+    db.session.add(sip29)
+    db.session.add(sip30)
+    db.session.add(sip31)
+    db.session.add(sip32)
+    db.session.add(sip33)
+    db.session.add(sip34)
+    db.session.add(sip35)
+    db.session.add(sip36)
+    db.session.add(sip37)
+    db.session.add(sip38)
+    db.session.add(sip39)
+    db.session.add(sip40)
+    db.session.add(sip41)
+    db.session.add(sip42)
+    db.session.add(sip43)
+    db.session.add(sip44)
+    db.session.add(sip45)
+    db.session.add(sip46)
+    db.session.add(sip47)
+    db.session.add(sip48)
+    db.session.add(sip49)
+    db.session.add(sip50)
+    db.session.add(sip51)
+    db.session.add(sip52)
+    db.session.add(sip53)
+    db.session.add(sip54)
+
     db.session.commit()
 
 
 def undo_sips():
-    db.session.execute('TRUNCATE sips;')
+    db.session.execute('TRUNCATE sips CASCADE;')
     db.session.commit()
