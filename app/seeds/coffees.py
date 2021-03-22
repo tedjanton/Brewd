@@ -397,7 +397,7 @@ def seed_coffees():
     coffee50 = Coffee(shop_id=16,
                       name="hot choc cold brew",
                       description="",
-                      caffeine=,
+                      caffeine=200,
                       type="",
                       img_src="https://chowhound3.cbsistatic.com/resize/b4ef5bef6258f7f835ced9287bd8fa6605884bb6/2020/08/how-to-make-better-iced-coffee-hot-bloom-cold-brew-chowhound.jpg?fit=bounds&width=800")
 
@@ -441,14 +441,14 @@ def seed_coffees():
     coffee56 = Coffee(shop_id=18,
                       name="Cortado",
                       description="Espresso + 2 oz of Milk",
-                      caffeine=, 89
+                      caffeine=89, 
                       type="hot",
                       img_src="https://www.reanimatorpickup.com/uploads/1/3/1/2/131268903/s226671392685346693_p20_i2_w977.png")
 
     coffee57 = Coffee(shop_id=18,
                       name="Cappuccino",
                       description="Espresso + 3.5 oz of Milk",
-                      caffeine=, 89
+                      caffeine=89,
                       type="hot",
                       img_src="https://www.reanimatorpickup.com/uploads/1/3/1/2/131268903/s226671392685346693_p2_i1_w977.png")
 

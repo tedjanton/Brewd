@@ -7,6 +7,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
 import Landing from "./components/Landing";
+import CoffeeHouse from "./components/CoffeeHouse"
 import { authenticate } from "./store/session";
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
         </ProtectedRoute>
         <Route path="/" exact={true} authenticated={authenticated}>
           <Landing authenticated={authenticated} />
+        </Route>
+        <Route path="/coffeehouse" authenticated={authenticated}>
+          <CoffeeHouse authenticated={authenticated}/>
         </Route>
       </Switch>
     </BrowserRouter>
