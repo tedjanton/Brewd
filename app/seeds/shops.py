@@ -111,6 +111,62 @@ def seed_shops():
                   zip_code=78741,
                   logo_src="https://pbs.twimg.com/profile_images/534750859502964736/l8Su6pqm.jpeg")
 
+    shop13 = Shop(name="Brewed Awakenings Cafe",
+                  description="From carefully hand-crafted coffee to baked goods & soups made from scratch as well as sandwiches, paninis and salads, we proudly serve Saline area customers with the freshest local ingredients.",
+                  address_1="7025 E Michigan Avenue",
+                  address_2="",
+                  city="Saline",
+                  state="Michigan",
+                  zip_code=48176,
+                  logo_src="")
+
+    shop14 = Shop(name="Backyard Beans Coffee Company",
+                  description="Backyard Beans Coffee Company is a craft coffee roaster specializing in high quality coffee beans and cold brew.",
+                  address_1="408 W Main Street",
+                  address_2="",
+                  city="Landsdale",
+                  state="Pennsylvania",
+                  zip_code=19446,
+                  logo_src="")
+
+    shop15 = Shop(name="Zingerman's Coffee Company",
+                  description="Zingerman’s Coffee Company is a wholesale roaster supplying cafés, restaurants and businesses with great coffees. We also serve our single estate, small batch coffees at our coffee bar in Ann Arbor.",
+                  address_1="3723 Plaza Drive",
+                  address_2="",
+                  city="Ann Arbor",
+                  state="Michigan",
+                  zip_code=48108,
+                  logo_src="https://www.zingermanscoffee.com/app/themes/zingermanscoffee17/images/logo_green.svg")
+
+    shop16 = Shop(name="RoosRoast Liberty",
+                  description="Chill, comfy hangout featuring coffee, cold brew & espresso, plus breakfast bites & pastries.",
+                  address_1="117 E Liberty Street",
+                  address_2="",
+                  city="Ann Arbor",
+                  state="Michigan",
+                  zip_code=48104,
+                  logo_src="https://cdn.shopify.com/s/files/1/1461/7372/files/Round_logo_blue_coffee-01_500x.png?v=1603375215")
+
+    shop17 = Shop(name="Elixr Coffee Roasters",
+                  description="Elixr has become a mecca for desperate coffee lovers. Elixr has developed a reputation for serving real deal coffee in a modern, yet relaxed atmosphere.",
+                  address_1="315 N 12th Street",
+                  address_2="",
+                  city="Philadelphia",
+                  state="Pennsylvania",
+                  zip_code=19107,
+                  logo_src="https://cdn.shopify.com/s/files/1/2565/6836/files/elixrcoffeeroastersblue_x150@2x.png?v=1511318250")
+
+    shop18 = Shop(name="ReAnimator Coffee",
+                  description="Local micro coffee roasters share brews & expertise in a snug, chic hangout with hardwood floors.",
+                  address_1="1523 E Susquehanna Ave",
+                  address_2="",
+                  city="Philadelphia",
+                  state="Pennsylvania",
+                  zip_code=19125,
+                  logo_src="https://pbs.twimg.com/profile_images/833752955862052868/f59GA6nj_400x400.jpg")
+
+    
+
     db.session.add(shop1)
     db.session.add(shop2)
     db.session.add(shop3)
@@ -123,6 +179,13 @@ def seed_shops():
     db.session.add(shop10)
     db.session.add(shop11)
     db.session.add(shop12)
+    db.session.add(shop13)
+    db.session.add(shop14)
+    db.session.add(shop15)
+    db.session.add(shop16)
+    db.session.add(shop17)
+    db.session.add(shop18)
+
     db.session.commit()
 
 

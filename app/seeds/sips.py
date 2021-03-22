@@ -180,6 +180,90 @@ def seed_sips():
                 img_src="",
                 created_at=(datetime(2021, 3, 1)))
 
+    sip25 = Sip(user_id=8,
+                coffee_id=41,
+                review="great holiday treat!",
+                rating=4,
+                img_src="",
+                created_at=(datetime(2020, 11, 22)))
+
+    sip26 = Sip(user_id=8,
+                coffee_id=43,
+                review="",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 7, 12)))
+
+    sip27 = Sip(user_id=8,
+                coffee_id=46,
+                review="pretty good",
+                rating=4,
+                img_src="",
+                created_at=(datetime(2020, 2, 2)))
+
+    sip28 = Sip(user_id=8,
+                coffee_id=47,
+                review="weird name",
+                rating=None,
+                img_src="",
+                created_at=(datetime(2020, 4, 7)))
+
+    sip29 = Sip(user_id=8,
+                coffee_id=48,
+                review="yummy!!",
+                rating=4,
+                img_src="",
+                created_at=(datetime(2020, 4, 16)))
+
+    sip30 = Sip(user_id=8,
+                coffee_id=49,
+                review="super delish and not too sweet",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 5, 8)))
+
+    sip31 = Sip(user_id=8,
+                coffee_id=50,
+                review="my favorite!!",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 8, 4)))
+
+    sip32 = Sip(user_id=8,
+                coffee_id=51,
+                review="",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 2, 10)))
+
+    sip33 = Sip(user_id=8,
+                coffee_id=52,
+                review="keeps me awake",
+                rating=5,
+                img_src="",
+                created_at=(datetime(2020, 12, 4)))
+
+    sip34 = Sip(user_id=8,
+                coffee_id=53,
+                review="",
+                rating=4,
+                img_src="",
+                created_at=(datetime(2020, 8, 11)))
+
+    sip35 = Sip(user_id=8,
+                coffee_id=54,
+                review="ok",
+                rating=3,
+                img_src="",
+                created_at=(datetime(2020, 7, 9)))
+
+    sip36 = Sip(user_id=8,
+                coffee_id=55,
+                review="classic staple",
+                rating=None,
+                img_src="",
+                created_at=(datetime(2020, 9, 5)))
+
     db.session.add(sip1)
     db.session.add(sip2)
     db.session.add(sip3)
@@ -204,6 +288,18 @@ def seed_sips():
     db.session.add(sip22)
     db.session.add(sip23)
     db.session.add(sip24)
+    db.session.add(sip25)
+    db.session.add(sip26)
+    db.session.add(sip27)
+    db.session.add(sip28)
+    db.session.add(sip29)
+    db.session.add(sip30)
+    db.session.add(sip31)
+    db.session.add(sip32)
+    db.session.add(sip33)
+    db.session.add(sip34)
+    db.session.add(sip35)
+    db.session.add(sip36)
     db.session.commit()
 
 
