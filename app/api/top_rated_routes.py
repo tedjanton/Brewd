@@ -6,9 +6,12 @@ top_rated_routes = Blueprint('top_rated', __name__)
 
 
 @top_rated_routes.route('/')
-# @login_required
+@login_required
 def top_rated():
     top_rated = Sip.query.order_by(Sip.rating).all()
-    print('HELLO: ', top_rated[0].coffee.name)
-    # return {"top_rated": [top_rated.to_dict() for coffee in top_rated]}
-    return "hi"
+    for sip in top_rated:
+        top_coffee = sip.coffee
+    print('HELLO: ', top_coffee)
+    # return "hi"
+    return top_coffee.to_dict()
+
