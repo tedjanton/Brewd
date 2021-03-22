@@ -134,21 +134,21 @@ def seed_coffees():
                       img_src="https://brewd.s3.amazonaws.com/coffee-pics/18-whipped-mocha-delight.jpeg")
     # COFFEES lauren
 # alfred
-    coffee 19 = Coffee(name='Iced Vanilla Latte',
+    coffee19 = Coffee(name='Iced Vanilla Latte',
                        shopId='7',
                        description='Behold our “World Famous” Iced Vanilla Latte: a double shot of espresso over milk and a helping of housemade vanilla – made with real vanilla bean.',
                        caffeine='200',
                        type='Cold',
                        imgSrc='https://i.pinimg.com/originals/79/cd/a2/79cda2b03a10dc87c80266508033682c.jpg')
 
-    coffee 20 = Coffee(name='Iced Matcha Latte',
+    coffee20 = Coffee(name='Iced Matcha Latte',
                        shopId='7',
                        description='Alfred’s own shade-grown, single-origin, tea-master blended matcha with the milk of your choice. No simpler way to CRUSH the day.',
                        caffeine='100',
                        type='Cold',
                        imgSrc='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2F13c18270-5519-4e9c-aa55-3cda9727fdf8%2Foriginal.jpg%3Fv%3D63778513865&quality=85&w=320&h=0&mode=auto&format=&v=4')
 
-    coffee 21 = Coffee(name='Cagaccino',
+    coffee21 = Coffee(name='Cagaccino',
                        shopId='7',
                        description='Chaga, the superhero of the mushroom world, stars here in our most popular special where it is blended with vanilla, cacao, cinnamon, monkfruit, and topped with espresso and milk.',
                        caffeine='80',
@@ -156,7 +156,7 @@ def seed_coffees():
                        imgSrc='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2Fb28bfc57-e7c7-4390-9bde-90ddd8b13d68%2Foriginal.jpg%3Fv%3D63778513030&quality=85&w=320&h=0&mode=auto&format=&v=4')
 
     # jo's
-    coffee 22 = Coffee(name='Iced Turbo',
+    coffee22 = Coffee(name='Iced Turbo',
                        shopId='11',
                        description='Our signature sweet drink made with coffee, espresso, chocolate, hazelnut, and cream.',
                        caffeine='125',
@@ -165,7 +165,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
 
-    coffee 23 = Coffee(name='Cortado',
+    coffee23 = Coffee(name='Cortado',
                        shopId='11',
                        description='Double shot of espresso topped with 4oz of steamed milk.',
                        caffeine='110',
@@ -173,7 +173,7 @@ def seed_coffees():
                        imgSrc='https://perfectdailygrind.com/wp-content/uploads/2020/03/Cortadito-1.png')
 
     # merit
-    coffee 24 = Coffee(name='Dirty Chai Latte',
+    coffee24 = Coffee(name='Dirty Chai Latte',
                        shopId='8',
                        description='Chai tea with steamed milk and a shot of espresso.',
                        caffeine='85',
@@ -182,7 +182,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
 
-    coffee 25 = Coffee(name='Iced Coffee',
+    coffee25 = Coffee(name='Iced Coffee',
                        shopId='8',
                        description='Our signature Cold Brew coffee served over ice.',
                        caffeine='175',
@@ -192,7 +192,7 @@ def seed_coffees():
                        updatedAt='')
 
 
-    coffee 26 = Coffee(name='Caffe Americano',
+    coffee26 = Coffee(name='Caffe Americano',
                        shopId='8',
                        description='Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance. Pro Tip: For an additional boost, ask your barista to try this with an extra shot.',
                        caffeine='225',
@@ -201,7 +201,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
 
-    coffee 27 = Coffee(name='Cappuccino',
+    coffee27 = Coffee(name='Cappuccino',
                        shopId='8',
                        description='Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.',
                        caffeine='150',
@@ -211,7 +211,7 @@ def seed_coffees():
                        updatedAt='')
 
     # houndstooth
-    coffee 28 = Coffee(name='Honey Almondmilk Flat White',
+    coffee28 = Coffee(name='Honey Almondmilk Flat White',
                        shopId='9',
                        description='This flat white intentionally pairs almondmilk and Blonde Espresso Roast with a hint of honey, making a perfect amount of creamy, nutty sweetness.',
                        caffeine='150',
@@ -220,7 +220,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
 
-    coffee 29 = Coffee(name='Salted Caramel Cream Cold Brew',
+    coffee29 = Coffee(name='Salted Caramel Cream Cold Brew',
                        shopId='9',
                        description="Here's a savory-meets-sweet refreshing beverage certain to delight: our signature, super-smooth cold brew, sweetened with a touch of caramel and topped with a salted, rich cold foam.",
                        caffeine='185',
@@ -229,7 +229,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
 
-    coffee 30 = Coffee(name='Nitro Cold Brew',
+    coffee30 = Coffee(name='Nitro Cold Brew',
                        shopId='9',
                        description="Our small-batch cold brew—slow-steeped for a super-smooth taste—gets even better. We're infusing it with nitrogen to create a sweet flavor without sugar and cascading, velvety crema. Perfection is served.",
                        caffeine='280',
@@ -238,7 +238,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
 
-    coffee 31 = Coffee(name='Nitro Flat White',
+    coffee31 = Coffee(name='Nitro Flat White',
                        shopId='9',
                        description='Our bold ristretto shots of espresso mingle with the perfect amount of cold, creamy nitrogen-infused whole milk. The end result: an irresistible velvety crema.',
                        caffeine='130',
@@ -247,7 +247,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
 
-    coffee 32 = Coffee(name='Iced Cinnamon Dolce Latte',
+    coffee32 = Coffee(name='Iced Cinnamon Dolce Latte',
                        shopId='9',
                        description='We add freshly steamed milk and cinnamon dolce-flavored syrup to our classic espresso and ice, topped with sweetened whipped cream and a cinnamon dolce topping to bring you specialness in a treat.',
                        caffeine='150',
@@ -256,7 +256,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
     # halcyon
-    coffee 33 = Coffee(name='Iced Caramel Macchiato',
+    coffee33 = Coffee(name='Iced Caramel Macchiato',
                        shopId='10',
                        description='We combine our rich, full-bodied espresso with vanilla-flavored syrup, milk and ice, then top it off with a caramel drizzle for an oh-so-sweet finish.',
                        caffeine='150',
@@ -265,7 +265,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
 
-    coffee 34 = Coffee(name='Blonde Roast',
+    coffee34 = Coffee(name='Blonde Roast',
                        shopId='10',
                        description="Lightly roasted coffee that's soft, mellow and flavorful. Easy-drinking on its own and delicious with milk, sugar or flavored with vanilla, caramel or hazelnut.",
                        caffeine='360',
@@ -274,7 +274,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
 
-    coffee 35 = Coffee(name='Iced Mocha',
+    coffee35 = Coffee(name='Iced Mocha',
                        shopId='10',
                        description='Silky housemade dark chocolate (vegan, soy-free) mixed with a double shot of espresso, topped with ice and milk.',
                        caffeine='220',
@@ -283,7 +283,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
     # alfred
-    coffee 36 = Coffee(name='Iced Chai Latte',
+    coffee36 = Coffee(name='Iced Chai Latte',
                        shopId='7',
                        description='Our signature spicy-sweet black tea brewed with cinnamon, ginger, cardamom, and molasses. Iced and mixed with milk.',
                        caffeine='95',
@@ -292,7 +292,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
 
-    coffee 37 = Coffee(name='Red Eye',
+    coffee37 = Coffee(name='Red Eye',
                        shopId='7',
                        description='Drip coffee, spiked with an additional double-shot of espresso.',
                        caffeine='350',
@@ -301,7 +301,7 @@ def seed_coffees():
                        createdAt='',
                        updatedAt='')
 
-    coffee 38 = Coffee(name='Cafe Au Lait',
+    coffee38 = Coffee(name='Cafe Au Lait',
                        shopId='7',
                        description="Drip coffee, with steamed milk, or 'au lait'.",
                        caffeine='125',
