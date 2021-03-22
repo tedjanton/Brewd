@@ -2,7 +2,7 @@ const LOAD = "/coffeehouse/get_sips";
 
 const load = (sips) => ({
   type: LOAD,
-  sips,
+  payload: sips,
 });
 
 
@@ -21,7 +21,7 @@ const coffeehouseReducer = (state = initialState, action) => {
     let newState;
     switch (action.type) {
         case LOAD: {
-            newState = [...state, ...action.sips]
+            newState = [...state, ...action.payload]
             return newState;
         }
         default:
