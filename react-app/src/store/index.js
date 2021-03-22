@@ -6,7 +6,7 @@ import coffeehouseReducer from "./coffeehouse";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
-  cofeehouse: coffeehouseReducer,
+  coffeehouse: coffeehouseReducer,
 })
 
 let enhancer;
