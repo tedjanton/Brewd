@@ -1,0 +1,81 @@
+.landing-background-container {
+    background-image: url("../../site-images/coffeehouse-background.jpeg");
+    background-attachment: local;
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.landing-button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+}
+
+.landing-button-div {
+    border: 3px solid white;
+    border-radius: 4px;
+    margin: 1em 1.4em 1em .3em;
+    padding: 15px 26px;
+}
+
+.landing-button-div a {
+    color: white;
+    text-decoration: none;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.landing-container-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 3em;
+}
+
+.landing-logo {
+    font-size: 120px;
+    height: 130px;
+}
+
+.landing-site-title > h1 {
+    margin: 0;
+    font-size: 60px;
+}
+
+.landing-subtitle > p {
+    margin: 0;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.landing-color-divider {
+    background-color: #ffc000;
+    height: 4px;
+    width: 50px;
+    margin: 20px auto;
+}
+
+.landing-message {
+    text-align: center;
+}
+
+.landing-container-right {
+    margin: 0 3em;
+}
+
+.landing-mobile-img img {
+    max-height: 600px;
+}
