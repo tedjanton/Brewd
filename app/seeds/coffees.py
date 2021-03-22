@@ -136,178 +136,148 @@ def seed_coffees():
 
     # alfred
     coffee19 = Coffee(name='Iced Vanilla Latte',
-                       shopId='7',
+                       shop_id=7,
                        description='Behold our “World Famous” Iced Vanilla Latte: a double shot of espresso over milk and a helping of housemade vanilla – made with real vanilla bean.',
-                       caffeine='200',
+                       caffeine=200,
                        type='Cold',
-                       imgSrc='https://i.pinimg.com/originals/79/cd/a2/79cda2b03a10dc87c80266508033682c.jpg')
+                       img_src='https://i.pinimg.com/originals/79/cd/a2/79cda2b03a10dc87c80266508033682c.jpg')
 
     coffee20 = Coffee(name='Iced Matcha Latte',
-                       shopId='7',
+                       shop_id=7,
                        description='Alfred’s own shade-grown, single-origin, tea-master blended matcha with the milk of your choice. No simpler way to CRUSH the day.',
-                       caffeine='100',
+                       caffeine=100,
                        type='Cold',
-                       imgSrc='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2F13c18270-5519-4e9c-aa55-3cda9727fdf8%2Foriginal.jpg%3Fv%3D63778513865&quality=85&w=320&h=0&mode=auto&format=&v=4')
+                       img_src='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2F13c18270-5519-4e9c-aa55-3cda9727fdf8%2Foriginal.jpg%3Fv%3D63778513865&quality=85&w=320&h=0&mode=auto&format=&v=4')
 
     coffee21 = Coffee(name='Cagaccino',
-                       shopId='7',
+                       shop_id=7,
                        description='Chaga, the superhero of the mushroom world, stars here in our most popular special where it is blended with vanilla, cacao, cinnamon, monkfruit, and topped with espresso and milk.',
-                       caffeine='80',
+                       caffeine=80,
                        type='Hot',
-                       imgSrc='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2Fb28bfc57-e7c7-4390-9bde-90ddd8b13d68%2Foriginal.jpg%3Fv%3D63778513030&quality=85&w=320&h=0&mode=auto&format=&v=4')
+                       img_src='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2Fb28bfc57-e7c7-4390-9bde-90ddd8b13d68%2Foriginal.jpg%3Fv%3D63778513030&quality=85&w=320&h=0&mode=auto&format=&v=4')
 
     # jo's
     coffee22 = Coffee(name='Iced Turbo',
-                       shopId='11',
+                       shop_id=11,
                        description='Our signature sweet drink made with coffee, espresso, chocolate, hazelnut, and cream.',
-                       caffeine='125',
+                       caffeine=125,
                        type='Cold',
-                       imgSrc='https://www.austin360.com/storyimage/TX/20170706/ENTERTAINMENT/307069804/AR/0/AR-307069804.jpg',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://www.austin360.com/storyimage/TX/20170706/ENTERTAINMENT/307069804/AR/0/AR-307069804.jpg')
 
     coffee23 = Coffee(name='Cortado',
-                       shopId='11',
+                       shop_id=11,
                        description='Double shot of espresso topped with 4oz of steamed milk.',
-                       caffeine='110',
+                       caffeine=110,
                        type='Hot',
-                       imgSrc='https://perfectdailygrind.com/wp-content/uploads/2020/03/Cortadito-1.png')
+                       img_src='https://perfectdailygrind.com/wp-content/uploads/2020/03/Cortadito-1.png')
 
     # merit
     coffee24 = Coffee(name='Dirty Chai Latte',
-                       shopId='8',
+                       shop_id=8,
                        description='Chai tea with steamed milk and a shot of espresso.',
-                       caffeine='85',
+                       caffeine=85,
                        type='Hot',
-                       imgSrc='https://raster-static.postmates.com/?url=com.postmates.img.prod.s3.amazonaws.com%2F2b616f0c-c417-4b5b-aea5-40ffef86a116%2Forig.jpg&quality=85&w=500&h=0&mode=auto&format=webp&v=4',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://raster-static.postmates.com/?url=com.postmates.img.prod.s3.amazonaws.com%2F2b616f0c-c417-4b5b-aea5-40ffef86a116%2Forig.jpg&quality=85&w=500&h=0&mode=auto&format=webp&v=4')
 
     coffee25 = Coffee(name='Iced Coffee',
-                       shopId='8',
+                       shop_id=8,
                        description='Our signature Cold Brew coffee served over ice.',
-                       caffeine='175',
+                       caffeine=175,
                        type='Cold',
-                       imgSrc='https://i5.walmartimages.com/asr/7e29785b-9858-4aae-be64-ba96bafe299d.485f44a394c1b2d4829872f1bfb2f3de.jpeg',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://i5.walmartimages.com/asr/7e29785b-9858-4aae-be64-ba96bafe299d.485f44a394c1b2d4829872f1bfb2f3de.jpeg')
 
 
     coffee26 = Coffee(name='Caffe Americano',
-                       shopId='8',
+                       shop_id=8,
                        description='Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance. Pro Tip: For an additional boost, ask your barista to try this with an extra shot.',
-                       caffeine='225',
+                       caffeine=225,
                        type='Hot',
-                       imgSrc='https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_1242',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_1242')
 
     coffee27 = Coffee(name='Cappuccino',
-                       shopId='8',
+                       shop_id=8,
                        description='Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.',
-                       caffeine='150',
+                       caffeine=150,
                        type='Hot',
-                       imgSrc='https://globalassets.starbucks.com/assets/5c515339667943ce84dc56effdf5fc1b.jpg?impolicy=1by1_wide_1242',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://globalassets.starbucks.com/assets/5c515339667943ce84dc56effdf5fc1b.jpg?impolicy=1by1_wide_1242')
 
     # houndstooth
     coffee28 = Coffee(name='Honey Almondmilk Flat White',
-                       shopId='9',
+                       shop_id=9,
                        description='This flat white intentionally pairs almondmilk and Blonde Espresso Roast with a hint of honey, making a perfect amount of creamy, nutty sweetness.',
-                       caffeine='150',
+                       caffeine=150,
                        type='Hot',
-                       imgSrc='https://globalassets.starbucks.com/assets/77801559b72b469583f4d484adc1bfa7.jpg?impolicy=1by1_wide_1242',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://globalassets.starbucks.com/assets/77801559b72b469583f4d484adc1bfa7.jpg?impolicy=1by1_wide_1242')
 
     coffee29 = Coffee(name='Salted Caramel Cream Cold Brew',
-                       shopId='9',
+                       shop_id=9,
                        description="Here's a savory-meets-sweet refreshing beverage certain to delight: our signature, super-smooth cold brew, sweetened with a touch of caramel and topped with a salted, rich cold foam.",
-                       caffeine='185',
+                       caffeine=185,
                        type='Cold',
-                       imgSrc='https://globalassets.starbucks.com/assets/6ffca0a4b4ec4af98d07c4e860baca45.jpg?impolicy=1by1_wide_1242',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://globalassets.starbucks.com/assets/6ffca0a4b4ec4af98d07c4e860baca45.jpg?impolicy=1by1_wide_1242')
 
     coffee30 = Coffee(name='Nitro Cold Brew',
-                       shopId='9',
+                       shop_id=9,
                        description="Our small-batch cold brew—slow-steeped for a super-smooth taste—gets even better. We're infusing it with nitrogen to create a sweet flavor without sugar and cascading, velvety crema. Perfection is served.",
-                       caffeine='280',
+                       caffeine=280,
                        type='Cold',
-                       imgSrc='https://globalassets.starbucks.com/assets/85ae42ce9eb5423d83c4410f7b561882.jpg?impolicy=1by1_wide_1242',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://globalassets.starbucks.com/assets/85ae42ce9eb5423d83c4410f7b561882.jpg?impolicy=1by1_wide_1242')
 
     coffee31 = Coffee(name='Nitro Flat White',
-                       shopId='9',
+                       shop_id=9,
                        description='Our bold ristretto shots of espresso mingle with the perfect amount of cold, creamy nitrogen-infused whole milk. The end result: an irresistible velvety crema.',
-                       caffeine='130',
+                       caffeine=130,
                        type='Cold',
-                       imgSrc='https://globalassets.starbucks.com/assets/44dfc376272044878f2c8ee32cc7ca7e.jpg',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://globalassets.starbucks.com/assets/44dfc376272044878f2c8ee32cc7ca7e.jpg')
 
     coffee32 = Coffee(name='Iced Cinnamon Dolce Latte',
-                       shopId='9',
+                       shop_id=9,
                        description='We add freshly steamed milk and cinnamon dolce-flavored syrup to our classic espresso and ice, topped with sweetened whipped cream and a cinnamon dolce topping to bring you specialness in a treat.',
-                       caffeine='150',
+                       caffeine=150,
                        type='Cold',
-                       imgSrc='https://globalassets.starbucks.com/assets/2a7651bc593044ba9043e90ddc20e3f1.jpg?impolicy=1by1_wide_1242',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://globalassets.starbucks.com/assets/2a7651bc593044ba9043e90ddc20e3f1.jpg?impolicy=1by1_wide_1242')
     # halcyon
     coffee33 = Coffee(name='Iced Caramel Macchiato',
-                       shopId='10',
+                       shop_id=10,
                        description='We combine our rich, full-bodied espresso with vanilla-flavored syrup, milk and ice, then top it off with a caramel drizzle for an oh-so-sweet finish.',
-                       caffeine='150',
+                       caffeine=150,
                        type='Cold',
-                       imgSrc='https://globalassets.starbucks.com/assets/79bfec31ab7447f691b3c48f39cc7661.jpg?impolicy=1by1_wide_1242',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://globalassets.starbucks.com/assets/79bfec31ab7447f691b3c48f39cc7661.jpg?impolicy=1by1_wide_1242')
 
     coffee34 = Coffee(name='Blonde Roast',
-                       shopId='10',
+                       shop_id=10,
                        description="Lightly roasted coffee that's soft, mellow and flavorful. Easy-drinking on its own and delicious with milk, sugar or flavored with vanilla, caramel or hazelnut.",
-                       caffeine='360',
+                       caffeine=360,
                        type='Hot',
-                       imgSrc='https://globalassets.starbucks.com/assets/abb4f97948c948c28ea2dcaf933c4f6b.jpg?impolicy=1by1_wide_1242',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://globalassets.starbucks.com/assets/abb4f97948c948c28ea2dcaf933c4f6b.jpg?impolicy=1by1_wide_1242')
 
     coffee35 = Coffee(name='Iced Mocha',
-                       shopId='10',
+                       shop_id=10,
                        description='Silky housemade dark chocolate (vegan, soy-free) mixed with a double shot of espresso, topped with ice and milk.',
-                       caffeine='220',
+                       caffeine=220,
                        type='Cold',
-                       imgSrc='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2F682f540e-5784-4838-a987-5162d9e7d96f%2Foriginal.jpg%3Fv%3D63771239607&quality=85&w=320&h=0&mode=auto&format=&v=4',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2F682f540e-5784-4838-a987-5162d9e7d96f%2Foriginal.jpg%3Fv%3D63771239607&quality=85&w=320&h=0&mode=auto&format=&v=4')
     # alfred
     coffee36 = Coffee(name='Iced Chai Latte',
-                       shopId='7',
+                       shop_id=7,
                        description='Our signature spicy-sweet black tea brewed with cinnamon, ginger, cardamom, and molasses. Iced and mixed with milk.',
-                       caffeine='95',
+                       caffeine=95,
                        type='Cold',
-                       imgSrc='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2F3fb11e45-451d-4d08-8b3a-46a1d73c25af%2Foriginal.jpg%3Fv%3D63778552251&quality=85&w=320&h=0&mode=auto&format=&v=4',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2F3fb11e45-451d-4d08-8b3a-46a1d73c25af%2Foriginal.jpg%3Fv%3D63778552251&quality=85&w=320&h=0&mode=auto&format=&v=4')
 
     coffee37 = Coffee(name='Red Eye',
-                       shopId='7',
+                       shop_id=7,
                        description='Drip coffee, spiked with an additional double-shot of espresso.',
-                       caffeine='350',
+                       caffeine=350,
                        type='Hot',
-                       imgSrc='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2F29b7ef39-fdd3-4fba-9ea3-8fda5c05d93c%2Foriginal.jpg%3Fv%3D63778512427&quality=85&w=320&h=0&mode=auto&format=&v=4',
-                       createdAt='',
-                       updatedAt='')
+                       img_src='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2F29b7ef39-fdd3-4fba-9ea3-8fda5c05d93c%2Foriginal.jpg%3Fv%3D63778512427&quality=85&w=320&h=0&mode=auto&format=&v=4')
 
     coffee38 = Coffee(name='Cafe Au Lait',
-                       shopId='7',
+                       shop_id=7,
                        description="Drip coffee, with steamed milk, or 'au lait'.",
-                       caffeine='125',
+                       caffeine=125,
                        type='Hot',
-                       imgSrc='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2F2af30573-1a9a-49a5-9b06-79ba9ac8d92e%2Foriginal.jpg%3Fv%3D63778510859&quality=85&w=320&h=0&mode=auto&format=&v=4',
+                       img_src='https://raster-static.postmates.com/?url=https%3A%2F%2Fitems-static.postmates.com%2Fuploads%2Fmedia%2F2af30573-1a9a-49a5-9b06-79ba9ac8d92e%2Foriginal.jpg%3Fv%3D63778510859&quality=85&w=320&h=0&mode=auto&format=&v=4',
                        )
 
     #Brewed Awakenings Cafe
@@ -340,7 +310,7 @@ def seed_coffees():
                       description="Nitro roasts from our tap!",
                       caffeine=38,
                       type="cold",
-                      img_src="https: // backyardbeansmenu.square.site/uploads/1/3/1/2/131295791/s344115646224029765_p93_i1_w667.jpeg")
+                      img_src="https://backyardbeansmenu.square.site/uploads/1/3/1/2/131295791/s344115646224029765_p93_i1_w667.jpeg")
 
     coffee43 = Coffee(shop_id=14,
                       name="Park",
@@ -354,7 +324,7 @@ def seed_coffees():
                       description='Check out our new seasonal latte jug! "Stay Home A-Latte" -- amazing lattee flavors in whole milk or oat milk',
                       caffeine=100,
                       type="cold",
-                      img_src="https://backyardbeansmenu.square.site/uploads/1/3/1/2/131295791/s344115646224029765_p87_i1_w1280.jpeg ")
+                      img_src="https://backyardbeansmenu.square.site/uploads/1/3/1/2/131295791/s344115646224029765_p87_i1_w1280.jpeg")
 
     # Zingerman's Coffee Company
 
@@ -397,7 +367,7 @@ def seed_coffees():
     coffee50 = Coffee(shop_id=16,
                       name="hot choc cold brew",
                       description="",
-                      caffeine=,
+                      caffeine=345,
                       type="",
                       img_src="https://chowhound3.cbsistatic.com/resize/b4ef5bef6258f7f835ced9287bd8fa6605884bb6/2020/08/how-to-make-better-iced-coffee-hot-bloom-cold-brew-chowhound.jpg?fit=bounds&width=800")
 
@@ -441,16 +411,148 @@ def seed_coffees():
     coffee56 = Coffee(shop_id=18,
                       name="Cortado",
                       description="Espresso + 2 oz of Milk",
-                      caffeine=, 89
+                      caffeine=89,
                       type="hot",
                       img_src="https://www.reanimatorpickup.com/uploads/1/3/1/2/131268903/s226671392685346693_p20_i2_w977.png")
 
     coffee57 = Coffee(shop_id=18,
                       name="Cappuccino",
                       description="Espresso + 3.5 oz of Milk",
-                      caffeine=, 89
+                      caffeine=89,
                       type="hot",
                       img_src="https://www.reanimatorpickup.com/uploads/1/3/1/2/131268903/s226671392685346693_p2_i1_w977.png")
+
+    # Americano Lounge
+    coffee58 = Coffee(shop_id=19,
+                      name="Feel'n Good",
+                      description="Banhez Mezcal, Red Eye Eye, Espresso, Vanilla, and Cream.",
+                      caffeine=203,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/americano_lounge_feeln_good.jpg")
+
+    coffee59 = Coffee(shop_id=19,
+                      name="Espresso Martini",
+                      description="Wheatley Vodka, Red Eye Eye, Espresso, and Vanilla.",
+                      caffeine=210,
+                      type="cold",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/americano_lounge_espresso_martini.jpg")
+
+    coffee60 = Coffee(shop_id=19,
+                      name="Bohemia After Dark",
+                      description="Wheatley vodka, Libre Mind Chocolate, Giffard Menthepastille, Fernet and Cream.",
+                      caffeine=180,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/americano_lounge_bohemia_after_dark.jpg")
+
+    # 8th & Roast
+    coffee61 = Coffee(shop_id=20,
+                      name="Drip Coffee",
+                      description="Simple, yet tasty and rich.",
+                      caffeine=180,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/8thandRoast_drip_coffee.jpg")
+
+    coffee62 = Coffee(shop_id=20,
+                      name="Dulce De Leche Latte",
+                      description="House made latte infused with Dulce De Leche flavored organic syrup.",
+                      caffeine=170,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/8thandRoast_dulce_de_leche_latte.jpg")
+
+    coffee63 = Coffee(shop_id=20,
+                      name="Flash Chilled Nitro",
+                      description="House made dripped chilled instantly with our unique nitro machine",
+                      caffeine=212,
+                      type="cold",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/8thandRoast_flash_chilled_nitro.jpg")
+
+    # Ugly Mugs
+    coffee64 = Coffee(shop_id=21,
+                      name="Hoodie",
+                      description="Honey, Vanilla, & Cinnamon Latte.",
+                      caffeine=190,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/ugly_mugs_hoodie.jpg")
+
+    coffee65 = Coffee(shop_id=21,
+                      name="Bingster",
+                      description="Latte with sweetened condensed milk.",
+                      caffeine=182,
+                      type="cold",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/ugly_mugs_bingster.jpg")
+
+    coffee66 = Coffee(shop_id=21,
+                      name="Lavender Latte",
+                      description="Made with housemade lavender syrup.",
+                      caffeine=192,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/ugly_mugs_lavender_latte.jpg")
+
+    # Buddy Brew Coffee
+    coffee67 = Coffee(shop_id=22,
+                      name="Buddy Brew Screw",
+                      description="So screwed up, it just might be the cup of joe you were looking to fix your broken day.",
+                      caffeine=220,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/buddy_brew_coffee_buddy_brew_screw.jpg")
+
+    coffee68 = Coffee(shop_id=22,
+                      name="Cortado",
+                      description='Cortado (from the Spanish cortar, known as "Tallat" in Catalan, "Pingo" or "Garoto" in Portugal and "noisette" in France) is an espresso "cut" with a small amount of warm milk to reduce the acidity. The ratio of coffee to milk is between 1:1 - 1:2, and the milk is added after the espresso',
+                      caffeine=220,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/buddy_brew_coffee_cortado.jpg")
+
+    coffee69 = Coffee(shop_id=22,
+                      name="Cold Brew Float",
+                      description="Our delicious house coffee steeped for 24 hours and then served over a refreshing cup of ice",
+                      caffeine=190,
+                      type="cold",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/bennetts_fresh_roast_cold_brew.jpg")
+
+    # Bennett's Fresh Roast
+    coffee70 = Coffee(shop_id=23,
+                      name="The Biscoff Latte",
+                      description="We all love those delicious Biscoff Cookies. The Biscoff Latte is a Bennett's Latte with the special addition of Biscoff Butter, whipped cream and a crumbled Biscoff Cookie on top",
+                      caffeine=188,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/bennetts_fresh_roast_biscoff_latte.jpg")
+
+    coffee71 = Coffee(shop_id=23,
+                      name="Bennett's Colombian Cup In-House",
+                      description="Served in a Bennett's Fresh Roast Mug, this in-shop fresh roasted coffee is brewed in bold, mild, or decaf.",
+                      caffeine=190,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/bennetts_fresh_roast_colombian_in-house_brew.jpg")
+
+    coffee72 = Coffee(shop_id=23,
+                      name="Bennet's Cold Brew",
+                      description="Made in house and kept ice cold from start to finish, Bennett's Cold Brew steeps for up to 18 hours to bring out the smoothness of Cold Brew with all the flavor of Bennett's Fresh Roasted Coffee.",
+                      caffeine=220,
+                      type="cold",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/bennetts_fresh_roast_cold_brew.jpg")
+
+    # Canes Corner and Coffee Store
+    coffee73 = Coffee(shop_id=24,
+                      name="Coconut White Macchiato",
+                      description="An espresso with a dash of frothy steamed coconut milk.",
+                      caffeine=150,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/canes_corner_and_coffee_store_coconut_macchiato.jpg")
+
+    coffee74 = Coffee(shop_id=24,
+                      name="Rasberry White Mocha",
+                      description="An espresso with a dash of frothy steamed milk and rasberry topping.",
+                      caffeine=130,
+                      type="hot",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/canes_corner_and_coffee_store_rasberry_white_mocha.jpg")
+
+    coffee75 = Coffee(shop_id=24,
+                      name="Peanut Butter Mocha",
+                      description="We blend mocha sauce and chocolate mocha chips with coffee, milk and ice, then top it off with whipped cream and a peanut butter drizzle to bring you endless java joy.",
+                      caffeine=93,
+                      type="cold",
+                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/canes_corner_and_coffee_store_peanut_butter_mocha.jpg")
 
     db.session.add(coffee1)
     db.session.add(coffee2)
@@ -509,6 +611,23 @@ def seed_coffees():
     db.session.add(coffee55)
     db.session.add(coffee56)
     db.session.add(coffee57)
+    db.session.add(coffee58)
+    db.session.add(coffee60)
+    db.session.add(coffee61)
+    db.session.add(coffee62)
+    db.session.add(coffee63)
+    db.session.add(coffee64)
+    db.session.add(coffee65)
+    db.session.add(coffee66)
+    db.session.add(coffee67)
+    db.session.add(coffee68)
+    db.session.add(coffee69)
+    db.session.add(coffee70)
+    db.session.add(coffee71)
+    db.session.add(coffee72)
+    db.session.add(coffee73)
+    db.session.add(coffee74)
+    db.session.add(coffee75)
 
 
 
