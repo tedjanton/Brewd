@@ -56,12 +56,73 @@ def seed_shops():
                  zip_code=60622,
                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/caffee-streets.jpeg")
 
+# SHOPS lauren
+    shop7 = Shop(name="Alfred",
+                 description="Keeping. Austin. Weirder. Enjoy picturesque views of Town Lake with your World Fmamous Iced Vanilla Latte while sitting at The LINE Hotel's infinity pool.",
+                 address_1="111 E Cesar Chavez St",
+                 address_2="",
+                 city="Austin",
+                 state="Texas",
+                 zip_code=78701,
+                 logo_src="https://pbs.twimg.com/profile_images/1138864169409585152/d3uciIYM_400x400.jpg")
+
+    shop8 = Shop(name="Merit Coffee",
+                 description="Like you, we care about the taste and quality of the coffee we serve and the hospitality you experience at Merit Coffee. We’ve trained with some of the best coffee people in the world, some of us earning certification as professional coffee stewards and all of us acquiring the skills to make your cup of coffee the best in Texas.",
+                 address_1="1105 S Lamar Blvd",
+                 address_2="",
+                 city="Austin",
+                 state="Texas",
+                 zip_code=78704,
+                 logo_src="http://static1.squarespace.com/static/56a027871f4039e3596c17aa/5aff965c70a6ada6e2100d91/5ccb6135ea82dc000154c41d/1576520601676/0.jpg?format=1500w")
+
+    shop9 = Shop(name="Houndstooth Coffee",
+                 description="Contemporary cafe serving select coffees, teas, wines, craft beer & pastries in a chill setting.",
+                 address_1="401 Congress Ave",
+                 address_2="100C",
+                 city="Austin",
+                 state="Texas",
+                 zip_code=78701,
+                 logo_src="https://uploads.poachedjobs.com/wp-content/uploads/2017/10/11135305/Chandler-Ad-768x768.jpg")
+
+    shop10 = Shop(name="Halcyon",
+                  description="Coffeehouse by day, bar & lounge by night where you can always relax and find your own personal 'halcyon'.",
+                  address_1="218 W 4th St",
+                  address_2="",
+                  city="Austin",
+                  state="Texas",
+                  zip_code=78701,
+                  logo_src="https://halcyonathome.square.site/uploads/b/71a53da0-7067-11ea-b314-e1400c853f79/Copy%20of%20HAL_rgb_tag.jpg")
+
+    shop11 = Shop(name="Jo's Coffee",
+                  description="Stumptown coffee, baked goods & more from a colorful kiosk with outdoor seating & iconic graffiti.",
+                  address_1="1300 S Congress Ave",
+                  address_2="",
+                  city="Austin",
+                  state="Texas",
+                  zip_code=78704,
+                  logo_src="https://static1.squarespace.com/static/55679273e4b0f3550bf4a8fe/t/5bc8b75d8165f54f6a6dc2f0/1612461235598/")
+
+    shop12 = Shop(name="The Buzz Mill",
+                  description="Rustic spot serves coffee, beer & cider around the clock in general-store digs with a back patio.",
+                  address_1="1505 Town Creek Dr",
+                  address_2="",
+                  city="Austin",
+                  state="Texas",
+                  zip_code=78741,
+                  logo_src="https://pbs.twimg.com/profile_images/534750859502964736/l8Su6pqm.jpeg")
+
     db.session.add(shop1)
     db.session.add(shop2)
     db.session.add(shop3)
     db.session.add(shop4)
     db.session.add(shop5)
     db.session.add(shop6)
+    db.session.add(shop7)
+    db.session.add(shop8)
+    db.session.add(shop9)
+    db.session.add(shop10)
+    db.session.add(shop11)
+    db.session.add(shop12)
     db.session.commit()
 
 
