@@ -20,6 +20,14 @@ export const getSips = () => async (dispatch) => {
     }
 }
 
+export const getUserSips = (userId) => async (dispatch) => {
+    const response = await fetch(`/api/users/${userId}/sips`)
+     
+            const userSips = await response.json();
+            console.log("=======>", userSips)
+            dispatch(load(userSips))
+   
+}
 
 const initialState = [];
 
