@@ -7,9 +7,12 @@ import "./CoffeeHouse.css";
 const CoffeeHouse = ({ authenticated }) => {
     const dispatch = useDispatch();
     const sips = useSelector((state) => {
-        console.log("STATE", state);
-        return state.coffeeHouse
+        
+        return state.coffeehouse[0]
     });
+
+        console.log("SIPS", sips)
+
     const handleSips = async () => {
         const retrieveSips = await dispatch(getSips());
         return retrieveSips;
@@ -20,17 +23,24 @@ const CoffeeHouse = ({ authenticated }) => {
     }, []);
     
     if (!authenticated) {
-        return <Redirect to="/" />
-    } return (
-        <>
-            <h2>Hello From Coffee House</h2>
-            <div>
-                {sips.map((sip) => {
-                    <div className="sip" key={sip.id}>
+        return <Redirect to="/" />}
+     return (
+        <div className="sips_container">
+            <h2>Recent Global Activity</h2>
+            <div className="sip">
+                <div className="">
+                    <div className="text_container">
+                        <p className="changing_text">Demo</p>
+                        <p>is sipping a</p>
+                        <p className="changing_text">Malt Ball Latte</p>
+                        <p>at</p>
+                        <p className="changing_text">ReAnimator Coffee</p>
                     </div>
-                })}
+                </div>
+                <img className="sip_logo" src="https://pbs.twimg.com/profile_images/833752955862052868/f59GA6nj_400x400.jpg"/>
+                    
             </div>
-        </>
+        </div>
 
     )
     
