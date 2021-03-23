@@ -24,4 +24,4 @@ def user(id):
 @login_required
 def user_sips(id):
     user_sips = Sip.query.filter(Sip.user_id == id).all()
-    return {"user_sip": [sips.to_dict() for sips in user_sips]}
+    return {"user_sips": [sips.to_dict() for sips in user_sips]}
