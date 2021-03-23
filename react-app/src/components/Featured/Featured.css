@@ -9,6 +9,9 @@
     height: 658.75px;
     width: 300px;
     border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .featured_title {
@@ -24,6 +27,7 @@
     border: black 1 px solid;
     display: flex;
     flex-direction: row;
+   
 }
 
 .featured_coffee img {
@@ -32,13 +36,21 @@
 }
 
 .featured_text_container {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .featured_coffee_name {
+    color: #8a4500;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0px 10px 0px 10px;
 
 }
 
 .featured_coffee_shop {
-
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0px 10px 0px 10px;
 }
