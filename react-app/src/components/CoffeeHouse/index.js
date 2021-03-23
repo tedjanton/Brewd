@@ -7,31 +7,22 @@ import Sip from "../Sip";
 
 const CoffeeHouse = ({ authenticated }) => {
     const dispatch = useDispatch();
-    const sips = useSelector((state) => {        
-        return state.coffeehouse[0];
-
+    const sips = useSelector((state) => {
+        return state.coffeehouse?.sips?.all_sips;
     });
 
-    
-
-    const handleSips = async () => {
-        const retrieveSips = await dispatch(getSips());
-        return retrieveSips;
-    };
-
     useEffect(() => {
-        handleSips();
-    }, []);
+        if (!sips) {
+            dispatch(getSips());
+        }
+    }, [sips, dispatch])
 
-    if (!authenticated) {
-        return <Redirect to="/" />
-    }
      return (
         <div className="sips_container">
             <div className="page_title">Recent Global Activity</div>
-            {sips.map((sip) => {
-                <Sip />
-            })}
+                {sips?.map((sip) => (
+                    <Sip sip={sip} />
+                ))}
         </div>
 
     )

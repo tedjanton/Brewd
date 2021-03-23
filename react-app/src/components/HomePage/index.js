@@ -17,10 +17,6 @@ const HomePage = ({ authenticated }) => {
         }
     }, [user, dispatch])
 
-    if (!authenticated) {
-        return <Redirect to="/" />;
-    }
-
     return (
         <>
             <h1>Hello From HomePage</h1>

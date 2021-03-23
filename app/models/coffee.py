@@ -24,5 +24,6 @@ class Coffee(db.Model):
             "description": self.description,
             "caffeine": self.caffeine,
             "type": self.type,
-            "img_src": self.img_src
+            "img_src": self.img_src,
+            "shop": self.shop.to_dict()
         }

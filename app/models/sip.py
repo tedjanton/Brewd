@@ -26,5 +26,9 @@ class Sip(db.Model):
             "review": self.review,
             "rating": self.rating,
             "img_src": self.img_src,
-            "created_at": self.created_at
+            "created_at": self.created_at,
+            "user": self.user.to_dict(),
+            "coffee": self.coffee.to_dict(),
+            # "comments": self.comments.to_dict(),
+            # "likes": self.likes.to_dict()
         }

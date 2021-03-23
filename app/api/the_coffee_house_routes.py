@@ -9,4 +9,5 @@ the_coffee_house_routes = Blueprint('coffeehouse', __name__)
 @login_required
 def recent_sips():
     all_sips = Sip.query.order_by(Sip.created_at).all()
+
     return {"all_sips": [sip.to_dict() for sip in all_sips]}
