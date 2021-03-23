@@ -12,14 +12,15 @@ const HomePage = ({ authenticated }) => {
 
     useEffect(() => {
         if (!user) dispatch(authenticate())
-        if (user) dispatch(getUserSips(user.id))
-
+        if (user && !sips[0]?.user_sip) {
+            dispatch(getUserSips(user.id))
+        }
     }, [user, dispatch])
 
     if (!authenticated) {
         return <Redirect to="/" />;
     }
-    
+
     return (
         <>
             <h1>Hello From HomePage</h1>
