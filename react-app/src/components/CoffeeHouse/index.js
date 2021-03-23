@@ -6,9 +6,9 @@ import "./CoffeeHouse.css";
 
 const CoffeeHouse = ({ authenticated }) => {
     const dispatch = useDispatch();
-    const sips = useSelector((state) => {
-        
+    const sips = useSelector((state) => {        
         return state.coffeehouse[0];
+
     });
 
     
@@ -17,13 +17,14 @@ const CoffeeHouse = ({ authenticated }) => {
         const retrieveSips = await dispatch(getSips());
         return retrieveSips;
     };
-    
+
     useEffect(() => {
         handleSips();
     }, []);
-    
+
     if (!authenticated) {
-        return <Redirect to="/" />}
+        return <Redirect to="/" />
+    }
      return (
         <div className="sips_container">
             <div className="page_title">Recent Global Activity</div>
@@ -46,12 +47,12 @@ const CoffeeHouse = ({ authenticated }) => {
                     </div>
                 </div>
                 <img className="sip_logo" src="https://pbs.twimg.com/profile_images/833752955862052868/f59GA6nj_400x400.jpg"/>
-                    
+
             </div>
         </div>
 
     )
-    
+
 }
 
 export default CoffeeHouse;

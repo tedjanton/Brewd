@@ -16,13 +16,17 @@ const removeUser = () => ({
   type: REMOVE_USER
 })
 
-export const authenticate = async () => {
+export const authenticate = () => async (dispatch) => {
   const response = await fetch("/api/auth/", {
     headers: {
       "Content-Type": "application/json",
     },
   });
-  return await response.json();
+  if (response.ok) {
+    const user = await response.json();
+    dispatch(getUser(user))
+  }
+  return response;
 };
 
 export const login = (email, password) => async (dispatch) => {

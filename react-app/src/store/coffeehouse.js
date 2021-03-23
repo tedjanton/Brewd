@@ -12,7 +12,6 @@ export const getSips = () => async (dispatch) => {
             "Content-Type": "application/json",
         }
     });
-    console.log(response)
     if (response.ok) {
         const sips = await response.json();
         dispatch(load(sips))
@@ -21,12 +20,17 @@ export const getSips = () => async (dispatch) => {
 }
 
 export const getUserSips = (userId) => async (dispatch) => {
-    const response = await fetch(`/api/users/${userId}/sips`)
-     
-            const userSips = await response.json();
-            console.log("=======>", userSips)
-            dispatch(load(userSips))
-   
+    const response = await fetch(`/api/users/${userId}/sips`, {
+        headers: {
+            "Content-Type": "application/json",
+        }
+    });
+
+    if (response.ok) {
+        const userSips = await response.json();
+        dispatch(load(userSips))
+        return response;
+    }
 }
 
 const initialState = [];
@@ -41,7 +45,7 @@ const coffeehouseReducer = (state = initialState, action) => {
         default:
             return state;
     }
-    
+
 }
 
 export default coffeehouseReducer;

@@ -24,9 +24,12 @@ const topRatedReducer = (state = initialState, action) => {
   const newState = Object.assign({}, state);
   switch (action.type) {
     case GET_TOP_RATED:
-      for (let sip of action.payload) {
-        newState[sip.id] = sip;
-      }
+      console.log("PAYLOAD", action.payload);
+      //   for (let sip of action.payload) {
+      //     newState[sip.id] = sip;
+      //   }
+      newState = [...state, action.payload];
+      console.log("NEW STATE", newState);
       return newState;
     default:
       return state;

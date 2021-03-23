@@ -1,12 +1,19 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import { topRated } from "../../store/top_rated";
 import "./TopRated.css";
 
 function TopRatedPage() {
   const dispatch = useDispatch();
-  //   const coffee = useSelector((state) => state.coffee.name);
+  //   const { id } = useParams();
+  //   const coffee = useSelector((state) => {
+  //     return state.topRated[0];
+  //   });
+  //   console.log("COFFEE NAME", coffee.id);
+  //   const { name, caffeine } = coffee;
+
   useEffect(() => {
     dispatch(topRated());
   }, [dispatch]);
@@ -14,7 +21,7 @@ function TopRatedPage() {
   return (
     <>
       <div>
-        <h1></h1>
+        <h1>Hi</h1>
       </div>
     </>
   );
