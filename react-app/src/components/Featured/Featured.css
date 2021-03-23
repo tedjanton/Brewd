@@ -1,0 +1,56 @@
+.featured_container {
+    background-color: white;
+    padding: 24px;
+    position: relative;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%); 
+    margin-right: auto;
+    height: 658.75px;
+    width: 300px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.featured_title {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid white;
+    color: black;
+}
+
+.featured_coffee {
+    border: black 1 px solid;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.featured_coffee img {
+    height: 43px;
+    width: 43px;
+}
+
+.featured_text_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured_coffee_name {
+    color: #8a4500;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0px 10px 0px 10px;
+
+}
+
+.featured_coffee_shop {
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0px 10px 0px 10px;
+}

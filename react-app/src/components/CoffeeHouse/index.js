@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
 import { getSips } from "../../store/coffeehouse";
 import "./CoffeeHouse.css";
 import Sip from "../Sip";
+import Featured from "../Featured";
 
 const CoffeeHouse = ({ authenticated }) => {
     const dispatch = useDispatch();
@@ -18,11 +18,14 @@ const CoffeeHouse = ({ authenticated }) => {
     }, [sips, dispatch])
 
      return (
-        <div className="sips_container">
-            <div className="page_title">Recent Global Activity</div>
-                {sips?.map((sip) => (
-                    <Sip sip={sip} />
-                ))}
+        <div className="coffeehouse_container">
+            <div className="sips_container">
+                <div className="page_title">Recent Global Activity</div>
+                    {sips?.map((sip) => (
+                        <Sip sip={sip} />
+                    ))}
+            </div>
+            <Featured />
         </div>
 
     )
