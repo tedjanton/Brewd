@@ -3,11 +3,13 @@ import thunk from "redux-thunk";
 import sessionReducer from "./session";
 import coffeehouseReducer from "./coffeehouse";
 import topRatedReducer from "./top_rated";
+import featuredReducer from "./featured"
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   coffeehouse: coffeehouseReducer,
   topRated: topRatedReducer,
+  featured: featuredReducer,
 });
 
 let enhancer;
