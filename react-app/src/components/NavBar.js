@@ -1,9 +1,8 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import LogoutButton from './auth/LogoutButton';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import LogoutButton from "./auth/LogoutButton";
 
 const NavBar = ({ authenticated, setAuthenticated }) => {
-
   let sessionLinks;
   if (authenticated) {
     sessionLinks = (
@@ -35,24 +34,21 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/top_rated" exact={true} activeClassName="active">
+              Top Rated
+            </NavLink>
+          </li>
+          <li>
             <LogoutButton setAuthenticated={setAuthenticated} />
           </li>
         </ul>
       </nav>
     );
-  }
-  else {
-    sessionLinks = (
-      <>
-      </>
-    )
+  } else {
+    sessionLinks = <></>;
   }
 
-  return (
-    <>
-      {sessionLinks}
-    </>
-  )
-}
+  return <>{sessionLinks}</>;
+};
 
 export default NavBar;
