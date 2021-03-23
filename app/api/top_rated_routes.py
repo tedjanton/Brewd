@@ -10,5 +10,5 @@ top_rated_routes = Blueprint('top_rated', __name__)
 @login_required
 def top_rated():
     top_rated = Coffee.query.all()
-    # print('HELLO: ', top_rated)
+    # print('HELLO: ', top_rated.sips_rating)
     return {"top_rated": [coffee.to_dict() for coffee in top_rated]}
