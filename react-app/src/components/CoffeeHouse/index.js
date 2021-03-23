@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
-import { getSips } from "../../store/coffeehouse";
+import { getSips } from "../../store/sips";
 import "./CoffeeHouse.css";
 import Sip from "../Sip";
 
 const CoffeeHouse = ({ authenticated }) => {
     const dispatch = useDispatch();
     const sips = useSelector((state) => {
-        return state.coffeehouse?.sips?.all_sips;
+        return state.sips?.sips?.all_sips;
     });
 
     useEffect(() => {

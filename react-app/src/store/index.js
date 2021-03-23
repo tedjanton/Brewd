@@ -1,12 +1,12 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import sessionReducer from "./session";
-import coffeehouseReducer from "./coffeehouse";
+import sipsReducer from "./sips";
 import topRatedReducer from "./top_rated";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
-  coffeehouse: coffeehouseReducer,
+  sips: sipsReducer,
   topRated: topRatedReducer,
 });
 

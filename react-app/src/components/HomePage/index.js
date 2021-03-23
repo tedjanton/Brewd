@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect } from "react-router";
-import { getUserSips } from "../../store/coffeehouse";
+import { getUserSips } from "../../store/sips";
 import { authenticate } from "../../store/session"
 
 

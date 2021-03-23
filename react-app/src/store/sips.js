@@ -1,4 +1,4 @@
-const LOAD = "/coffeehouse/load";
+const LOAD = "/sips/load";
 
 const load = (sips) => ({
   type: LOAD,
@@ -7,7 +7,7 @@ const load = (sips) => ({
 
 
 export const getSips = () => async (dispatch) => {
-    const response = await fetch("/api/coffeehouse/", {
+    const response = await fetch("/api/sips/", {
         headers: {
             "Content-Type": "application/json",
         }
@@ -35,7 +35,7 @@ export const getUserSips = (userId) => async (dispatch) => {
 
 const initialState = {};
 
-const coffeehouseReducer = (state = initialState, action) => {
+const sipsReducer = (state = initialState, action) => {
     let newState;
     switch (action.type) {
         case LOAD: {
@@ -49,4 +49,4 @@ const coffeehouseReducer = (state = initialState, action) => {
 
 }
 
-export default coffeehouseReducer;
+export default sipsReducer;

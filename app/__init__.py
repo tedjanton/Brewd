@@ -9,7 +9,7 @@ from app.models import db, User
 from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
 from .api.top_rated_routes import top_rated_routes
-from .api.the_coffee_house_routes import the_coffee_house_routes
+from .api.sips_routes import sips_routes
 
 from .seeds import seed_commands
 
@@ -34,7 +34,7 @@ app.config.from_object(Config)
 app.register_blueprint(user_routes, url_prefix='/api/users')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(top_rated_routes, url_prefix='/api/top_rated')
-app.register_blueprint(the_coffee_house_routes, url_prefix='/api/coffeehouse')
+app.register_blueprint(sips_routes, url_prefix='/api/sips')
 db.init_app(app)
 Migrate(app, db)
 
