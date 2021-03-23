@@ -33,13 +33,14 @@ export const getUserSips = (userId) => async (dispatch) => {
     }
 }
 
-const initialState = [];
+const initialState = {};
 
 const coffeehouseReducer = (state = initialState, action) => {
     let newState;
     switch (action.type) {
         case LOAD: {
-            newState = [...state, action.payload]
+            newState = Object.assign({}, state);
+            newState.sips = action.payload;
             return newState;
         }
         default:
