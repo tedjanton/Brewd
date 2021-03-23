@@ -8,8 +8,6 @@
     position: relative;
     height: auto;
     border-radius: 8px;
-
-
 }
 
 .page_title {
@@ -22,6 +20,7 @@
     margin-block-start: 1em;
     margin-block-end: 1em;
 }
+
 .sip {
     background: transparent;
     border-bottom: 1px solid #e5e5e5;
@@ -32,6 +31,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-left: 75px;
+    margin-top: 25px;
 }
 
 
@@ -86,6 +86,7 @@
 
 .icon {
     color: #ffbb00;
+    margin-right: 5px;
 }
 
 .user_image {
