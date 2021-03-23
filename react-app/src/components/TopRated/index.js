@@ -29,7 +29,7 @@ function TopRatedPage() {
   return (
     <>
       <div>
-        <h1>Top Rated Coffees</h1>
+        <h1 className="top_rated_title">Top Rated Coffees</h1>
         {coffees?.map((coffee) => (
           <Coffee coffee={coffee} />
         ))}

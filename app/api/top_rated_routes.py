@@ -2,6 +2,7 @@ from app.models import Sip, Coffee, User
 from flask import Blueprint, jsonify
 from flask_login import login_required
 from app.models import Sip, Coffee
+from sqlalchemy import func
 
 top_rated_routes = Blueprint('top_rated', __name__)
 

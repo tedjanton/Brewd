@@ -8,17 +8,25 @@ const Coffee = ({ coffee }) => {
 
   if (coffee) {
     return (
-      <div className="coffee">
-        <div className="user_input_container">
-          <p className="text">
-            <a className="changing_text">{coffee.name}</a>
-            <div>About This Coffee: {coffee.description}</div>
+      <div className="main">
+        <div className="box">
+          <div className="content">
+            <h3 className="top_rated_title"></h3>
+            <div className="top_rated_container">
+              <div className="coffee_item">{coffee.name}</div>
+              <img className="coffee_pic" src={coffee.img_src} />
+              <div className="coffee_details">
+                <p className="coffee_name"></p>
+              </div>
+              <div clasName="coffee_specs"></div>
+              {/* <div>About This Coffee: {coffee.description}</div>
             <div>Caffeine Content: {coffee.caffeine}mg</div>
             <div>Hot or Cold? {coffee.type}</div>
             <div>{coffee.shop.name}</div>
-            <img class="coffee-pics" src={coffee.img_src} />
-            <a>Rating: {rating}</a>
-          </p>
+
+            <a>Rating: {rating}</a> */}
+            </div>
+          </div>
         </div>
       </div>
     );
