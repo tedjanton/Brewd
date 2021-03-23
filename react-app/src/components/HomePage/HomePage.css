@@ -26,8 +26,12 @@
 .home-user-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     height: 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 2em;
 }
 
 .home-user-icon {
@@ -35,36 +39,77 @@
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
+    align-self: center;
 }
 
 .home-user-icon img {
-    height: 50px;
+    height: 70px;
 }
 
 .home-user-name {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 5;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 10px 10px 5px 10px;
+    margin-top: 10px;
+    align-self: end;
+}
+
+.home-user-name p, 
+.home-user-username p,
+.home-user-sip-count p,
+.home-user-sip-unique-count p {
+    margin: 0;
 }
 
 .home-user-username {
     display: flex;
-    align-items: center;
+    align-items: start;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 4;
+    padding: 0 10px 10px 10px;
+    color: grey;
+    font-size: 14px;
 }
 
 .home-user-sip-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 5;
+    font-weight: 500;
 }
 
 .home-user-sip-count {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 24px;
+    text-align: center;
 
 }
+
+.home-user-sip-unique-count {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+.home-user-sip-count-subtitle,
+.home-user-sip-unique-count-subtitle {
+    font-size: 10px;
+}
+

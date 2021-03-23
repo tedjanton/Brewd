@@ -47,13 +47,13 @@ const HomePage = ({ authenticated }) => {
                     <div className="home-user-sip-count">
                         <p>{sips?.length}</p>
                         <div className="home-user-sip-count-subtitle">
-                            <p>TOTAL SIPS</p>
+                            <p>TOTAL</p>
                         </div>
                     </div>
                     <div className="home-user-sip-unique-count">
                         <p>{unique.size}</p>
                         <div className="home-user-sip-unique-count-subtitle">
-                            <p>TOTAL UNIQUE SIPS</p>
+                            <p>UNIQUE</p>
                         </div>
                     </div>
                 </div>
