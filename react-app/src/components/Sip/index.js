@@ -9,19 +9,25 @@ const Sip = ({ sip }) => {
             <div className="sip">
                 <div className="user_input_container">
                     <p className="text">
-                        <a className="changing_text" >{sip.user.first_name}
+                        <a className="changing_text">
+                            {sip.user.first_name}
                         </a>is sipping a
-                        <a className="changing_text">{sip.coffee.name}
+                        <a className="changing_text">
+                            {sip.coffee.name}
                         </a>at
-                        <a className="changing_text">{sip.coffee.shop.name}</a>
+                        <a className="changing_text">
+                            {sip.coffee.shop.name}
+                        </a>
                     </p>
                     <div className="review_container">
                         <div className="inner_container">
-                            <div className="review_text">{sip.review}!</div>
+                            <div className="review_text">
+                                {sip.review}!
+                            </div>
                             <div className="review_middle_container">
                                 <div className="review_stars"></div>
                                 <div className="type">
-                                    <i className="fas fa-mug-hot icon"></i>
+                                    <i className="fas fa-mug-hot icon" />
                                     {sip.coffee.type}
                                 </div>
                             </div>

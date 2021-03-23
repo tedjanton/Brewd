@@ -28,7 +28,21 @@ class Sip(db.Model):
             "img_src": self.img_src,
             "created_at": self.created_at,
             "user": self.user.to_dict(),
-            "coffee": self.coffee.to_dict(),
-            # "comments": self.comments.to_dict(),
-            # "likes": self.likes.to_dict()
+            "coffee": self.coffee.to_simple_dict(),
+            "comments": [comment.to_dict() for comment in self.comments],
+            "likes": [like.to_dict() for like in self.likes]
+        }
+
+    def to_simple_dict(self):
+        return {
+            "id": self.id,
+            "user_id": self.user_id,
+            "coffee_id": self.coffee_id,
+            "review": self.review,
+            "rating": self.rating,
+            "img_src": self.img_src,
+            "created_at": self.created_at,
+            "user": self.user.to_dict(),
+            "comments": [comment.to_dict() for comment in self.comments],
+            "likes": [like.to_dict() for like in self.likes]
         }

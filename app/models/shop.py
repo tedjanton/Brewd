@@ -27,5 +27,6 @@ class Shop(db.Model):
             "city": self.city,
             "state": self.state,
             "zip_code": self.zip_code,
-            "logo_src": self.logo_src
+            "logo_src": self.logo_src,
+            # "coffees": [coffee.to_dict() for coffee in self.coffees]
         }

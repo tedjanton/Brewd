@@ -22,11 +22,11 @@ export const authenticate = () => async (dispatch) => {
       "Content-Type": "application/json",
     },
   });
+  const user = await response.json();
   if (response.ok) {
-    const user = await response.json();
     dispatch(getUser(user))
   }
-  return response;
+  return user;
 };
 
 export const login = (email, password) => async (dispatch) => {

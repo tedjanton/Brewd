@@ -25,5 +25,18 @@ class Coffee(db.Model):
             "caffeine": self.caffeine,
             "type": self.type,
             "img_src": self.img_src,
-            "shop": self.shop.to_dict()
+            "shop": self.shop.to_dict(),
+            "sips": [sip.to_simple_dict() for sip in self.sips]
+        }
+
+    def to_simple_dict(self):
+        return {
+            "id": self.id,
+            "shop_id": self.shop_id,
+            "name": self.name,
+            "description": self.description,
+            "caffeine": self.caffeine,
+            "type": self.type,
+            "img_src": self.img_src,
+            "shop": self.shop.to_dict(),
         }

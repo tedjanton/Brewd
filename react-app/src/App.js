@@ -11,14 +11,17 @@ import CoffeeHouse from "./components/CoffeeHouse"
 import { authenticate } from "./store/session";
 import TopRated from "./components/TopRated";
 import HomePage from "./components/HomePage";
+import { useDispatch } from "react-redux";
 
 function App() {
+  const dispatch = useDispatch()
   const [authenticated, setAuthenticated] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     (async () => {
-      const user = await authenticate();
+      const user = await dispatch(authenticate());
+      
       if (!user.errors) {
         setAuthenticated(true);
       }
