@@ -1,8 +1,8 @@
 const GET_TOP_RATED = "/top_rated/getTopRated";
 
-const getTopRated = (sip) => ({
+const getTopRated = (coffees) => ({
   type: GET_TOP_RATED,
-  payload: sip,
+  payload: coffees,
 });
 
 export const topRated = () => async (dispatch) => {
@@ -12,24 +12,22 @@ export const topRated = () => async (dispatch) => {
     },
   });
   if (response.ok) {
-    const data = await response.json();
-    console.log("hi!!!!", data);
-    dispatch(getTopRated(data));
+    const coffees = await response.json();
+    console.log("hi!!!!", coffees);
+    dispatch(getTopRated(coffees));
     return response;
   }
 };
 
 let initialState = {};
 const topRatedReducer = (state = initialState, action) => {
-  const newState = Object.assign({}, state);
+  let newState;
   switch (action.type) {
     case GET_TOP_RATED:
-      console.log("PAYLOAD", action.payload);
-      //   for (let sip of action.payload) {
-      //     newState[sip.id] = sip;
-      //   }
-      newState = [...state, action.payload];
-      console.log("NEW STATE", newState);
+      //   console.log("PAYLOAD", action.payload);
+      newState = Object.assign({}, state);
+      newState.coffees = action.payload;
+      //   console.log("NEW STATE", newState);
       return newState;
     default:
       return state;
