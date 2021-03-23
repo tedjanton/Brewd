@@ -16,7 +16,7 @@ const Coffee = ({ coffee }) => {
             <div>Caffeine Content: {coffee.caffeine}mg</div>
             <div>Hot or Cold? {coffee.type}</div>
             <div>{coffee.shop.name}</div>
-            <img src={coffee.img_src} />
+            <img class="coffee-pics" src={coffee.img_src} />
             <a>Rating: {rating}</a>
           </p>
         </div>
