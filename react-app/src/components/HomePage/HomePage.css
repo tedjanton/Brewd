@@ -1,0 +1,70 @@
+.home-feed-title {
+    font-size: 22.4px;
+    color: #000000;
+    font-weight: bold;
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+
+.home-container {
+    display: flex;
+    justify-items: center;
+}
+
+.home-feed-container {
+    margin: 2em;
+    max-width: 70%;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.home-user-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 200px;
+}
+
+.home-user-icon {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.home-user-icon img {
+    height: 50px;
+}
+
+.home-user-name {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.home-user-username {
+    display: flex;
+    align-items: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.home-user-sip-container {
+    display: flex;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.home-user-sip-count {
+
+}
