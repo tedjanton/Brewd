@@ -8,10 +8,10 @@ const CoffeeHouse = ({ authenticated }) => {
     const dispatch = useDispatch();
     const sips = useSelector((state) => {
         
-        return state.coffeehouse[0]
+        return state.coffeehouse[0];
     });
 
-        console.log("SIPS", sips)
+    
 
     const handleSips = async () => {
         const retrieveSips = await dispatch(getSips());
@@ -26,15 +26,23 @@ const CoffeeHouse = ({ authenticated }) => {
         return <Redirect to="/" />}
      return (
         <div className="sips_container">
-            <h2>Recent Global Activity</h2>
+            <div className="page_title">Recent Global Activity</div>
             <div className="sip">
-                <div className="">
-                    <div className="text_container">
-                        <p className="changing_text">Demo</p>
-                        <p>is sipping a</p>
-                        <p className="changing_text">Malt Ball Latte</p>
-                        <p>at</p>
-                        <p className="changing_text">ReAnimator Coffee</p>
+                <div className="user_input_container">
+                    <p className="text"><a className="changing_text" >Demo</a>is sipping a <a className="changing_text">Malt Ball Latte</a>at<a className="changing_text">ReAnimator Coffee</a></p>
+                    <div className="review_container">
+                        <div className="inner_container">
+                            <div className="review_text">super tasty and unique!</div>
+                            <div className="review_middle_container">
+                                <div className="review_stars"></div>
+                                <div className="type"> <i className="fas fa-mug-hot icon"></i>hot</div>
+                            </div>
+                        </div>
+                        <img className="user_image"></img>
+                        <div className="review_bottom_container">
+                            <div className="review_date">7/12/2020</div>
+                            <div className="open_sip_details">View Sip Details</div>
+                        </div>
                     </div>
                 </div>
                 <img className="sip_logo" src="https://pbs.twimg.com/profile_images/833752955862052868/f59GA6nj_400x400.jpg"/>
