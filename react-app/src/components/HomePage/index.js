@@ -37,11 +37,11 @@ const HomePage = ({ authenticated }) => {
                     <img src={user_icon} />
                 </div>
                 <div className="home-user-name">
-                    <p>{`${user.first_name} ${user.last_name}`}</p>
+                    <p>{`${user?.first_name} ${user?.last_name}`}</p>
                 </div>
                 <div className="home-user-username">
                     <i class="fas fa-user" />
-                    <p>{user.username}</p>
+                    <p>{user?.username}</p>
                 </div>
                 <div className="home-user-sip-container">
                     <div className="home-user-sip-count">
