@@ -12,19 +12,25 @@ const Coffee = ({ coffee }) => {
         <div className="box">
           <div className="content">
             <h3 className="top_rated_title"></h3>
-            <div className="top_rated_container">
-              <div className="coffee_item">{coffee.name}</div>
+            <div className="coffee_item">
               <img className="coffee_pic" src={coffee.img_src} />
               <div className="coffee_details">
-                <p className="coffee_name"></p>
+                <p className="coffee_name">
+                  <a href="/coffees/:id">{coffee.name}</a>
+                </p>
+                <p className="coffee_shop">
+                  <a href="/shops/:id">{coffee.shop.name}</a>
+                </p>
+                <p className="coffee_description">{coffee.description}</p>
               </div>
+            </div>
+            <div className="coffee_spec_container">
+              <div className="coffee_caffeine">{coffee.caffeine} mg</div>
+              <div className="coffee_type">{coffee.type}</div>
+              <div className="coffee_rating_display">⭐️⭐️⭐️⭐️⭐️</div>
+              <div className="coffee_rating_number">{rating}</div>
+              <div className="coffee_total_ratings">Total Ratings</div>
               <div clasName="coffee_specs"></div>
-              {/* <div>About This Coffee: {coffee.description}</div>
-            <div>Caffeine Content: {coffee.caffeine}mg</div>
-            <div>Hot or Cold? {coffee.type}</div>
-            <div>{coffee.shop.name}</div>
-
-            <a>Rating: {rating}</a> */}
             </div>
           </div>
         </div>
