@@ -64,7 +64,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
           <div className="circle_OR">OR</div>
 
           <div className="email_container">
-            <i class="fas fa-envelope email "></i>
+            <i className="fas fa-envelope email_icon"></i>
             <input
               name="email"
               type="text"
@@ -75,7 +75,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
             />
           </div>
           <div className="password_container">
-            <i clasName="fas fa-lock password_icon"></i>
+            <i className="fas fa-lock password_icon"></i>
             <input
               name="password"
               type="password"
@@ -90,40 +90,13 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               <button className="demo_user_login_text">Sign in as demo?</button>
               <div className="signup_link_container">
                 <p className="signup_link_text">New around here?</p>
-                <Link to="/signup" className="signup_page_link"></Link>Sign up!
+                <Link to="/signup" className="signup_page_link">Sign up!</Link>
             </div>
           <div>
             {errors.map((error) => (
               <div>{error}</div>
             ))}
           </div>
-
-          <div className="recaptcha_container">
-            <label className="checkbox_container">
-              <div className="checkbox_positional_container">
-                <input type="checkbox" className="checkbox"/>
-                <span className="checkmark"></span>
-                <p className="checkbox_text">I'm not a robot</p>
-              </div>
-            </label>
-            <div className="image_and_links">
-              <div className="recaptcha_img_container">
-                <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png"/>
-              </div>
-              <p className="recaptcha_text">reCAPTCHA</p>
-              <div className="link_container">
-                <a href='https://policies.google.com/privacy?hl=en' className='google_links'>Privacy</a>
-                <a href="https://policies.google.com/terms?hl=en" className="google_links">Terms</a>
-              </div>
-            </div>
-          </div>
-          <button type="submit" className="sign_in_button">Sign In</button>
-          <button type="button" className="demo_user_login_text" onClick={signInDemoUser}>Sign in as demo?</button>
-          <div className="signup_link_container">
-            <p className="signup_link_text">New around here?</p>
-            <Link to="/signup" className="signup_page_link"></Link>Sign up!
-          </div>
-
         </form>
       </div>
     </div>
