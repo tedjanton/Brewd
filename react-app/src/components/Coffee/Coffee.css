@@ -200,17 +200,32 @@
   box-sizing: border-box;
 }
 
-a:visited {
+.coffee_name a:visited {
   text-decoration: none;
   color: #8a4500;
 }
-a:hover {
+.coffee_name a:hover {
   color: orange;
   outline: none;
   cursor: pointer;
 }
 
-a {
+.coffee_name a {
+  /* text-decoration: none; */
+  color: #8a4500;
+}
+
+.coffee_shop a:visited {
+  text-decoration: none;
+  color: #8a4500;
+}
+.coffee_shop a:hover {
+  color: orange;
+  outline: none;
+  cursor: pointer;
+}
+
+.coffee_shop a {
   /* text-decoration: none; */
   color: #8a4500;
 }

@@ -10,16 +10,8 @@ import Featured from "../Featured";
 function TopRatedPage() {
   const dispatch = useDispatch();
   const coffees = useSelector((state) => {
-    return state.topRated?.coffees?.top_rated;
+    return state.topRated?.coffees;
   });
-  console.log("THIS IS IT", coffees);
-
-  //   const { id } = useParams();
-  //   const coffee = useSelector((state) => {
-  //     return state.topRated[0];
-  //   });
-  //   console.log("COFFEE NAME", coffee.id);
-  //   const { name, caffeine } = coffee;
 
   useEffect(() => {
     if (!coffees) {
