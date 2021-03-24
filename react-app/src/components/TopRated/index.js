@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 import { topRated } from "../../store/top_rated";
 import "./TopRated.css";
 import Coffee from "../Coffee";
+import Featured from "../Featured";
 
 function TopRatedPage() {
   const dispatch = useDispatch();
@@ -29,10 +30,13 @@ function TopRatedPage() {
   return (
     <>
       <div>
-        <h1 className="top_rated_title">Top Rated Coffees</h1>
-        {coffees?.map((coffee) => (
-          <Coffee coffee={coffee} />
-        ))}
+        <div className="top_rated_container">
+          <h1 className="top_rated_title">Top Rated Coffees</h1>
+          {coffees?.map((coffee) => (
+            <Coffee coffee={coffee} />
+          ))}
+        </div>
+        <Featured />
       </div>
     </>
   );
