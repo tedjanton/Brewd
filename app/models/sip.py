@@ -1,3 +1,4 @@
+from datetime import datetime
 from .db import db
 
 
@@ -51,4 +52,3 @@ class Sip(db.Model):
         if self.rating == None:
             return []
         return self.rating
-

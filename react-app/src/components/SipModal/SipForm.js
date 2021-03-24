@@ -37,7 +37,6 @@ const SipForm = () => {
             review,
             rating,
             img_src: "",
-            created_at: new Date()
         }
         console.log(submission)
         dispatch(createSip(submission))
