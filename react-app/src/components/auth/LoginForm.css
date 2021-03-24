@@ -80,7 +80,7 @@
 }
 
 .circle_OR {
-    color: #e5e5e5;
+     color: rgba(0, 0, 0, 0.75);
     border-radius: 100px;
     border: #e5e5e5 3px solid;
     height: 36px;
