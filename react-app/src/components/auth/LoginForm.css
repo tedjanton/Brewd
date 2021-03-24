@@ -1,0 +1,156 @@
+.login_form_container {
+    background-image: url(../../site-images/icedcoffee-background.jpeg);
+    background-attachment: local;
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    display: flex;
+
+}
+
+.login_form_white_background {
+    background-color: white;
+    width: 400px;
+    height: 600px;
+    border-radius: 8px;
+    margin: auto;
+    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%);
+
+}
+
+.login_form {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.site_title {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 46px;
+}
+
+.saying_container {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 46px 20px;
+}
+
+.site_saying {
+    font-size: 13px;
+    color: #ccc;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 5px 0px 5px;
+}
+
+.demo_user_login {
+    background-color: #4267B2;
+    width: 300px;
+    height: 46px;
+    margin: 0px 22px;
+    border-radius: 4px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.demo_text_container {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo_text_small {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0px 10px 0px 10px;
+}
+
+.demo_text_large {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0px 10px 0px 10px;
+}
+
+.circle_OR {
+    color: #e5e5e5;
+    border-radius: 100px;
+    border: #e5e5e5 3px solid;
+    height: 36px;
+    width: 36px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 166px;
+}
+
+.email_container {
+    width: 300px;
+    height: 34.44px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2.5px;
+}
+
+.user_icon {
+    color: #ccc;
+}
+
+.email_input {
+    width: 250px;
+    height: 20px;
+    border: none;
+    border-left: #ccc 1px solid;
+    margin: 2,5px;
+}
+
+.password_container {
+    width: 300px;
+    height: 34.44px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+.password_icon {
+       color: #ccc;
+}
+
+.password_input {
+    width: 250px;
+    height: 20px;
+    border: none;
+    border-left: #ccc 1px solid;
+    margin: 5px;
+}
+
+.sign_in_button {
+    height: 44px;
+    width: 300px;
+    margin: 0px auto;
+    padding: 12px 0px;
+    font-size: 18px;
+    font-weight: 600px;
+    color: #fff;
+    background-color: #020202;
+    border: 1px solid #545863;
+    border-radius: 4px;
+    margin: 2.5px;
+}
