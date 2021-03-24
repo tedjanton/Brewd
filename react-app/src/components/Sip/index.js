@@ -3,7 +3,7 @@ import "./Sip.css"
 
 
 const Sip = ({ sip }) => {
-    
+
     if (sip) {
         return (
             <div className="sip">
@@ -12,7 +12,7 @@ const Sip = ({ sip }) => {
                         <a className="changing_text">
                             {sip.user.first_name}
                         </a>is sipping a
-                        <a 
+                        <a
                         className="changing_text"
                         href={`/coffees/${sip.coffee.id}`}>
                             {sip.coffee.name}
@@ -24,7 +24,7 @@ const Sip = ({ sip }) => {
                     <div className="review_container">
                         <div className="inner_container">
                             <div className="review_text">
-                                {sip.review}!
+                                {sip.review}
                             </div>
                             <div className="review_middle_container">
                                 <div className="review_stars"></div>

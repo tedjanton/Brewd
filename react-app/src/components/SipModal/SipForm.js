@@ -104,7 +104,7 @@ const SipForm = ({ setShowModal }) => {
             <div className="sip-form-location-button-container">
                 <div className="sip-form-location-container">
                     <i className="fas fa-map-marker-alt" />
-                    <div className="sip-form-location">{coffee.shop.name} in {coffee.shop.city}</div>
+                    <div className="sip-form-location">{coffee?.shop?.name} in {coffee?.shop?.city}</div>
                 </div>
                 <div className="sip-form-button">
                     <button onClick={handleSubmit}>Confirm</button>
