@@ -10,16 +10,8 @@ import Featured from "../Featured";
 function TopRatedPage() {
   const dispatch = useDispatch();
   const coffees = useSelector((state) => {
-    return state.topRated?.coffees?.top_rated;
+    return state.topRated?.coffees;
   });
-  console.log("THIS IS IT", coffees);
-
-  //   const { id } = useParams();
-  //   const coffee = useSelector((state) => {
-  //     return state.topRated[0];
-  //   });
-  //   console.log("COFFEE NAME", coffee.id);
-  //   const { name, caffeine } = coffee;
 
   useEffect(() => {
     if (!coffees) {
@@ -29,9 +21,13 @@ function TopRatedPage() {
 
   return (
     <>
-      <div>
+      <div className="top_rated_page_container">
         <div className="top_rated_container">
           <h1 className="top_rated_title">Top Rated Coffees</h1>
+          <h2 className="top_rated_blurb">
+            This list shows the top coffees based on the average user ratings.
+            Have fun exploring, and be sure to rate your favorite coffees!
+          </h2>
           {coffees?.map((coffee) => (
             <Coffee coffee={coffee} />
           ))}

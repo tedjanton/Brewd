@@ -1,17 +1,17 @@
 import React from "react";
 import "./Coffee.css";
+import Ratings from "react-ratings-declarative";
+import ratings from "react-ratings-declarative/build/ratings";
 
 const Coffee = ({ coffee }) => {
-  console.log("testing", coffee.sips);
-  const sips = coffee.sips;
-  const rating = sips.map((sip) => sip.rating);
+  const ratings_array = coffee?.all_ratings;
+
 
   if (coffee) {
     return (
       <div className="main">
         <div className="box">
           <div className="content">
-            <h3 className="top_rated_title"></h3>
             <div className="coffee_item">
               <img className="coffee_pic" src={coffee.img_src} />
               <div className="coffee_details">
@@ -25,11 +25,42 @@ const Coffee = ({ coffee }) => {
               </div>
             </div>
             <div className="coffee_spec_container">
-              <div className="coffee_caffeine">{coffee.caffeine} mg</div>
+              <div className="coffee_caffeine">
+                {coffee.caffeine} mg caffeine
+              </div>
               <div className="coffee_type">{coffee.type}</div>
-              <div className="coffee_rating_display">⭐️⭐️⭐️⭐️⭐️</div>
-              <div className="coffee_rating_number">{rating}</div>
-              <div className="coffee_total_ratings">Total Ratings</div>
+              <Ratings
+                className="coffee_rating_display"
+                rating={coffee.avg_rating}
+                widgetDimensions="15px"
+                widgetSpacings="5px"
+              >
+                <Ratings.Widget
+                  widgetRatedColor="orange"
+                  widgetEmptyColors="grey"
+                />
+                <Ratings.Widget
+                  widgetRatedColor="orange"
+                  widgetEmptyColors="grey"
+                />
+                <Ratings.Widget
+                  widgetRatedColor="orange"
+                  widgetEmptyColors="grey"
+                />
+                <Ratings.Widget
+                  widgetRatedColor="orange"
+                  widgetEmptyColors="grey"
+                />
+                <Ratings.Widget
+                  widgetRatedColor="orange"
+                  widgetEmptyColors="grey"
+                />
+              </Ratings>
+              {/* <div className="coffee_rating_display">⭐️⭐️⭐️⭐️⭐️</div> */}
+              <div className="coffee_rating_number">{coffee.avg_rating}</div>
+              <div className="coffee_total_ratings">
+                {coffee.all_ratings.length} Ratings
+              </div>
               <div clasName="coffee_specs"></div>
             </div>
           </div>
