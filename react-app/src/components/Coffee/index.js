@@ -64,7 +64,7 @@ const Coffee = ({ coffee }) => {
               <div className="coffee_total_ratings">
                 {coffee.all_ratings.length} Ratings
               </div>
-              <div clasName="coffee_specs"></div>
+              <div className="coffee_specs"></div>
             </div>
           </div>
         </div>

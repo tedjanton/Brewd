@@ -24,7 +24,7 @@ const Landing = ({ authenticated }) => {
                 <div className="landing-container">
                     <div className="landing-container-left">
                         <div className="landing-logo">
-                            <i clasName="fas fa-coffee"></i>
+                            <i className="fas fa-coffee"></i>
                         </div>
                         <div className="landing-site-title">
                             <h1>BREWD</h1>

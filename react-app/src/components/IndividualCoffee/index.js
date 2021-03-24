@@ -7,7 +7,7 @@ const IndividualCoffee = ({ coffee }) => {
 
   if (coffee) {
     return (
-      
+
           <div className="content_container">
             <div className="coffee_item_container">
               <img className="coffee_pic_i" src={coffee.img_src} />
@@ -26,10 +26,10 @@ const IndividualCoffee = ({ coffee }) => {
               <div className="coffee_rating_display_i">⭐️⭐️⭐️⭐️⭐️</div>
               <div className="coffee_rating_number_i">{rating}</div>
               <div className="coffee_total_ratings_i">Total Ratings</div>
-              <div clasName="coffee_specs_i"></div>
+              <div className="coffee_specs_i"></div>
             </div>
           </div>
-        
+
     );
   } else {
     return <></>;
