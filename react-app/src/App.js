@@ -7,10 +7,11 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
 import Landing from "./components/Landing";
-import CoffeeHouse from "./components/CoffeeHouse"
+import CoffeeHouse from "./components/CoffeeHouse";
 import { authenticate } from "./store/session";
 import TopRated from "./components/TopRated";
 import HomePage from "./components/HomePage";
+import CoffeeDetail from "./components/CoffeeDetail";
 import { useDispatch } from "react-redux";
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
   useEffect(() => {
     (async () => {
       const user = await dispatch(authenticate());
-      
+
       if (!user.errors) {
         setAuthenticated(true);
       }
@@ -52,20 +53,6 @@ function App() {
             setAuthenticated={setAuthenticated}
           />
         </Route>
-        <ProtectedRoute
-          path="/users"
-          exact={true}
-          authenticated={authenticated}
-        >
-          <UsersList />
-        </ProtectedRoute>
-        <ProtectedRoute
-          path="/users/:userId"
-          exact={true}
-          authenticated={authenticated}
-        >
-          <User />
-        </ProtectedRoute>
         <Route path="/" exact={true} authenticated={authenticated}>
           <Landing authenticated={authenticated} />
         </Route>
@@ -77,6 +64,9 @@ function App() {
         </Route>
         <ProtectedRoute path="/home" exact={true} authenticated={authenticated}>
           <HomePage authenticated={authenticated}/>
+        </ProtectedRoute>
+        <ProtectedRoute path="/coffees/:id" exact={true} authenticated={authenticated}>
+          <CoffeeDetail />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

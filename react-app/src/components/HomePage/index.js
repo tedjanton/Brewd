@@ -40,7 +40,7 @@ const HomePage = ({ authenticated }) => {
                     <p>{`${user?.first_name} ${user?.last_name}`}</p>
                 </div>
                 <div className="home-user-username">
-                    <i class="fas fa-user" />
+                    <i className="fas fa-user" />
                     <p>{user?.username}</p>
                 </div>
                 <div className="home-user-sip-container">
