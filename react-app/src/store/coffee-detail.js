@@ -21,8 +21,7 @@ export const createSip = (sip) => async (dispatch) => {
         coffee_id,
         review,
         rating,
-        img_src,
-        created_at
+        img_src
     } = sip;
 
     const response = await fetch("/api/coffees/add-sip", {
@@ -33,8 +32,7 @@ export const createSip = (sip) => async (dispatch) => {
             coffee_id,
             review,
             rating,
-            img_src,
-            created_at
+            img_src
         })
     });
 

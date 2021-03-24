@@ -42,7 +42,7 @@ const CoffeeDetail = () => {
                     <button onClick={() => setShowModal(true)} className="make_new_post"><i class="fas fa-coffee mug_icon"></i></button>
                     {showModal && (
                         <Modal onClose={() => setShowModal(false)}>
-                            <SipForm />
+                            <SipForm setShowModal={setShowModal} />
                         </Modal>
                     )}
                 </div>

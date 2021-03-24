@@ -15,7 +15,6 @@ class Coffee(db.Model):
     shop = db.relationship("Shop", back_populates="coffees")
     sips = db.relationship("Sip", back_populates="coffee")
 
-
     def to_dict(self):
         ratings = []
 
@@ -54,7 +53,6 @@ class Coffee(db.Model):
             "img_src": self.img_src,
             "shop": self.shop.to_dict(),
         }
-
 
 
 # {'id': 1,

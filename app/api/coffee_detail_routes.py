@@ -1,7 +1,8 @@
 from app.models import db, Sip, Coffee
 from flask_login import login_required
-from flask import Blueprint
+from flask import Blueprint, session, request
 from app.forms import SipForm
+from datetime import datetime
 
 coffee_detail_routes = Blueprint("coffee_detail_routes", __name__)
 
@@ -18,11 +19,12 @@ def coffee(id):
 @login_required
 def add_sip():
     """
-    Adds a Sip to the database
+    Add a Sip to the database
     """
     form = SipForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
-        new_sip = SipForm(user_id=form.user_id.data,
+        new_sip = Sip(user_id=form.user_id.data,
                           coffee_id=form.coffee_id.data,
                           review=form.review.data,
                           rating=form.rating.data,
@@ -30,7 +32,6 @@ def add_sip():
                           created_at=form.created_at.data)
         db.session.add(new_sip)
         db.session.commit()
-        print("SUCCESSSSSSSSSS")
         return new_sip.to_dict()
     else:
         return {"errors": "invalid submission"}

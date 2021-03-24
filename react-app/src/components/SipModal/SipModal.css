@@ -1,3 +1,173 @@
 .sip-form-picture-container {
-    background-color: #dfdfdf;
+    background-color: black;
+    color: white;
+}
+
+.sip-form-title {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    width: 570px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.sip-form-title-close,
+.sip-form-title p {
+    margin: 0;
+    padding: 10px;
+}
+
+.sip-form-title-close img {
+    height: 19px;
+}
+
+.sip-form-review-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.sip-form-review-box {
+    position: relative;
+    padding: 16px;
+    margin: 5px;
+}
+
+.sip-form-review-box > textarea {
+    font-family: "Roboto", sans-serif;
+    width: 400px;
+    height: 75px;
+    resize: none;
+    font-size: 18px;
+    padding: 8px;
+    border: thin solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+}
+
+::placeholder {
+    color:rgb(212, 212, 212);
+    opacity: 1;
+}
+
+.sip-form-char-count {
+    position: absolute;
+    bottom: 24px;
+    right: 22px;
+    font-size: 12px;
+    color: rgb(97, 97, 97);
+    background-color:rgb(236, 236, 236);
+    padding: 1px 4px;
+}
+
+.sip-form-picture-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 46px;
+    height: 90px;
+    width: 90px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.sip-form-picture img {
+    height: 50px;
+    padding: 10px 0 0 0;
+}
+
+.sip-form-picture-container:hover,
+.sip-form-button button:hover {
+    background-color: rgb(63, 63, 63);
+}
+
+.sip-form-rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 10px;
+}
+
+.sip-form-facebook-icon {
+    color: lightgrey;
+    margin-right: 120px;
+    font-size: 50px;
+}
+
+.sip-form-rating-display {
+    position: relative;
+    background-color: #8f8f8f;
+    color: white;
+    border-radius: 5px;
+    padding: 0 10px 1px 10px;
+    width: 40px;
+}
+
+.rating-top,
+.rating-bottom {
+    margin: 0;
+}
+
+.rating-top {
+    font-size: 24px;
+}
+
+.rating-bottom {
+    font-size: 12px;
+}
+
+.fa-caret-left {
+    position: absolute;
+    color: #8f8f8f;
+    font-size: 40px;
+    left: -12px;
+    top: 3px;
+}
+
+.sip-form-rating-divider {
+    height: 40px;
+    width: 1px;
+    background-color:rgba(0, 0, 0, 0.1)
+}
+
+.sip-form-location-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.sip-form-location-container {
+    display: flex;
+    align-items: center;
+    background-color:rgb(233, 233, 233);
+    padding: 10px;
+    width: 300px;
+}
+
+.fa-map-marker-alt {
+    color: #6d6d6d;
+}
+
+.sip-form-location {
+    color:rgb(150, 72, 0);
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.sip-form-button button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 40px 10px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
 }

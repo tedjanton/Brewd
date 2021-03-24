@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField, IntegerField, DateField
+from wtforms import StringField, TextAreaField, IntegerField, DateTimeField
 from wtforms.validators import DataRequired
+from datetime import datetime
 
 
 class SipForm(FlaskForm):
@@ -9,4 +10,4 @@ class SipForm(FlaskForm):
     review = TextAreaField("review")
     rating = IntegerField("rating")
     img_src = StringField("img_src")
-    created_at = DateField("created_at")
+    created_at = DateTimeField("created_at", default=datetime.now())
