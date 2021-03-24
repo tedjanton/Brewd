@@ -16,7 +16,7 @@ const Coffee = ({ coffee }) => {
               <img className="coffee_pic" src={coffee.img_src} />
               <div className="coffee_details">
                 <p className="coffee_name">
-                  <a href="/coffees/:id">{coffee.name}</a>
+                  <a href={`/coffees/${coffee.id}`}>{coffee.name}</a>
                 </p>
                 <p className="coffee_shop">
                   <a href="/shops/:id">{coffee.shop.name}</a>

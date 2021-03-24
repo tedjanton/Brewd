@@ -12,7 +12,9 @@ const Sip = ({ sip }) => {
                         <a className="changing_text">
                             {sip.user.first_name}
                         </a>is sipping a
-                        <a className="changing_text">
+                        <a 
+                        className="changing_text"
+                        href={`/coffees/${sip.coffee.id}`}>
                             {sip.coffee.name}
                         </a>at
                         <a className="changing_text">
