@@ -2,7 +2,7 @@ import React from "react";
 import "./Coffee.css";
 
 const Coffee = ({ coffee }) => {
-  console.log("testing", coffee.sips);
+  // console.log("testing", coffee.sips);
   const sips = coffee.sips;
   const rating = sips.map((sip) => sip.rating);
 
