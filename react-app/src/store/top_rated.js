@@ -27,7 +27,10 @@ const onlyTopRated = (coffees) => {
       top_rated_array.push(coffee_array[i]);
     }
   }
-  return top_rated_array;
+  let new_array = top_rated_array.sort((a, b) =>
+    a.avg_rating < b.avg_rating ? 1 : -1
+  );
+  return new_array;
 };
 
 let initialState = {};
@@ -36,12 +39,9 @@ const topRatedReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_TOP_RATED:
       const highestRated = onlyTopRated(action.payload);
-      // console.log("PAYLOAD", action.payload.top_rated[0].avg_rating);
       console.log("highest_rated", highestRated);
       newState = Object.assign({}, state);
       newState.coffees = highestRated;
-
-      //   console.log("NEW STATE", newState);
       return newState;
     default:
       return state;

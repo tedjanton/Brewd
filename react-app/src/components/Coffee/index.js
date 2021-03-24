@@ -4,9 +4,8 @@ import Ratings from "react-ratings-declarative";
 import ratings from "react-ratings-declarative/build/ratings";
 
 const Coffee = ({ coffee }) => {
-  // const avg_rating = coffee.avg_rating;
-  const ratings_array = coffee.all_ratings;
-  console.log("all ratings", ratings_array.length);
+  const ratings_array = coffee?.all_ratings;
+
 
   if (coffee) {
     return (

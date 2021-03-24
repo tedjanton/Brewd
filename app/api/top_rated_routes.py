@@ -12,5 +12,5 @@ top_rated_routes = Blueprint('top_rated', __name__)
 def top_rated():
     # highest_rated = Sip.query.filter(Sip.rating > 3)
     top_rated = Coffee.query.all()
-    # print('HELLO: ', top_rated)
+    print('HELLO: ', top_rated)
     return {"top_rated": [coffee.to_dict() for coffee in top_rated]}
