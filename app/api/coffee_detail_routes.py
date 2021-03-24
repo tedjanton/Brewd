@@ -11,7 +11,8 @@ coffee_detail_routes = Blueprint("coffee_detail_routes", __name__)
 @login_required
 def coffee(id):
     coffee = Coffee.query.get(id)
-    return coffee.to_dict()
+   
+    return {"currentCoffee": coffee.to_dict()}
 
 
 @coffee_detail_routes.route("/add-sip", methods=["POST"])

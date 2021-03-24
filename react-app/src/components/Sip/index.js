@@ -3,7 +3,7 @@ import "./Sip.css"
 
 
 const Sip = ({ sip }) => {
-    console.log(sip.user_id)
+    
     if (sip) {
         return (
             <div className="sip">
@@ -12,7 +12,9 @@ const Sip = ({ sip }) => {
                         <a className="changing_text">
                             {sip.user.first_name}
                         </a>is sipping a
-                        <a className="changing_text">
+                        <a 
+                        className="changing_text"
+                        href={`/coffees/${sip.coffee.id}`}>
                             {sip.coffee.name}
                         </a>at
                         <a className="changing_text">

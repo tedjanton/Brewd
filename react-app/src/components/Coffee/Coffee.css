@@ -222,9 +222,10 @@
   color: orange;
   outline: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .coffee_shop a {
-  /* text-decoration: none; */
+  text-decoration: none;
   color: #8a4500;
 }

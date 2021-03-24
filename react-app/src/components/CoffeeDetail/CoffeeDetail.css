@@ -1,0 +1,43 @@
+.coffee_details_page_container_top {
+    margin: auto;
+    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%); 
+    width: 652px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+}
+
+.cd_middle_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    align-items: center;
+}
+.individual_coffee_container {
+    margin: auto;
+    width: 652px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.make_new_post {
+   height: 52px;
+   width: 52px;
+   background-color: #1b8811;
+   border:none;
+}
+
+.mug_icon {
+    font-size: 25px;
+    color: white;
+}
+
+.coffee_description_i {
+  color: #888;
+  margin: 10px;
+  font-size: 100%;
+ 
+}

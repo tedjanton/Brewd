@@ -4,6 +4,9 @@ import Ratings from "react-ratings-declarative";
 import ratings from "react-ratings-declarative/build/ratings";
 
 const Coffee = ({ coffee }) => {
+  const sips = coffee?.sips;
+  const rating = sips?.map((sip) => sip.rating);
+
   const ratings_array = coffee?.all_ratings;
 
 
@@ -16,7 +19,7 @@ const Coffee = ({ coffee }) => {
               <img className="coffee_pic" src={coffee.img_src} />
               <div className="coffee_details">
                 <p className="coffee_name">
-                  <a href="/coffees/:id">{coffee.name}</a>
+                  <a href={`/coffees/${coffee.id}`}>{coffee.name}</a>
                 </p>
                 <p className="coffee_shop">
                   <a href="/shops/:id">{coffee.shop.name}</a>

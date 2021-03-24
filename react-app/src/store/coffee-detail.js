@@ -8,11 +8,11 @@ const load = (coffee) => ({
 export const getCoffee = (coffeeId) => async (dispatch) => {
     const response = await fetch(`/api/coffees/${coffeeId}`)
 
-    const coffee = await response.json();
     if (response.ok) {
+        const coffee = await response.json();
         dispatch(load(coffee));
+        return response;
     }
-    return coffee;
 };
 
 export const createSip = (sip) => async (dispatch) => {

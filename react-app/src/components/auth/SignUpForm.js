@@ -69,7 +69,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
             <div className="message1">All fields below are required.</div>
             <div className="message2">Avoid using common words and include a mix of letters and numbers.</div>
             <div className="username_container">
-              <i class="fas fa-user user_icon"></i>
+              <i className="fas fa-user user_icon"></i>
               <input
                 type="text"
                 name="username"
