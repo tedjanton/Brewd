@@ -24,6 +24,10 @@ function TopRatedPage() {
       <div className="top_rated_page_container">
         <div className="top_rated_container">
           <h1 className="top_rated_title">Top Rated Coffees</h1>
+          <h2 className="top_rated_blurb">
+            This list shows the top coffees based on the average user ratings.
+            Have fun exploring, and be sure to rate your favorite coffees!
+          </h2>
           {coffees?.map((coffee) => (
             <Coffee coffee={coffee} />
           ))}
