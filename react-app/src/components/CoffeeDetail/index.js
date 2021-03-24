@@ -10,11 +10,13 @@ const CoffeeDetail = () => {
     const params = useParams();
     const dispatch = useDispatch();
     const [showModal, setShowModal] = useState();
-
-    let coffee;
+    const coffee = useSelector((state) => {
+        return state.selected?.coffee
+    })
+    
     useEffect(() => {
         if (!coffee) {
-            coffee = dispatch(getCoffee(params.id))
+            dispatch(getCoffee(params.id))
         }
     })
 
