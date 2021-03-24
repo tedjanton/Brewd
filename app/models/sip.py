@@ -47,4 +47,8 @@ class Sip(db.Model):
             "likes": [like.to_dict() for like in self.likes]
         }
 
+    def get_rating(self):
+        if self.rating == None:
+            return []
+        return self.rating
 

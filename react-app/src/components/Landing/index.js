@@ -1,9 +1,9 @@
 import React from "react";
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink, Link, Redirect, useHistory } from "react-router-dom";
 import "./Landing.css";
 
 const Landing = ({ authenticated }) => {
-
+    const history = useHistory();
     if (authenticated) {
         return <Redirect to="/home" />
     }
@@ -12,11 +12,13 @@ const Landing = ({ authenticated }) => {
         <>
             <div className="landing-background-container">
                 <div className="landing-button-container">
-                    <div className="landing-button-div login-button">
-                        <NavLink to="/login">SIGN IN</NavLink>
+                    <div onClick={() => history.push("/login")}
+                        className="landing-button-div login-button"
+                    >SIGN IN
                     </div>
-                    <div className="landing-button-div login-button">
-                        <NavLink to="/signup">CREATE AN ACCOUNT</NavLink>
+                    <div onClick={() => history.push("/signup")}
+                        className="landing-button-div login-button"
+                    >CREATE AN ACCOUNT
                     </div>
                 </div>
                 <div className="landing-container">
