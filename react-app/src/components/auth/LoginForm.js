@@ -64,7 +64,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
             />
           </div>
           <div className="password_container">
-            <i class="fas fa-lock password_icon"></i>
+            <i clasName="fas fa-lock password_icon"></i>
             <input
               name="password"
               type="password"
@@ -84,7 +84,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
             <label className="checkbox_container">
               <div className="checkbox_positional_container">
                 <input type="checkbox" className="checkbox"/>
-                <span class="checkmark"></span>
+                <span className="checkmark"></span>
                 <p className="checkbox_text">I'm not a robot</p>
               </div>
             </label>
@@ -98,7 +98,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
                 <a href="https://policies.google.com/terms?hl=en" className="google_links">Terms</a>
               </div>
             </div>
-          </div>    
+          </div>
           <button type="submit" className="sign_in_button">Sign In</button>
           <button className="demo_user_login_text">Sign in as demo?</button>
           <div className="signup_link_container">
@@ -108,7 +108,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
         </form>
       </div>
     </div>
-      
+
   );
 };
 
