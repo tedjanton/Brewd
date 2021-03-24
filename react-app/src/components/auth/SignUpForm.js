@@ -109,6 +109,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
           required={true}
         ></input>
       </div>
+      
       <button type="submit">Sign Up</button>
     </form>
   );
