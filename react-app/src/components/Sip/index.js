@@ -3,7 +3,7 @@ import "./Sip.css"
 
 
 const Sip = ({ sip }) => {
-    console.log(sip.user_id)
+    
     if (sip) {
         return (
             <div className="sip">
