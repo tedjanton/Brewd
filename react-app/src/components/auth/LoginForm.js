@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { Redirect, Link } from "react-router-dom";
 import { login } from "../../store/session";
+import Recaptcha from "./Recaptcha";
 import "./LoginForm.css";
+import "./Forms.css";
 
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
@@ -35,14 +37,16 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   }
 
   return (
-    <div className="login_form_container">
-      <div className="login_form_white_background">
-        <form  className="login_form"onSubmit={onLogin}>
+    <div className="form_container">
+      <div className="form_white_background">
+        <form  className="form" onSubmit={onLogin}>
           <div className="site_title">BREWD</div>
           <div className="saying_container">
             <p className="site_saying">S I P</p><p className="site_saying">S O C I A L L Y</p>
           </div>
-
+          
+          <div className="message1"></div>
+          <div className="message2"></div>
           <button className="demo_user_login">
             <div className="demo_text_container">
               <p className="demo_text_small">Sign in as</p>
@@ -53,7 +57,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
           <div className="circle_OR">OR</div>
 
           <div className="email_container">
-            <i className="fas fa-user user_icon"></i>
+            <i class="fas fa-envelope email "></i>
             <input
               name="email"
               type="text"
@@ -74,37 +78,19 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               className="password_input"
             />
           </div>
+          <Recaptcha />
+          <button type="submit" className="form_button">Sign In</button>
+              <button className="demo_user_login_text">Sign in as demo?</button>
+              <div className="signup_link_container">
+                <p className="signup_link_text">New around here?</p>
+                <Link to="/signup" className="signup_page_link"></Link>Sign up!
+            </div>
           <div>
-
             {errors.map((error) => (
               <div>{error}</div>
             ))}
           </div>
-          <div className="recaptcha_container">
-            <label className="checkbox_container">
-              <div className="checkbox_positional_container">
-                <input type="checkbox" className="checkbox"/>
-                <span class="checkmark"></span>
-                <p className="checkbox_text">I'm not a robot</p>
-              </div>
-            </label>
-            <div className="image_and_links">
-              <div className="recaptcha_img_container">
-                <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png"/>
-              </div>
-              <p className="recaptcha_text">reCAPTCHA</p>
-              <div className="link_container">
-                <a href='https://policies.google.com/privacy?hl=en' className='google_links'>Privacy</a>
-                <a href="https://policies.google.com/terms?hl=en" className="google_links">Terms</a>
-              </div>
-            </div>
-          </div>    
-          <button type="submit" className="sign_in_button">Sign In</button>
-          <button className="demo_user_login_text">Sign in as demo?</button>
-          <div className="signup_link_container">
-            <p className="signup_link_text">New around here?</p>
-            <Link to="/signup" className="signup_page_link"></Link>Sign up!
-          </div>
+          
         </form>
       </div>
     </div>
