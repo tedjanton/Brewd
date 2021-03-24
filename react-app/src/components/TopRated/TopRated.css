@@ -1,6 +1,7 @@
 .top_rated_page_container {
   display: flex;
   flex-direction: row;
+  padding-bottom: 30px;
 }
 
 .top_rated_container {
@@ -12,4 +13,5 @@
   position: relative;
   height: auto;
   border-radius: 8px;
+  /* padding-bottom: 10px; */
 }
