@@ -37,14 +37,16 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   }
 
   return (
-    <div className="form_container login_form_container">
+    <div className="form_container">
       <div className="form_white_background">
-        <form  className="form"onSubmit={onLogin}>
+        <form  className="form" onSubmit={onLogin}>
           <div className="site_title">BREWD</div>
           <div className="saying_container">
             <p className="site_saying">S I P</p><p className="site_saying">S O C I A L L Y</p>
           </div>
-
+          
+          <div className="message1"></div>
+          <div className="message2"></div>
           <button className="demo_user_login">
             <div className="demo_text_container">
               <p className="demo_text_small">Sign in as</p>
@@ -55,7 +57,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
           <div className="circle_OR">OR</div>
 
           <div className="email_container">
-            
+            <i class="fas fa-envelope email "></i>
             <input
               name="email"
               type="text"

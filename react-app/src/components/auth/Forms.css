@@ -1,5 +1,5 @@
 .form_container {
-    
+    background-image: url(../../site-images/icedcoffee-background.jpeg);
     background-attachment: local;
     background-size: cover;
     background-position: center;
@@ -50,6 +50,7 @@
 
 .user_icon {
     color: #ccc;
+    padding: 5px;
 }
 
 
@@ -60,7 +61,6 @@
     flex-direction: row;
     border: 1px solid #ccc;
     border-radius: 4px;
-    display: flex;
     align-items: center;
     justify-content: space-around;
     margin: 2.5px;
@@ -68,6 +68,7 @@
 
 .email_icon {
     color: #ccc;
+    padding: 5px;
 }
 
 .email_input {
@@ -85,14 +86,14 @@
     flex-direction: row;
     border: 1px solid #ccc;
     border-radius: 4px;
-    display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 5px;
+    margin: 2.5px;
 }
 
 .password_icon {
-       color: #ccc;
+    color: #ccc;
+    padding: 5px;
 }
 
 .password_input {
@@ -100,7 +101,7 @@
     height: 20px;
     border: none;
     border-left: #ccc 1px solid;
-    margin: 5px;
+    margin: 2.5px;
 }
 
 
