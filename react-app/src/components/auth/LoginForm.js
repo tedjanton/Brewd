@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { Redirect } from "react-router-dom";
 import { login } from "../../store/session";
 import "./LoginForm.css";
+
+
 const LoginForm = ({ authenticated, setAuthenticated }) => {
   const dispatch = useDispatch();
   const [errors, setErrors] = useState([]);
@@ -77,6 +79,11 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               onChange={updatePassword}
               className="password_input"
             />
+          </div>
+          <div className="recaptcha_container">
+            <div className="recaptcha_img" />
+            <div>Privacy</div>
+            <div>Terms</div>
           </div>
           <button type="submit" className="sign_in_button">Sign In</button>
         </form>
