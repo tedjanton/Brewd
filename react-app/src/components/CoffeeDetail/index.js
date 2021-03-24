@@ -24,7 +24,7 @@ const CoffeeDetail = () => {
             <button onClick={() => setShowModal(true)}>Sip Coffee</button>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
-                    <SipForm />
+                    <SipForm setShowModal={setShowModal}/>
                 </Modal>
             )}
         </>

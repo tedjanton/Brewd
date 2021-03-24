@@ -21,7 +21,6 @@ def add_sip():
     Add a Sip to the database
     """
     form = SipForm()
-    print(".................", form.created_at.data)
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         new_sip = Sip(user_id=form.user_id.data,
@@ -32,7 +31,6 @@ def add_sip():
                           created_at=form.created_at.data)
         db.session.add(new_sip)
         db.session.commit()
-        print("SUCCESSSSSSSSSS")
         return new_sip.to_dict()
     else:
         return {"errors": "invalid submission"}
