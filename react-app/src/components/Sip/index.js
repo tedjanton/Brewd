@@ -34,19 +34,23 @@ const Sip = ({ sip }) => {
               <div className="open_sip_details">View Sip Details</div>
             </div>
           </div>
+          <div className="sip_comments_container">
+            <CommentForm sip={sip} />
+          </div>
+          <div className="sip_likes_container">
+            <LikeButton sip={sip} />
+          </div>
+          <div className="sip_comment_responses_container">
+            {sip.comments &&
+              sip.comments.map((comment) => (
+                <div key={comment.comment.id} className="sip_comment_response">
+                  <div>{comment.comment}</div>
+                </div>
+              ))}
+          </div>
         </div>
         <div className="sip_logo_container" >
           <img className="sip_logo" src={sip.coffee.shop.logo_src} />
-        </div>
-        <CommentForm sip={sip} />
-        <LikeButton sip={sip} />
-        <div className="sip_comment_responses_container">
-          {sip.comments &&
-            sip.comments.map((comment) => (
-              <div key={comment.comment.id} className="sip_comment_response">
-                <div>{comment.comment}</div>
-              </div>
-            ))}
         </div>
       </div>
     );
