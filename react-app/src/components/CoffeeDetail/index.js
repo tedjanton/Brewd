@@ -39,7 +39,7 @@ const CoffeeDetail = () => {
                 </div>
                 <div className="cd_middle_container">
                     <p className="coffee_description_i">{coffee?.description}</p>
-                    <button onClick={() => setShowModal(true)} className="make_new_post"><i class="fas fa-coffee mug_icon"></i></button>
+                    <button onClick={() => setShowModal(true)} className="make_new_post"><i className="fas fa-coffee mug_icon"></i></button>
                     {showModal && (
                         <Modal onClose={() => setShowModal(false)}>
                             <SipForm setShowModal={setShowModal} />

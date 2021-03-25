@@ -100,7 +100,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
                 ></input>
             </div>
             <div className="email_container">
-              <i class="fas fa-envelope email_icon"></i>
+              <i className="fas fa-envelope email_icon"></i>
               <input
                 type="text"
                 name="email"
@@ -111,7 +111,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
                 ></input>
             </div>
             <div className="password_container">
-              <i class="fas fa-lock password_icon"></i>
+              <i className="fas fa-lock password_icon"></i>
               <input
                 type="password"
                 name="password"
@@ -122,7 +122,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
                 ></input>
             </div>
             <div className="repeatpassword_container">
-              <i class="fas fa-lock password_icon"></i>
+              <i className="fas fa-lock password_icon"></i>
               <input
                 type="password"
                 name="repeat_password"
