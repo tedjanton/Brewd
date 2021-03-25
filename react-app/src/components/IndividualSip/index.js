@@ -28,20 +28,21 @@ const IndividualSip = ({ sip, coffee }) => {
                 <div className="inner_container_i">
                 <div className="review_text_i">{sip.review}</div>
                 <div className="review_middle_container_i">
-                    <Ratings
-                    className="coffee_rating_display_sip_i"
-                    rating={coffee.avg_rating || 0}
-                    widgetDimensions="15px"
-                    widgetSpacings="5px"
-                    widgetRatedColors="orange"
-                    widgetEmptyColors="grey"
-                >
-                    <Ratings.Widget />
-                    <Ratings.Widget />
-                    <Ratings.Widget />
-                    <Ratings.Widget />
-                    <Ratings.Widget />
-                </Ratings>
+                    <div className="coffee_rating_display_sip_i">
+                        <Ratings
+                            rating={sip.rating || 0}
+                            widgetDimensions="15px"
+                            widgetSpacings="5px"
+                            widgetRatedColors="orange"
+                            widgetEmptyColors="grey"
+                        >
+                            <Ratings.Widget />
+                            <Ratings.Widget />
+                            <Ratings.Widget />
+                            <Ratings.Widget />
+                            <Ratings.Widget />
+                        </Ratings>
+                    </div>
                     <div className="type_i">
                     <i className="fas fa-mug-hot icon_i" />
                     {coffee.type}

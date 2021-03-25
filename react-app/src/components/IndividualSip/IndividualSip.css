@@ -76,6 +76,16 @@
     justify-content: space-between;
 }
 
+.coffee_rating_display_sip_i {
+    width: auto;
+    font-size: 1em;
+    height: 60px;
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+
 .review_stars_i {
     height: auto;
     width: 100%;
@@ -86,12 +96,14 @@
     color: black;
     margin: 10px;
     display: flex;
-    
+    align-self: center;
+    margin-right: 20px;
 }
 
 .icon_i {
     color: #ffbb00;
     margin-right: 5px;
+    align-self: center;
 }
 .user_icon_i {
     margin-left: 12px;
