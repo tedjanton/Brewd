@@ -1,0 +1,153 @@
+.form_white_background {
+    width: 600px;
+    height: 700px;
+}
+
+.inputs_container {
+    /* 2 col 6 row */
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+        "coffeeshop_message coffeeshop_message"
+        "message1 message1"
+        "username_container email_container"
+        "message2 message2"
+        "password_container repeatpassword_container"
+        "firstname_container lastname_container";
+}
+.coffeeshop_message {
+    grid-area: coffeeshop_message;
+    font-weight: 600;
+    font-size: 14.4px;
+    background-color: #ffa;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    
+}
+
+.coffeeshop_message_text_1 {
+    color: #595959;
+    margin: 0px;
+}
+.coffeeshop_message_text_2 {
+    color: #8a4500;
+    margin: 0px;
+}
+.message1 {
+    grid-area: message1;
+    color: #666666;
+    font-size: 14.4px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.message2 {
+    grid-area: message2;
+    font-size: 14.4px;
+    font-weight: 500;
+    text-align: center;
+    margin: 10px;
+}
+
+.username_container {
+    grid-area: username_container;
+    width: 275px;
+    height: 34.44px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2.5px;
+}
+
+.firstname_container {
+    grid-area: firstname_container;
+    width: 275px;
+    height: 34.44px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin: 2.5px;
+}
+
+.lastname_container {
+    grid-area: lastname_container;
+    width: 275px;
+    height: 34.44px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin: 2.5px;
+}
+
+.repeatpassword_container {
+    grid-area: repeatpassword_container;
+    width: 275px;
+    height: 34.44px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2.5px;
+    margin-bottom: 50px;
+}
+
+.email_container {
+    grid-area: email_container; 
+    width: 275px;  
+}
+
+.password_container {
+    grid-area: password_container;
+    width: 275px;
+}
+
+.firstname_input {
+    width: 250px;
+    height: 20px;
+    border: none;
+    margin: 2.5px;
+}
+
+.lastname_input {
+    width: 250px;
+    height: 20px;
+    border: none;
+    margin: 2.5px;
+}
+
+.username_input {
+    width: 250px;
+    height: 20px;
+    border: none;
+    border-left: #ccc 1px solid;
+    margin: 2.5px;
+}
+
+.repeatedpassword_input {
+    width: 250px;
+    height: 20px;
+    border: none;
+    border-left: #ccc 1px solid;
+    margin: 2.5px;
+}
+
+.above_button_phrase {
+    font-size: 11.2px;
+    color: #595959;
+    margin: 4px 55px 16px;
+    padding: 6px 0;
+    text-align: center;
+}

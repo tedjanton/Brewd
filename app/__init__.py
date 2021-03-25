@@ -11,6 +11,7 @@ from .api.auth_routes import auth_routes
 from .api.top_rated_routes import top_rated_routes
 from .api.the_coffee_house_routes import the_coffee_house_routes
 from .api.featured_routes import featured_routes
+from .api.coffee_detail_routes import coffee_detail_routes
 
 from .seeds import seed_commands
 
@@ -37,6 +38,7 @@ app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(top_rated_routes, url_prefix='/api/top_rated')
 app.register_blueprint(the_coffee_house_routes, url_prefix='/api/coffeehouse')
 app.register_blueprint(featured_routes, url_prefix='/api/featured')
+app.register_blueprint(coffee_detail_routes, url_prefix="/api/coffees")
 
 
 db.init_app(app)
@@ -50,6 +52,7 @@ CORS(app)
 # Therefore, we need to make sure that in production any
 # request made over http is redirected to https.
 # Well.........
+
 
 @app.before_request
 def https_redirect():
@@ -75,7 +78,7 @@ def inject_csrf_token(response):
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def react_root(path):
-    print("path", path)
+    # print("path", path)
     if path == 'favicon.ico':
         return app.send_static_file('favicon.ico')
     return app.send_static_file('index.html')
