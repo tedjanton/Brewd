@@ -1,24 +1,20 @@
 import React from "react";
-import user_icon from "../../site-images/user_icon.jpeg";
-import "./Sip.css"
+import "./IndividualSip.css"
 
 
-const Sip = ({ sip }) => {
+const IndividualSip = ({ sip, coffee }) => {
 
     if (sip) {
         return (
             <div className="sip">
-                <div className="user_icon">
-                    <img src={user_icon} />
-                </div>
                 <div className="user_input_container">
-                    <p className="text">
+                    <div className="text_i">
                         <a className="changing_text">{sip.user.first_name}</a>
                         is sipping a
-                        <a className="changing_text" href={`/coffees/${sip.coffee.id}`}>{sip.coffee.name}</a>
+                        <a className="changing_text">{coffee.name}</a>
                         at
-                        <a className="changing_text">{sip.coffee.shop.name}</a>
-                    </p>
+                        <a className="changing_text">{coffee.shop.name}</a>
+                    </div>
                     <div className="review_container">
                         <div className="inner_container">
                             <div className="review_text">
@@ -28,7 +24,7 @@ const Sip = ({ sip }) => {
                                 <div className="review_stars"></div>
                                 <div className="type">
                                     <i className="fas fa-mug-hot icon" />
-                                    {sip.coffee.type}
+                                    {coffee.type}
                                 </div>
                             </div>
                         </div>
@@ -39,7 +35,7 @@ const Sip = ({ sip }) => {
                         </div>
                     </div>
                 </div>
-                <img className="sip_logo" src={sip.coffee.shop.logo_src}/>
+                <img className="sip_logo" src={coffee.shop.logo_src}/>
             </div>
         )
 
@@ -51,4 +47,4 @@ const Sip = ({ sip }) => {
     }
 }
 
-export default Sip;
+export default IndividualSip;
