@@ -1,4 +1,5 @@
 import React from "react";
+import Ratings from "react-ratings-declarative";
 import "./IndividualCoffee.css";
 
 const IndividualCoffee = ({ coffee }) => {
@@ -23,7 +24,33 @@ const IndividualCoffee = ({ coffee }) => {
             <div className="coffee_spec_container_i">
               <div className="coffee_caffeine_i">{coffee.caffeine} mg</div>
               <div className="coffee_type_i">{coffee.type}</div>
-              <div className="coffee_rating_display_i">⭐️⭐️⭐️⭐️⭐️</div>
+              <Ratings
+                className="coffee_rating_display"
+                rating={coffee.avg_rating}
+                widgetDimensions="15px"
+                widgetSpacings="5px"
+              >
+                <Ratings.Widget
+                  widgetRatedColor="orange"
+                  widgetEmptyColors="grey"
+                />
+                <Ratings.Widget
+                  widgetRatedColor="orange"
+                  widgetEmptyColors="grey"
+                />
+                <Ratings.Widget
+                  widgetRatedColor="orange"
+                  widgetEmptyColors="grey"
+                />
+                <Ratings.Widget
+                  widgetRatedColor="orange"
+                  widgetEmptyColors="grey"
+                />
+                <Ratings.Widget
+                  widgetRatedColor="orange"
+                  widgetEmptyColors="grey"
+                />
+              </Ratings>
               <div className="coffee_rating_number_i">{rating}</div>
               <div className="coffee_total_ratings_i">Total Ratings</div>
               <div clasName="coffee_specs_i"></div>
