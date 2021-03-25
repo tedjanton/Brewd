@@ -11,6 +11,7 @@ export const getSips = () => async (dispatch) => {
       "Content-Type": "application/json",
     },
   });
+  console.log(response)
   if (response.ok) {
     const sips = await response.json();
     dispatch(load(sips));
@@ -28,7 +29,6 @@ export const getUserSips = (userId) => async (dispatch) => {
   if (response.ok) {
     const userSips = await response.json();
     dispatch(load(userSips));
-    return response;
   }
 };
 

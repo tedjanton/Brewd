@@ -23,7 +23,7 @@ const CoffeeHouse = ({ authenticated }) => {
             <div className="sip_container">
                 <div className="page_title">Recent Global Activity</div>
                     {sips?.map((sip) => (
-                        <Sip sip={sip} />
+                        <Sip key={sip.id} sip={sip} />
                     ))}
             </div>
             <Featured />

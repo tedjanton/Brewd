@@ -4,7 +4,7 @@ import CommentForm from "../Comment/index";
 import LikeButton from "../Like/index";
 
 const Sip = ({ sip }) => {
-  console.log("THE SIP", sip);
+
   if (sip) {
     return (
       <div className="sip">
@@ -43,8 +43,8 @@ const Sip = ({ sip }) => {
         <div className="sip_comment_responses_container">
           {sip.comments &&
             sip.comments.map((comment) => (
-              <div className="sip_comment_response">
-                <div>{comment}</div>
+              <div key={comment.comment.id} className="sip_comment_response">
+                <div>{comment.comment}</div>
               </div>
             ))}
         </div>

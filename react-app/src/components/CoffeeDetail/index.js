@@ -29,7 +29,7 @@ const CoffeeDetail = () => {
             dispatch(getSips())
         }
     }, [coffee, sips, dispatch])
-    
+
     return (
         <div className="coffee_details_page_container">
             <div className="coffee_details_page_container_top">
@@ -49,11 +49,11 @@ const CoffeeDetail = () => {
             <div className="coffee_details_page_container_bottom">
                 <div>
                     {sips?.map((sip) => (
-                                <IndividualSip sip={sip} coffee={coffee} />
+                        <IndividualSip key={sip.id} sip={sip} coffee={coffee} />
                     ))}
                 </div>
             </div>
-            
+
         </div>
     )
 }
