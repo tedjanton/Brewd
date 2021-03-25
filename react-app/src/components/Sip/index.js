@@ -39,7 +39,9 @@ const Sip = ({ sip }) => {
                         </div>
                     </div>
                 </div>
-                <img className="sip_logo" src={sip.coffee.shop.logo_src}/>
+                <div className="sip_logo_container">
+                    <img className="sip_logo" src={sip.coffee.shop.logo_src}/>
+                </div>
             </div>
         )
 
