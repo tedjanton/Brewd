@@ -4,22 +4,26 @@ import { useParams } from "react-router-dom";
 import { Modal } from "../../context/Modal";
 import { getCoffee } from "../../store/coffee-detail";
 import SipForm from "../SipModal/SipForm";
+import CommentForm from "../Comment/index";
 import IndividualCoffee from "../IndividualCoffee";
 import IndividualSip from "../IndividualSip";
 import { getSips } from "../../store/coffeehouse";
 import "./CoffeeDetail.css";
 
-
 const CoffeeDetail = () => {
-    const params = useParams();
-    const dispatch = useDispatch();
-    const [showModal, setShowModal] = useState();
+  const params = useParams();
+  const dispatch = useDispatch();
+  const [showModal, setShowModal] = useState();
 
-    const coffee = useSelector((state) => {
+  const coffee = useSelector((state) => {
+    return state.selected?.coffee?.currentCoffee;
+  });
+
+  const coffee = useSelector((state) => {
        return state.selected?.coffee?.currentCoffee;
     })
     
-    const sips = coffee?.sips;
+  const sips = coffee?.sips;
 
     useEffect(() => {
         if (!coffee) {
@@ -29,6 +33,7 @@ const CoffeeDetail = () => {
             dispatch(getSips())
         }
     }, [coffee, sips, dispatch])
+    
     return (
         <div className="coffee_details_page_container">
             <div className="coffee_details_page_container_top">
@@ -56,5 +61,6 @@ const CoffeeDetail = () => {
         </div>
     )
 }
+
 
 export default CoffeeDetail;

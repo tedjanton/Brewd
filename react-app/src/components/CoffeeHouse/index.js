@@ -4,18 +4,19 @@ import { getSips } from "../../store/coffeehouse";
 import "./CoffeeHouse.css";
 import Sip from "../Sip";
 import Featured from "../Featured";
+import CommentForm from "../Comment/index";
 
 const CoffeeHouse = ({ authenticated }) => {
-    const dispatch = useDispatch();
-    const sips = useSelector((state) => {
-        return state.coffeehouse?.sips?.all_sips;
-    });
+  const dispatch = useDispatch();
+  const sips = useSelector((state) => {
+    return state.coffeehouse?.sips?.all_sips;
+  });
 
-    useEffect(() => {
-        if (!sips) {
-            dispatch(getSips());
-        }
-    }, [sips, dispatch])
+  useEffect(() => {
+    if (!sips) {
+      dispatch(getSips());
+    }
+  }, [sips, dispatch]);
 
      return (
         <div className="coffeehouse_container">
@@ -27,9 +28,8 @@ const CoffeeHouse = ({ authenticated }) => {
             </div>
             <Featured />
         </div>
-
     )
-
 }
+
 
 export default CoffeeHouse;
