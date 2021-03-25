@@ -8,7 +8,7 @@ import add_picture from "../../site-images/add_picture.png"
 import "./SipModal.css";
 
 const SipForm = ({ setShowModal }) => {
-    const coffee = useSelector(state => state.selected.coffee)
+    const coffee = useSelector(state => state.selected.coffee.currentCoffee)
     const user = useSelector(state => state.session.user)
     const dispatch = useDispatch();
     const history = useHistory();
