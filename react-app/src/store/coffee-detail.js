@@ -6,7 +6,7 @@ const load = (coffee) => ({
 })
 
 export const getCoffee = (coffeeId) => async (dispatch) => {
-    const response = await fetch(`/api/coffees/${coffeeId}`)
+    const response = await fetch(`/api/coffees/${coffeeId}/`)
 
     if (response.ok) {
         const coffee = await response.json();
@@ -24,7 +24,7 @@ export const createSip = (sip) => async (dispatch) => {
         img_src
     } = sip;
 
-    const response = await fetch("/api/coffees/add-sip", {
+    const response = await fetch("/api/coffees/add-sip/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -4,18 +4,19 @@ from flask import Blueprint, session, request
 from app.forms import SipForm
 from datetime import datetime
 
+
 coffee_detail_routes = Blueprint("coffee_detail_routes", __name__)
 
 
-@coffee_detail_routes.route("/<int:id>")
+@coffee_detail_routes.route("/<int:id>/")
 @login_required
 def coffee(id):
     coffee = Coffee.query.get(id)
-   
+
     return {"currentCoffee": coffee.to_dict()}
 
 
-@coffee_detail_routes.route("/add-sip", methods=["POST"])
+@coffee_detail_routes.route("/add-sip/", methods=["POST"])
 @login_required
 def add_sip():
     """
@@ -35,4 +36,3 @@ def add_sip():
         return new_sip.to_dict()
     else:
         return {"errors": "invalid submission"}
-

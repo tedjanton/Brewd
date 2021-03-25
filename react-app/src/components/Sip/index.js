@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Sip.css";
 import CommentForm from "../Comment/index";
 import LikeButton from "../Like/index";
@@ -19,6 +19,18 @@ const Sip = ({ sip }) => {
       </>
     )
   }
+
+  useEffect(() => {
+
+  }, [sip])
+
+  const commentsGiven = sip.comments
+    .sort((a, b) => a.id < b.id ? 1 : -1)
+    .map((comment) =>
+        <div key={comment.id} className="sip_comment_response">
+          {comment.comment}
+        </div>
+    );
 
   if (sip) {
     return (
@@ -57,12 +69,7 @@ const Sip = ({ sip }) => {
             <LikeButton sip={sip} />
           </div>
           <div className="sip_comment_responses_container">
-            {sip.comments &&
-              sip.comments.map((comment) => (
-                <div key={comment.comment.id} className="sip_comment_response">
-                  <div>{comment.comment}</div>
-                </div>
-              ))}
+            {commentsGiven}
           </div>
         </div>
         <div className="sip_logo_container" >
