@@ -25,6 +25,7 @@
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  background-color: white;
 }
 
 .top_rated_blurb {
@@ -33,6 +34,7 @@
   padding-left: 24px;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
+  background-color:white;
 }
 
 .coffee_item {
