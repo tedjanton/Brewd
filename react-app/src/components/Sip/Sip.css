@@ -3,7 +3,7 @@
     padding: 24px;
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%); 
+    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%);
     width: 652px;
     position: relative;
     height: auto;
@@ -58,7 +58,7 @@
 .inner_container {
     border: rgb(0 22 36 / 8%) solid 1px;
     border-radius: 5px;
-    
+
 }
 .review_text {
     font-size: 19.2px;
@@ -83,7 +83,7 @@
     color: black;
     margin: 10px;
     display: flex;
-    
+
 }
 
 .icon {
@@ -113,9 +113,14 @@
     margin: 0px 12px 16px 0px;
 }
 
-.sip_logo {
+.sip_logo_container {
     height: 42px;
     width: 42px;
-    margin: 0px 0px 12px 12px;
+    object-fit: cover;
 }
 
+.sip_logo {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0px 0px 12px 12px;
+}
