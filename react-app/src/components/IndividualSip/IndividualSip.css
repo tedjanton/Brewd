@@ -4,7 +4,7 @@
     padding-left: 0px;
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%);
+    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%); 
     width: 652px;
     position: relative;
     height: auto;
@@ -35,18 +35,13 @@
     margin-top: 25px;
 }
 
-.user_icon img {
-    height: 52px;
-    width: 52px;
-    margin-left: -10px;
-}
-
 
 .user_input_container {
     font-size: 18px;
+
 }
 
-.text {
+.text_i {
     color: #000000;
     margin: 10px;
 }
@@ -55,24 +50,18 @@
     color: #8a4500;
     margin-left: 4px;
     margin-right: 4px;
-    text-decoration: none;
 }
 
-.changing_text a {
-    color: #8a4500;
-    margin-left: 4px;
-    margin-right: 4px;
-    text-decoration: none;
-}
+
 
 .review_container {
-    width: 450px;
+
 }
 
 .inner_container {
     border: rgb(0 22 36 / 8%) solid 1px;
     border-radius: 5px;
-
+    
 }
 .review_text {
     font-size: 19.2px;
@@ -97,7 +86,7 @@
     color: black;
     margin: 10px;
     display: flex;
-
+    
 }
 
 .icon {
@@ -127,14 +116,9 @@
     margin: 0px 12px 16px 0px;
 }
 
-.sip_logo_container {
+.sip_logo {
     height: 42px;
     width: 42px;
-    object-fit: cover;
-}
-
-.sip_logo {
-    max-height: 100%;
-    max-width: 100%;
     margin: 0px 0px 12px 12px;
 }
+

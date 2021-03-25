@@ -5,7 +5,7 @@ import { Modal } from "../../context/Modal";
 import { getCoffee } from "../../store/coffee-detail";
 import SipForm from "../SipModal/SipForm";
 import IndividualCoffee from "../IndividualCoffee";
-import Sip from "../Sip";
+import IndividualSip from "../IndividualSip";
 import { getSips } from "../../store/coffeehouse";
 import "./CoffeeDetail.css";
 
@@ -19,9 +19,7 @@ const CoffeeDetail = () => {
        return state.selected?.coffee?.currentCoffee;
     })
     
-    const sips = useSelector((state) => {
-        return state.coffeehouse?.sips?.all_sips;
-    })
+    const sips = coffee?.sips;
 
     useEffect(() => {
         if (!coffee) {
@@ -32,14 +30,14 @@ const CoffeeDetail = () => {
         }
     }, [coffee, sips, dispatch])
     return (
-        <>
+        <div className="coffee_details_page_container">
             <div className="coffee_details_page_container_top">
                 <div className="individual_coffee_container">
                     <IndividualCoffee coffee={coffee} />
                 </div>
                 <div className="cd_middle_container">
                     <p className="coffee_description_i">{coffee?.description}</p>
-                    <button onClick={() => setShowModal(true)} className="make_new_post"><i class="fas fa-coffee mug_icon"></i></button>
+                    <button onClick={() => setShowModal(true)} className="make_new_post"><i className="fas fa-coffee mug_icon"></i></button>
                     {showModal && (
                         <Modal onClose={() => setShowModal(false)}>
                             <SipForm setShowModal={setShowModal} />
@@ -47,12 +45,15 @@ const CoffeeDetail = () => {
                     )}
                 </div>
             </div>
-            <div className="coffee_sips_container">
-                {sips?.map((sip) => (
-                            <Sip sip={sip} />
-                ))}
+            <div className="coffee_details_page_container_bottom">
+                <div>
+                    {sips?.map((sip) => (
+                                <IndividualSip sip={sip} coffee={coffee} />
+                    ))}
+                </div>
             </div>
-        </>
+            
+        </div>
     )
 }
 
