@@ -1,28 +1,32 @@
 
-.flex-container {
+.flex-container-navbar {
     display: flex;
-    
+    padding: 0px 180px;
+}
+.flex-container-ul {
+    display: flex;
+    justify-items: flex-start;
 }
 .yellowBar{
-    height:10px;
+    height:8px;
     width:100%;
-    background-color: rgb(255, 209, 82);
+    background-color: #ffbb00;
 }
 .brewd-letters {
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 38px;
+    font-weight: 550;
     align-items: center;
-    
-}
-.navBar {
-    width: 900px;
-    margin:0 auto;
+    height: 38px;
 }
 
+.link-other-page {
+    color: #212121;
+    font-size: 16px;
+}
 .navContainer {
     width:100%;
     background-color:white;    
-    line-height:70px;
+    line-height:50px;
 }
 
 nav {
@@ -37,12 +41,13 @@ nav ul {
     padding :0px 10px;
 }
 
-.rightAlign {
+.profile-button-nav {
     justify-self: flex-end;
 }
 
 nav ul li {
-    margin :10px;
+    margin :5px;
+    display: flex;
 }
 
 nav ul li a {
@@ -52,9 +57,7 @@ nav ul li a {
     /* border :1px solid red; */
     border-radius:4px; 
     padding: 7px  15px;
+    align-items: center;
 }
 
-.navUl {
-    flex-basis: 900px;
-    
-}
+

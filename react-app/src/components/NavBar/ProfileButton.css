@@ -6,7 +6,8 @@
 }
 
 .menuContainer {
-    display:relative;
+    margin-right: 310px;
+    margin-left: auto;
 }
 
 .menu {
@@ -38,3 +39,12 @@ a {
     color: white;
 }
 
+.logout-button-nav button {
+    text-decoration:none;
+    color: white;
+    font-size: 16px;
+    border: none;
+    background-color: rgb(59, 59, 59);
+    height: auto;
+    width: auto;
+}

@@ -10,11 +10,11 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
     sessionLinks = (
       <div className="navContainer ">
         <div className="yellowBar"></div>
-      <nav className="flex-container navBar">
-        <ul className="flex-container navUl">
+      <nav className="flex-container-navbar">
+        <ul className="flex-container-ul">
           <li>
             <NavLink className="brewd-letters" to="/" exact={true} activeClassName="active">
-              Brewd
+              BREWD
             </NavLink>
           </li>
           {/* <li>
@@ -33,12 +33,12 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
             </NavLink>
           </li> */}
           <li>
-            <NavLink to="/coffeehouse" exact={true} activeClassName="active">
+            <NavLink className="link-other-page" to="/coffeehouse" exact={true} activeClassName="active">
               Coffee House
             </NavLink>
           </li>
           <li>
-            <NavLink to="/top_rated" exact={true} activeClassName="active">
+            <NavLink className="link-other-page" to="/top_rated" exact={true} activeClassName="active">
               Top Rated
             </NavLink>
           </li>
@@ -49,7 +49,7 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
             <LogoutButton setAuthenticated={setAuthenticated} />
           </li> */}
         </ul>
-        <ProfileButton className="rightAlign" setAuthenticated={setAuthenticated}/>
+        <ProfileButton className="profile-button-nav" setAuthenticated={setAuthenticated}/>
       </nav>
 
       </div>
