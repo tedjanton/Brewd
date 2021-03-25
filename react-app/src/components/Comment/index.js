@@ -3,9 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { addComment } from "../../store/comment";
 import "./Comment.css";
 
-const CommentForm = () => {
-  const sip = useSelector((state) => state.coffeehouse.sips);
-  //   console.log("SIP", sip);
+const CommentForm = ({ sip }) => {
+  //   const sip = useSelector(
+  //     (state) => state?.selected?.coffee?.currentCoffee?.sips
+  //   );
+//   console.log("SIP", sip);
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const [comment, setComment] = useState("");
@@ -17,6 +19,7 @@ const CommentForm = () => {
       comment,
     };
     dispatch(addComment(new_comment));
+    console.log("NEW_COMMENT", new_comment);
   };
 
   return (

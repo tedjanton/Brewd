@@ -16,9 +16,10 @@ export const addComment = (new_comment) => async (dispatch) => {
       comment,
     }),
   });
+  const data = await response.json();
+  console.log("DATA", data);
   if (response.ok) {
-    console.log("response", response.json());
-    const data = await response.json();
+    // console.log("response", response.data);
     dispatch(create_comment(data));
     return response;
   }

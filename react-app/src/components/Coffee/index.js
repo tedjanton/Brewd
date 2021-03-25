@@ -9,7 +9,6 @@ const Coffee = ({ coffee }) => {
 
   const ratings_array = coffee?.all_ratings;
 
-
   if (coffee) {
     return (
       <div className="main">
