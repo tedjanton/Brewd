@@ -12,6 +12,7 @@ from .api.top_rated_routes import top_rated_routes
 from .api.the_coffee_house_routes import the_coffee_house_routes
 from .api.featured_routes import featured_routes
 from .api.coffee_detail_routes import coffee_detail_routes
+from .api.comment_routes import comment_routes
 
 from .seeds import seed_commands
 
@@ -39,6 +40,7 @@ app.register_blueprint(top_rated_routes, url_prefix='/api/top_rated')
 app.register_blueprint(the_coffee_house_routes, url_prefix='/api/coffeehouse')
 app.register_blueprint(featured_routes, url_prefix='/api/featured')
 app.register_blueprint(coffee_detail_routes, url_prefix="/api/coffees")
+app.register_blueprint(comment_routes, url_prefix='/api/comments')
 
 
 db.init_app(app)

@@ -4,32 +4,33 @@ import { getSips } from "../../store/coffeehouse";
 import "./CoffeeHouse.css";
 import Sip from "../Sip";
 import Featured from "../Featured";
+import CommentForm from "../Comment/index";
 
 const CoffeeHouse = ({ authenticated }) => {
-    const dispatch = useDispatch();
-    const sips = useSelector((state) => {
-        return state.coffeehouse?.sips?.all_sips;
-    });
+  const dispatch = useDispatch();
+  const sips = useSelector((state) => {
+    return state.coffeehouse?.sips?.all_sips;
+  });
 
-    useEffect(() => {
-        if (!sips) {
-            dispatch(getSips());
-        }
-    }, [sips, dispatch])
+  useEffect(() => {
+    if (!sips) {
+      dispatch(getSips());
+    }
+  }, [sips, dispatch]);
 
-     return (
-        <div className="coffeehouse_container">
-            <div className="sips_container">
-                <div className="page_title">Recent Global Activity</div>
-                    {sips?.map((sip) => (
-                        <Sip sip={sip} />
-                    ))}
-            </div>
-            <Featured />
-        </div>
-
-    )
-
-}
+  return (
+    <div className="coffeehouse_container">
+      <div className="sips_container">
+        <div className="page_title">Recent Global Activity</div>
+        <CommentForm />
+        {sips?.map((sip) => (
+          <Sip sip={sip} />
+        ))}
+      </div>
+      <CommentForm />
+      <Featured />
+    </div>
+  );
+};
 
 export default CoffeeHouse;

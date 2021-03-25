@@ -16,6 +16,6 @@ class Comment(db.Model):
         return {
             "id": self.id,
             "user_id": self.user_id,
-            "shop_id": self.shop_id,
+            # "shop_id": self.shop_id,
             "comment": self.comment
         }
