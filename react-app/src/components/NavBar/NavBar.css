@@ -1,0 +1,63 @@
+
+.flex-container-navbar {
+    display: flex;
+    padding: 0px 180px;
+}
+.flex-container-ul {
+    display: flex;
+    justify-items: flex-start;
+}
+.yellowBar{
+    height:8px;
+    width:100%;
+    background-color: #ffbb00;
+}
+.brewd-letters {
+    font-size: 38px;
+    font-weight: 550;
+    align-items: center;
+    height: 38px;
+}
+
+.link-other-page {
+    color: #212121;
+    font-size: 16px;
+}
+.navContainer {
+    width:100%;
+    background-color:white;    
+    line-height:50px;
+}
+
+nav {
+    /* justify-content: fl; */
+    list-style:none;
+    padding :0;
+    margin:0;
+}
+
+nav ul {
+    list-style:none;
+    padding :0px 10px;
+}
+
+.profile-button-nav {
+    justify-self: flex-end;
+}
+
+nav ul li {
+    margin :5px;
+    display: flex;
+}
+
+nav ul li a {
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    /* border :1px solid red; */
+    border-radius:4px; 
+    padding: 7px  15px;
+    align-items: center;
+}
+
+

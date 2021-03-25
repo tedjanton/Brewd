@@ -1,6 +1,8 @@
 .featured_container {
     background-color: white;
     padding: 24px;
+    margin-top: 20px;
+    margin-left:20px;  /* added*/
     position: relative;
     border-radius: 8px;
     font-family: Arial, Helvetica, sans-serif;

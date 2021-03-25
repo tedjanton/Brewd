@@ -18,19 +18,18 @@ const CoffeeHouse = ({ authenticated }) => {
     }
   }, [sips, dispatch]);
 
-  return (
-    <div className="coffeehouse_container">
-      <div className="sips_container">
-        <div className="page_title">Recent Global Activity</div>
-        <CommentForm />
-        {sips?.map((sip) => (
-          <Sip sip={sip} />
-        ))}
-      </div>
-      <CommentForm />
-      <Featured />
-    </div>
-  );
-};
+     return (
+        <div className="coffeehouse_container">
+            <div className="sip_container">
+                <div className="page_title">Recent Global Activity</div>
+                    {sips?.map((sip) => (
+                        <Sip sip={sip} />
+                    ))}
+            </div>
+            <Featured />
+        </div>
+    )
+}
+
 
 export default CoffeeHouse;

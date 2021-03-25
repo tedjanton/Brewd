@@ -8,7 +8,7 @@ const Recaptcha = () => {
             <label className="checkbox_container">
                 <div className="checkbox_positional_container">
                 <input type="checkbox" className="checkbox"/>
-                <span class="checkmark"></span>
+                <span className="checkmark"></span>
                 <p className="checkbox_text">I'm not a robot</p>
                 </div>
             </label>
