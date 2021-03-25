@@ -51,8 +51,8 @@ const IndividualCoffee = ({ coffee }) => {
                   widgetEmptyColors="grey"
                 />
               </Ratings>
-              <div className="coffee_rating_number_i">{rating}</div>
-              <div className="coffee_total_ratings_i">Total Ratings</div>
+              <div className="coffee_rating_number_i">{coffee.avg_rating}</div>
+              <div className="coffee_total_ratings_i">{coffee.all_ratings.length} ratings</div>
               <div className="coffee_specs_i"></div>
             </div>
           </div>

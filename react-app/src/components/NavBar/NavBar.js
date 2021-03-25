@@ -43,15 +43,15 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
             </NavLink>
           </li>
           {/* <li className="rightAlign">
-            
+
           </li> */}
           {/* <li>
             <LogoutButton setAuthenticated={setAuthenticated} />
           </li> */}
         </ul>
-        <ProfileButton className="rightAlign"/>
+        <ProfileButton className="rightAlign" setAuthenticated={setAuthenticated}/>
       </nav>
-      
+
       </div>
     );
   } else {
