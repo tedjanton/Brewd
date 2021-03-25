@@ -70,4 +70,7 @@
     margin: 4px;
 }
 
-
+.signup_page_link {
+    text-decoration: none;
+    color: #8a4500;
+}
