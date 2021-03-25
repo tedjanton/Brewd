@@ -19,10 +19,6 @@ const CoffeeDetail = () => {
     return state.selected?.coffee?.currentCoffee;
   });
 
-  const coffee = useSelector((state) => {
-       return state.selected?.coffee?.currentCoffee;
-    })
-    
   const sips = coffee?.sips;
 
     useEffect(() => {
