@@ -74,3 +74,7 @@
     text-decoration: none;
     color: #8a4500;
 }
+
+.login-errors {
+    color: red;
+}

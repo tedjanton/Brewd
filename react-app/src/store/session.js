@@ -41,11 +41,13 @@ export const login = (email, password) => async (dispatch) => {
     }),
   });
 
-  if (response.ok) {
-    let data = await response.json();
-    dispatch(getUser(data));
-    return response;
+  let user = await response.json();
+  console.log(user)
+  if (!user.errors) {
+    dispatch(getUser(user));
+    return user;
   }
+  return user;
 };
 
 export const logout = () => async (dispatch) => {

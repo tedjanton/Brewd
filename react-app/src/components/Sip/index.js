@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sip.css";
 import CommentForm from "../Comment/index";
 import LikeButton from "../Like/index";
 
 const Sip = ({ sip }) => {
+  const [clicked, setClicked] = useState(false);
+
+  let commentBox;
+  if (clicked) {
+    commentBox = (
+      <div className="sip-comment-box">
+        <CommentForm setClicked={setClicked} sip={sip} />
+      </div>
+    )
+  } else {
+    commentBox = (
+      <>
+      </>
+    )
+  }
 
   if (sip) {
     return (
@@ -34,10 +49,11 @@ const Sip = ({ sip }) => {
               <div className="open_sip_details">View Sip Details</div>
             </div>
           </div>
-          <div className="sip_comments_container">
-            <CommentForm sip={sip} />
+          <div className="sip_comment_button">
+            <button onClick={() => setClicked(true)}>Comment</button>
+            {commentBox}
           </div>
-          <div className="sip_likes_container">
+          <div className="sip_like_button">
             <LikeButton sip={sip} />
           </div>
           <div className="sip_comment_responses_container">

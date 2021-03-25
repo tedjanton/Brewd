@@ -3,11 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addComment } from "../../store/comment";
 import "./Comment.css";
 
-const CommentForm = ({ sip }) => {
-  //   const sip = useSelector(
-  //     (state) => state?.selected?.coffee?.currentCoffee?.sips
-  //   );
-//   console.log("SIP", sip);
+const CommentForm = ({ setClicked, sip }) => {
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const [comment, setComment] = useState("");
@@ -19,7 +15,8 @@ const CommentForm = ({ sip }) => {
       comment,
     };
     dispatch(addComment(new_comment));
-    console.log("NEW_COMMENT", new_comment);
+    setClicked(false)
+    window.location.reload();
   };
 
   return (
@@ -29,7 +26,7 @@ const CommentForm = ({ sip }) => {
         placeholder="Leave a comment here!"
         value={comment}
       />
-      <div classname="comment_button">
+      <div className="comment_button">
         <button onClick={handleSubmit}>Submit Comment</button>
       </div>
     </div>

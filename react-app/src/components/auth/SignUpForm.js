@@ -12,6 +12,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
+  const [errors, setErrors] = useState([]);
 
   const onSignUp = async (e) => {
     e.preventDefault();
@@ -21,6 +22,8 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
       );
       if (!user.errors) {
         setAuthenticated(true);
+      } else {
+        setErrors(user.errors)
       }
     }
   };
@@ -102,7 +105,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
             <div className="email_container">
               <i className="fas fa-envelope email_icon"></i>
               <input
-                type="text"
+                type="email"
                 name="email"
                 onChange={updateEmail}
                 value={email}

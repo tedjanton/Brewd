@@ -15,10 +15,9 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 
   const onLogin = async (e) => {
     e.preventDefault();
-    const user = await login(email, password);
+    const user = await dispatch(login(email, password));
     if (!user.errors) {
       setAuthenticated(true);
-      dispatch(login(email, password))
     } else {
       setErrors(user.errors);
     }
@@ -62,7 +61,11 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
           </button>
 
           <div className="circle_OR">OR</div>
-
+          <div className="login-errors">
+            {errors.map((error) => (
+              <div key={error}>{error}</div>
+            ))}
+          </div>
           <div className="email_container">
             <i className="fas fa-envelope email_icon"></i>
             <input
@@ -92,11 +95,6 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
                 <p className="signup_link_text">New around here?</p>
                 <Link to="/signup" className="signup_page_link">Sign up!</Link>
             </div>
-          <div>
-            {errors.map((error) => (
-              <div key={error}>{error}</div>
-            ))}
-          </div>
         </form>
       </div>
     </div>
