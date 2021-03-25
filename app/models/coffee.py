@@ -21,10 +21,10 @@ class Coffee(db.Model):
         for sip in self.sips:
             ratings.append(sip.get_rating())
 
-        if len(ratings) == 0:
-            avg_rating = None
-        elif len(ratings) == 1:
+        if len(ratings) == 1:
             avg_rating = ratings[0]
+        elif len(ratings) == 0:
+            avg_rating = 0;
         else:
             avg_rating = sum(ratings)/len(ratings)
 
@@ -43,6 +43,19 @@ class Coffee(db.Model):
         }
 
     def to_simple_dict(self):
+
+        ratings = []
+
+        for sip in self.sips:
+            ratings.append(sip.get_rating())
+
+        if len(ratings) == 1:
+            avg_rating = ratings[0]
+        elif len(ratings) == 0:
+            avg_rating = 0;
+        else:
+            avg_rating = sum(ratings)/len(ratings)
+            
         return {
             "id": self.id,
             "shop_id": self.shop_id,
@@ -52,7 +65,11 @@ class Coffee(db.Model):
             "type": self.type,
             "img_src": self.img_src,
             "shop": self.shop.to_dict(),
-        }
+            "avg_rating": avg_rating,
+            "all_ratings": ratings
+        } 
+
+        
 
 
 # {'id': 1,

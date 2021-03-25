@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 75px;
+    margin-left: 5px;
     margin-top: 25px;
 }
 
@@ -93,9 +93,13 @@
     color: #ffbb00;
     margin-right: 5px;
 }
-
-.user_image_i {
-
+.user_icon_i {
+    margin-left: 12px;
+}
+.user_icon_i img {
+    height: 52px;
+    width: 52px;
+    margin-left: -10px;
 }
 
 .review_bottom_container_i {

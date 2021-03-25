@@ -60,6 +60,9 @@
   color: #888;
   margin: 10px;
   font-size: 100%;
+  width: 500px;
+  height: auto;
+  overflow: wrap;
  
 }
 

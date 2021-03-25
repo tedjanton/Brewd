@@ -1,13 +1,18 @@
 import React from "react";
 import "./Sip.css";
-import CommentForm from "../Comment/index";
+import CommentForm from "../Comment/index"
+import Ratings from "react-ratings-declarative";
 import LikeButton from "../Like/index";
+import user_icon from "../../site-images/user_icon.jpeg";
 
 const Sip = ({ sip }) => {
-
+  
   if (sip) {
     return (
       <div className="sip">
+        <div className="user_icon" >
+                <img src={user_icon} />
+            </div>
         <div className="user_input_container">
           <p className="text">
             <a className="changing_text">{sip.user.first_name}</a>is sipping a
@@ -21,7 +26,20 @@ const Sip = ({ sip }) => {
             <div className="inner_container">
               <div className="review_text">{sip.review}</div>
               <div className="review_middle_container">
-                <div className="review_stars"></div>
+                <Ratings
+                className="coffee_rating_display_sip"
+                rating={sip.coffee.avg_rating || 0}
+                widgetDimensions="15px"
+                widgetSpacings="5px"
+                widgetRatedColors="orange"
+                widgetEmptyColors="grey"
+              >
+                <Ratings.Widget />
+                <Ratings.Widget />
+                <Ratings.Widget />
+                <Ratings.Widget />
+                <Ratings.Widget />
+              </Ratings>
                 <div className="type">
                   <i className="fas fa-mug-hot icon" />
                   {sip.coffee.type}
