@@ -1,13 +1,14 @@
-.content_container {
+.content_container_i {
     background-color: #fff;
+    width: 552px;
 }
 
-.content_container img {
+.content_container_i img {
     height: 94px;
     width: 94px;
 }
 
-.coffee_item_container {
+.coffee_item_container_i {
   margin: 0;
   border: 0;
   padding: 0;
@@ -26,7 +27,7 @@
 }
 
 .coffee_details_i {
-  width: 84%;
+ 
   padding: 0 72px 16px 8px;
 }
 
@@ -61,16 +62,16 @@
 
 .coffee_spec_container_i {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
- 
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 600px;
   border-top: 1px solid #e9e9e9;
   border-bottom: 1px solid #e9e9e9;
 }
 
 .coffee_caffeine_i {
-  display: inline;
-  width: 20%;
+
   border-right: 1px solid #e9e9e9;
   padding: 12px;
   color: #999;
@@ -79,8 +80,7 @@
 }
 
 .coffee_type_i {
-  display: inline;
-  width: 15%;
+  width: 10%;
   border-right: 1px solid #e9e9e9;
   padding: 12px;
   color: #999;
@@ -91,7 +91,6 @@
 
 
 .coffee_rating_display_i {
-  width: 25%;
   border-right: 1px solid #e9e9e9;
   padding: 12px;
   color: #999;
@@ -106,18 +105,17 @@
 }
 
 .coffee_rating_number_i {
-  width: 15%;
+  width: 7%;
   border-right: 1px solid #e9e9e9;
   padding: 12px;
   color: #999;
   justify-content: center;
   font-size: 1em;
-  
+  border-left: 1px solid #e9e9e9;
 }
 
 .coffee_total_ratings_i {
   width: 25%;
-  border-right: 1px solid #e9e9e9;
   padding: 12px;
   color: #999;
   justify-content: center;
