@@ -15,5 +15,5 @@ class Like(db.Model):
         return {
             "id": self.id,
             "user_id": self.user_id,
-            "shop_id": self.shop_id
+            "sip_id": self.sip_id
         }

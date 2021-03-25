@@ -1,8 +1,10 @@
 import React from "react";
 import "./Sip.css";
 import CommentForm from "../Comment/index";
+import LikeButton from "../Like/index";
 
 const Sip = ({ sip }) => {
+  console.log("THE SIP", sip);
   if (sip) {
     return (
       <div className="sip">
@@ -35,6 +37,15 @@ const Sip = ({ sip }) => {
         </div>
         <img className="sip_logo" src={sip.coffee.shop.logo_src} />
         <CommentForm sip={sip} />
+        <LikeButton sip={sip} />
+        <div className="sip_comment_responses_container">
+          {sip.comments &&
+            sip.comments.map((comment) => (
+              <div className="sip_comment_response">
+                <div>{comment}</div>
+              </div>
+            ))}
+        </div>
       </div>
     );
   } else {

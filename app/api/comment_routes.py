@@ -22,4 +22,4 @@ def add_comment():
         db.session.commit()
         return new_comment.to_dict()
     else:
-        return {"errors": "invalid submission"}
+        return {"errors": "invalid comment submission"}
