@@ -1,13 +1,16 @@
 .coffeehouse_container {
     display: flex;
     flex-direction: row;
+    justify-content:center
 }
 
-.sip_container {
+/* 
+.sips_container {
     background-color: white;
     padding: 24px;
     padding-left: 0px;
     margin: auto;
+    margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%); 
     width: 652px;
@@ -17,6 +20,7 @@
     margin-left: 196px;
     margin-right: 24px;
 }
+ */
 
 .page_title {
     font-size: 22.4px;

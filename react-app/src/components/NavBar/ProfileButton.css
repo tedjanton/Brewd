@@ -1,0 +1,40 @@
+.profileImg {
+    width:38px;
+    height:35px;
+    border-radius:50%;
+    margin-top:25px;
+}
+
+.menuContainer {
+    display:relative;
+}
+
+.menu {
+    margin-top:20px;
+    position: absolute;
+    z-index: 100;
+    background-color:rgb(59, 59, 59);
+    width:175px;
+    /* display :none; */
+    color:white;
+} 
+
+.menu div {
+    padding-left: 10px;
+    border-bottom: 1px solid black;
+    color:white;
+}
+
+a {
+    text-decoration:none;
+    color: white;
+}
+
+/* .profileImg:hover + .menu{
+    display:block;
+} */
+
+.dropdown-item {
+    color: white;
+}
+
