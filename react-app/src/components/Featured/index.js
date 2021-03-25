@@ -17,7 +17,7 @@ const Featured = () => {
         <div className ="featured_container">
             <div className="featured_title">Featured Coffees</div>
             {coffees?.map((coffee) => (
-                <div className="featured_coffee">
+                <div key={coffee.id} className="featured_coffee">
                     <img className="featured_coffee_img" src={coffee.img_src}/>
                     <div className="featured_text_container">
                         <p className="featured_coffee_name">{coffee.name}</p>

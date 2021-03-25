@@ -51,7 +51,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
             <p className="site_saying">S I P</p><p className="site_saying">S O C I A L L Y</p>
           </div>
 
-          <button     
+          <button
                 type="button"
                 className="demo_user_login"
                 onClick={signInDemoUser}>
@@ -94,7 +94,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
             </div>
           <div>
             {errors.map((error) => (
-              <div>{error}</div>
+              <div key={error}>{error}</div>
             ))}
           </div>
         </form>

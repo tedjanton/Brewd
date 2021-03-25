@@ -29,7 +29,7 @@ function TopRatedPage() {
             Have fun exploring, and be sure to rate your favorite coffees!
           </h2>
           {coffees?.map((coffee) => (
-            <Coffee coffee={coffee} />
+            <Coffee key={coffee.id} coffee={coffee} />
           ))}
         </div>
         <Featured />
