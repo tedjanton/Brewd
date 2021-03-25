@@ -1,19 +1,23 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import LogoutButton from "./auth/LogoutButton";
+import LogoutButton from "../auth/LogoutButton";
+import "./NavBar.css"
+import ProfileButton from "./ProfileButton"
 
 const NavBar = ({ authenticated, setAuthenticated }) => {
   let sessionLinks;
   if (authenticated) {
     sessionLinks = (
-      <nav>
-        <ul>
+      <div className="navContainer ">
+        <div className="yellowBar"></div>
+      <nav className="flex-container navBar">
+        <ul className="flex-container navUl">
           <li>
-            <NavLink to="/" exact={true} activeClassName="active">
-              Home
+            <NavLink className="brewd-letters" to="/" exact={true} activeClassName="active">
+              Brewd
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/login" exact={true} activeClassName="active">
               Login
             </NavLink>
@@ -27,7 +31,7 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
             <NavLink to="/users" exact={true} activeClassName="active">
               Users
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to="/coffeehouse" exact={true} activeClassName="active">
               Coffee House
@@ -38,11 +42,17 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
               Top Rated
             </NavLink>
           </li>
-          <li>
+          {/* <li className="rightAlign">
+            
+          </li> */}
+          {/* <li>
             <LogoutButton setAuthenticated={setAuthenticated} />
-          </li>
+          </li> */}
         </ul>
+        <ProfileButton className="rightAlign"/>
       </nav>
+      
+      </div>
     );
   } else {
     sessionLinks = <></>;

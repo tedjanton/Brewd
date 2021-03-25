@@ -13,11 +13,13 @@
 .home-container {
     display: flex;
     justify-items: center;
+    margin:0 auto;
+    max-width: 50%;
 }
 
 .home-feed-container {
     margin: 2em;
-    max-width: 70%;
+    flex-basis: 60%;
     padding: 24px;
     background-color: white;
     border-radius: 8px;
@@ -32,6 +34,7 @@
     padding: 20px;
     border-radius: 8px;
     margin: 2em;
+    flex-basis: 30%;
 }
 
 .home-user-icon {

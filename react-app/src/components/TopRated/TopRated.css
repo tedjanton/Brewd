@@ -1,4 +1,4 @@
-/* .top_rated_container {
+.top_rated_container {
   display: flex;
   flex: row;
   padding: 25px;
@@ -15,3 +15,11 @@
   height: auto;
   border-radius: 8px;
 } */
+
+
+
+/* added */
+
+.topRated{
+  margin-top:20px;
+}

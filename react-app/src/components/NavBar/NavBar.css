@@ -1,0 +1,60 @@
+
+.flex-container {
+    display: flex;
+    
+}
+.yellowBar{
+    height:10px;
+    width:100%;
+    background-color: rgb(255, 209, 82);
+}
+.brewd-letters {
+    font-size: 40px;
+    font-weight: bold;
+    align-items: center;
+    
+}
+.navBar {
+    width: 900px;
+    margin:0 auto;
+}
+
+.navContainer {
+    width:100%;
+    background-color:white;    
+    line-height:70px;
+}
+
+nav {
+    /* justify-content: fl; */
+    list-style:none;
+    padding :0;
+    margin:0;
+}
+
+nav ul {
+    list-style:none;
+    padding :0px 10px;
+}
+
+.rightAlign {
+    justify-self: flex-end;
+}
+
+nav ul li {
+    margin :10px;
+}
+
+nav ul li a {
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    /* border :1px solid red; */
+    border-radius:4px; 
+    padding: 7px  15px;
+}
+
+.navUl {
+    flex-basis: 900px;
+    
+}

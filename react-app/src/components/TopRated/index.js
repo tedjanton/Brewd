@@ -29,7 +29,8 @@ function TopRatedPage() {
 
   return (
     <>
-      <div>
+    {/* added className and some css */}
+      <div className="topRated">
         <div className="top_rated_container">
           <h1 className="top_rated_title">Top Rated Coffees</h1>
           {coffees?.map((coffee) => (
