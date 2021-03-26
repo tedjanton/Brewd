@@ -14,6 +14,7 @@ from .api.featured_routes import featured_routes
 from .api.coffee_detail_routes import coffee_detail_routes
 from .api.comment_routes import comment_routes
 from .api.like_routes import like_routes
+from .api.coffeeshop_details_routes import coffeeshop_details_routes
 
 from .seeds import seed_commands
 
@@ -43,7 +44,7 @@ app.register_blueprint(featured_routes, url_prefix='/api/featured')
 app.register_blueprint(coffee_detail_routes, url_prefix="/api/coffees")
 app.register_blueprint(comment_routes, url_prefix='/api/comments')
 app.register_blueprint(like_routes, url_prefix='/api/likes')
-
+app.register_blueprint(coffeeshop_details_routes, url_prefix='/api/shop')
 
 db.init_app(app)
 Migrate(app, db)
