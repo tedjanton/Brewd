@@ -10,7 +10,6 @@ const LikeButton = ({ sip }) => {
 
   console.log(userLikesArray);
   useEffect(() => {
-    debugger
     if (userLikesArray) {
       for (let i = 0; i < userLikesArray.length; i++) {
         let sipId = userLikesArray[i].sip_id;
