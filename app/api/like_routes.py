@@ -25,7 +25,6 @@ def add_like():
 @login_required
 def get_likes(id):
     likes = Like.query.filter(Like.user_id == id).all()
-
     return {"likes" : [like.to_dict() for like in likes]}
 
 
@@ -33,8 +32,6 @@ def get_likes(id):
 @login_required
 def delete_like(id):
     like = Like.query.get(id)
-    print("LIKE!!!!!!!!!!!!!", like)
-
     db.session.delete(like)
     db.session.commit()
     return like.to_dict()
