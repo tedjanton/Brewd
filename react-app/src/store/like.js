@@ -13,6 +13,7 @@ const load = (likes) => ({
   likes
 });
 
+
 const remove = (like) => ({
   type: REMOVE,
   like
@@ -64,7 +65,7 @@ const userLikesReducer = (state=initialState, action) => {
     case ADD:
       newState = Object.assign({}, state);
       if (newState.likes) {
-        newState.likes.push(action.like)
+        newState.likes = [...newState.likes, action.like]
       } else {
         newState.likes = action.like
       }

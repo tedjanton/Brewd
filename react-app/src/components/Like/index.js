@@ -6,39 +6,26 @@ const LikeButton = ({ sip }) => {
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const userLikesArray = useSelector((state) => state.userLikes.likes)
-  const sipLikes = sip.likes
-  const [liked, setLiked] = useState()
+  const [userLikeId, setUserLikeId] = useState(null);
 
+  console.log(userLikesArray);
   useEffect(() => {
-    getUserLike();
-  });
-
-  useEffect(() => {
-    let checked = getUserLike();
-    if (checked) {
-      setLiked(true)
-    } else {
-      setLiked(false)
-    }
-  }, [userLikesArray])
-
-  const getUserLike = () => {
+    debugger
     if (userLikesArray) {
       for (let i = 0; i < userLikesArray.length; i++) {
         let sipId = userLikesArray[i].sip_id;
         if (sipId === sip.id) {
-          setLiked(true);
-          return userLikesArray[i];
+          setUserLikeId(userLikesArray[i].id)
         } else {
-          setLiked(false);
-          return null;
+          setUserLikeId(null)
         }
       }
     }
-  }
+  }, [userLikesArray, setUserLikeId, sip]);
+
 
   let lk;
-  if (liked) {
+  if (userLikeId) {
     lk = (
       <div>
         <i className="fas fa-heart" />
@@ -53,18 +40,16 @@ const LikeButton = ({ sip }) => {
   }
 
   const handleClick = async () => {
-    let userLike = getUserLike();
 
-    if (liked) {
-      dispatch(deleteLike(userLike.id))
-      setLiked(false)
+    if (userLikeId) {
+      // debugger
+      dispatch(deleteLike(userLikeId))
     } else {
       const like = {
         user_id: user.id,
         sip_id: sip.id,
       };
       dispatch(addLike(like));
-      setLiked(true)
     }
   };
 
