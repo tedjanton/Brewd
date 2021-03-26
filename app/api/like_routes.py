@@ -33,7 +33,8 @@ def get_likes(id):
 @login_required
 def delete_like(id):
     like = Like.query.get(id)
+    print("LIKE!!!!!!!!!!!!!", like)
 
     db.session.delete(like)
     db.session.commit()
-    return {"Success"}
+    return like.to_dict()

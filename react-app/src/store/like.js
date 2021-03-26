@@ -1,5 +1,12 @@
-const GET_LIKES = "/likes/get_user_likes";
+const ADD = "/likes/add_like";
+const GET_LIKES = "/likes/get_likes";
+const GET_USER_LIKE = "/likes/get_user_like";
 const REMOVE = "/likes/remove_like";
+
+const add = (like) => ({
+  type: ADD,
+  like
+})
 
 const load = (likes) => ({
   type: GET_LIKES,
@@ -11,8 +18,8 @@ const remove = (like) => ({
   like
 })
 
-export const addLike = (like) => async () => {
-  const { user_id, sip_id } = like;
+export const addLike = (newLike) => async (dispatch) => {
+  const { user_id, sip_id } = newLike;
   const response = await fetch("/api/likes/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -21,10 +28,11 @@ export const addLike = (like) => async () => {
       sip_id,
     }),
   });
-  const data = await response.json();
+  const addedLike = await response.json();
   if (response.ok) {
-    return data;
+    dispatch(add(addedLike));
   }
+  return addedLike;
 };
 
 export const getUserLikes = (userId) => async (dispatch) => {
@@ -37,14 +45,15 @@ export const getUserLikes = (userId) => async (dispatch) => {
   return likes;
 }
 
-export const deleteLike = (userLikeId) => async (dispatch) => {
-  const response = await fetch(`/api/likes/${userLikeId}/delete`);
 
-  const like = await response.json();
+export const deleteLike = (userLikeId) => async (dispatch) => {
+  const response = await fetch(`/api/likes/${userLikeId}/delete/`);
+
+  const deletedLike = await response.json();
   if (response.ok) {
-    dispatch(remove(like))
+    dispatch(remove(deletedLike))
   }
-  return like;
+  return deletedLike;
 }
 
 let initialState = {};
@@ -52,12 +61,22 @@ let initialState = {};
 const userLikesReducer = (state=initialState, action) => {
   let newState;
   switch (action.type) {
+    case ADD:
+      newState = Object.assign({}, state);
+      if (newState.likes) {
+        newState.likes.push(action.like)
+      } else {
+        newState.likes = action.like
+      }
+      return newState;
     case GET_LIKES:
       newState = Object.assign({}, state);
-      newState.likes = action.likes;
+      newState.likes = action.likes.likes;
       return newState;
     case REMOVE:
-      return state;
+      newState = Object.assign({}, state)
+      newState.likes = newState.likes.filter(like => like.id !== action.like.id)
+      return newState;
     default:
       return state;
   }

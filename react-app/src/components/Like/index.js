@@ -5,31 +5,52 @@ import { addLike, deleteLike } from "../../store/like";
 const LikeButton = ({ sip }) => {
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
-  const likesArray = sip.likes;
+  const userLikesArray = useSelector((state) => state.userLikes.likes)
+  const sipLikes = sip.likes
   const [liked, setLiked] = useState(false)
 
-  let userLike;
+  const getUserLike = () => {
+    if (userLikesArray?.length) {
+      for (let i = 0; i < userLikesArray.length; i++) {
+        let sipId = userLikesArray[i].sip_id;
+        if (sipId === sip.id) {
+          setLiked(true);
+          return userLikesArray[i];
+        } else {
+          setLiked(false);
+          return null;
+        }
+      }
+    }
+  }
+
+  useEffect(() => {
+    getUserLike();
+  })
+
 
   let lk;
   if (liked) {
     lk = (
-      <>
+      <div>
         <i className="fas fa-heart" />
-      </>
+      </div>
     )
   } else {
     lk = (
-      <>
+      <div>
         <i className="far fa-heart" />
-      </>
+      </div>
     )
   }
 
-  const handleSubmit = () => {
-    if (liked) {
-      setLiked(false)
-      dispatch(deleteLike(userLike.id))
+  const handleClick = async () => {
+    let userLike = getUserLike();
+    console.log(userLike);
 
+    if (liked) {
+      dispatch(deleteLike(userLike.id))
+      setLiked(false)
     } else {
       const like = {
         user_id: user.id,
@@ -42,7 +63,7 @@ const LikeButton = ({ sip }) => {
 
   return (
     <div>
-      <div onClick={handleSubmit}>
+      <div onClick={handleClick}>
         {lk}
       </div>
     </div>
