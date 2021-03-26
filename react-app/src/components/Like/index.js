@@ -11,7 +11,7 @@ const LikeButton = ({ sip }) => {
 
   const getUserLike = () => {
     if (userLikesArray?.length) {
-      for (let i = 0; i < userLikesArray.length; i++) {
+      for (let i = 0; i < userLikesArray?.length; i++) {
         let sipId = userLikesArray[i].sip_id;
         if (sipId === sip.id) {
           setLiked(true);
@@ -46,7 +46,6 @@ const LikeButton = ({ sip }) => {
 
   const handleClick = async () => {
     let userLike = getUserLike();
-    console.log(userLike);
 
     if (liked) {
       dispatch(deleteLike(userLike.id))
