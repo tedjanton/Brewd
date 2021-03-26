@@ -4,7 +4,6 @@ import { getSips } from "../../store/coffeehouse";
 import "./CoffeeHouse.css";
 import Sip from "../Sip";
 import Featured from "../Featured";
-import CommentForm from "../Comment/index";
 
 const CoffeeHouse = ({ authenticated }) => {
   const dispatch = useDispatch();

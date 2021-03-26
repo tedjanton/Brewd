@@ -9,8 +9,8 @@ const IndividualCoffee = ({ coffee }) => {
   if (coffee) {
     return (
 
-          <div className="content_container">
-            <div className="coffee_item_container">
+          <div className="content_container_i">
+            <div className="coffee_item_container_i">
               <img className="coffee_pic_i" src={coffee.img_src} />
               <div className="coffee_details_i">
                 <p className="coffee_name_i">

@@ -88,6 +88,15 @@
     justify-content: space-between;
 }
 
+.coffee_rating_display_sip {
+    width: auto;
+    font-size: 1em;
+    height: 60px;
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
 .review_stars {
     height: auto;
     width: 100%;
@@ -98,12 +107,14 @@
     color: black;
     margin: 10px;
     display: flex;
-
+    align-self: center;
+    margin-right: 20px;
 }
 
 .icon {
     color: #ffbb00;
     margin-right: 5px;
+    align-self: center;
 }
 
 .user_image {
