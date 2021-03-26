@@ -23,5 +23,5 @@ def user(id):
 @user_routes.route('/<int:id>/sips/')
 @login_required
 def user_sips(id):
-    user_sips = Sip.query.filter(Sip.user_id == id).all()
+    user_sips = Sip.query.filter(Sip.user_id == id).order_by(Sip.created_at.desc()).all()
     return {"user_sips": [sips.to_dict() for sips in user_sips]}
