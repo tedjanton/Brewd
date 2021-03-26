@@ -38,7 +38,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     } else {
         ratingDisplay = (
             <>
-                <p className="rating-top">{newRating}</p>
+                <p className="rating-top">{newRating || rating}</p>
                 <p className="rating-bottom">STARS</p>
             </>
         )
@@ -57,7 +57,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     }
 
     const handleDelete = () => {
-        
+
     }
 
     return (
