@@ -5,6 +5,7 @@ import { authenticate } from "../../store/session";
 import Sip from "../../components/Sip";
 import user_icon from "../../site-images/user_icon.jpeg";
 import "./HomePage.css";
+import { getUserLikes } from "../../store/like";
 
 
 const HomePage = ({ authenticated }) => {
@@ -16,8 +17,9 @@ const HomePage = ({ authenticated }) => {
 
     useEffect(() => {
         if (!user) dispatch(authenticate())
-        if (user && !sips?.user_sip) {
+        else {
             dispatch(getUserSips(user.id))
+            dispatch(getUserLikes(user.id))
         }
     }, [user, dispatch])
 

@@ -33,7 +33,7 @@ const Sip = ({ sip }) => {
           {comment.comment}
         </div>
     );
-  
+
   if (sip) {
     return (
       <div className="sip">
@@ -80,15 +80,17 @@ const Sip = ({ sip }) => {
               <div className="open_sip_details">View Sip Details</div>
             </div>
           </div>
-          <div className="sip_comment_button">
-            <button onClick={() => setClicked(true)}>Comment</button>
-            {commentBox}
-          </div>
-          <div className="sip_like_button">
-            <LikeButton sip={sip} />
-          </div>
-          <div className="sip_comment_responses_container">
-            {commentsGiven}
+          <div className="sip_comment_like_container">
+            <div className="sip_comment_button">
+              <button onClick={() => setClicked(true)}>Comment</button>
+              {commentBox}
+            </div>
+            <div className="sip_like_button">
+              <LikeButton sip={sip} />
+            </div>
+            <div className="sip_comment_responses_container">
+              {commentsGiven}
+            </div>
           </div>
         </div>
         <div className="sip_logo_container" >

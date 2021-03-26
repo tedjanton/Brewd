@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSips } from "../../store/coffeehouse";
+import { getUserLikes } from "../../store/like";
 import "./CoffeeHouse.css";
 import Sip from "../Sip";
 import Featured from "../Featured";
@@ -10,10 +11,12 @@ const CoffeeHouse = ({ authenticated }) => {
   const sips = useSelector((state) => {
     return state.coffeehouse?.sips?.all_sips;
   });
+  const user = useSelector(state => state.session.user)
 
   useEffect(() => {
     if (!sips) {
       dispatch(getSips());
+      dispatch(getUserLikes(user.id))
     }
   }, [sips, dispatch]);
 

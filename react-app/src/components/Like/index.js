@@ -5,54 +5,57 @@ import { addLike, deleteLike } from "../../store/like";
 const LikeButton = ({ sip }) => {
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
-  const likesArray = sip.likes;
-  const [liked, setLiked] = useState(false)
+  const userLikesArray = useSelector((state) => state.userLikes.likes)
+  const [userLikeId, setUserLikeId] = useState(null);
 
-  let userLike = [];
+  console.log(userLikesArray);
   useEffect(() => {
-    if (likesArray.length) {
-      let singleLike = likesArray.filter(like => like.user_id === user.id);
-      userLike.push(singleLike)
-      setLiked(true);
+    debugger
+    if (userLikesArray) {
+      for (let i = 0; i < userLikesArray.length; i++) {
+        let sipId = userLikesArray[i].sip_id;
+        if (sipId === sip.id) {
+          setUserLikeId(userLikesArray[i].id)
+        } else {
+          setUserLikeId(null)
+        }
+      }
     }
-  }, [likesArray]);
+  }, [userLikesArray, setUserLikeId, sip]);
 
-  console.log("LIKES ARRAY", likesArray)
-  console.log("USERLIKE", userLike)
 
   let lk;
-  if (liked) {
+  if (userLikeId) {
     lk = (
-      <>
+      <div>
         <i className="fas fa-heart" />
-      </>
+      </div>
     )
   } else {
     lk = (
-      <>
+      <div>
         <i className="far fa-heart" />
-      </>
+      </div>
     )
   }
 
-  const handleSubmit = () => {
-    if (liked) {
-      setLiked(false)
-      dispatch(deleteLike(userLike.id))
+  const handleClick = async () => {
 
+    if (userLikeId) {
+      // debugger
+      dispatch(deleteLike(userLikeId))
     } else {
       const like = {
         user_id: user.id,
         sip_id: sip.id,
       };
       dispatch(addLike(like));
-      setLiked(true)
     }
   };
 
   return (
     <div>
-      <div onClick={handleSubmit}>
+      <div onClick={handleClick}>
         {lk}
       </div>
     </div>

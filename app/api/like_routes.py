@@ -3,6 +3,7 @@ from flask_login import login_required
 from flask import Blueprint, session, request
 from app.forms import LikeForm
 
+
 like_routes = Blueprint('like_routes', __name__)
 
 
@@ -19,11 +20,21 @@ def add_like():
     else:
         return {"errors": "invalid like submission"}
 
+
 @like_routes.route("/<int:id>/", methods=["GET"])
 @login_required
+def get_likes(id):
+    likes = Like.query.filter(Like.user_id == id).all()
+
+    return {"likes" : [like.to_dict() for like in likes]}
+
+
+@like_routes.route("/<int:id>/delete/", methods=["GET"])
+@login_required
 def delete_like(id):
-    like = Like.query.filter_by(id).delete()
+    like = Like.query.get(id)
+    print("LIKE!!!!!!!!!!!!!", like)
 
     db.session.delete(like)
     db.session.commit()
-    return {"Success"}
+    return like.to_dict()

@@ -5,6 +5,7 @@ import coffeehouseReducer from "./coffeehouse";
 import topRatedReducer from "./top_rated";
 import featuredReducer from "./featured";
 import coffeeDetailReducer from "./coffee-detail";
+import userLikesReducer from "./like";
 import shopDetailReducer from "./coffeeshop_details"
 
 const rootReducer = combineReducers({
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   topRated: topRatedReducer,
   featured: featuredReducer,
   selected: coffeeDetailReducer,
+  userLikes: userLikesReducer,
   shop: shopDetailReducer,
 });
 
