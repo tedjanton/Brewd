@@ -5,7 +5,7 @@ import { Modal } from "../../context/Modal";
 import SipForm from "../SipModal/SipForm";
 import CommentForm from "../Comment/index"
 import LikeButton from "../Like/index";
-import user_icon from "../../site-images/user_icon.jpeg";
+import user_icon from "../../site-images/user_icon.png";
 import "./Sip.css";
 import { useSelector } from "react-redux";
 import SipFormEdit from "../SipModal/SipFormEdit";
@@ -23,7 +23,9 @@ const Sip = ({ sip }) => {
   if (clicked) {
     commentBox = (
       <div className="sip-comment-box">
-        <CommentForm setClicked={setClicked} sip={sip} />
+        <CommentForm
+          setClicked={setClicked}
+          sip={sip} />
       </div>
     )
   } else {
@@ -41,8 +43,16 @@ const Sip = ({ sip }) => {
   const commentsGiven = sip.comments
     .sort((a, b) => a.id < b.id ? 1 : -1)
     .map((comment) =>
-        <div key={comment.id} className="sip_comment_response">
-          {comment.comment}
+        <div className="sip_comment_responses_container" key={comment.id}>
+          <div className="sip_comment_response_pic">
+            <img src={user_icon} />
+          </div>
+          <div className="sip_comment_response_name">
+            {`${comment.user.first_name} ${comment.user.last_name}:`}
+          </div>
+          <div  className="sip_comment_response">
+            {comment.comment}
+          </div>
         </div>
     );
 
@@ -54,7 +64,7 @@ const Sip = ({ sip }) => {
             </div>
         <div className="user_input_container">
           <p className="text">
-            <a className="changing_text">{sip.user.first_name}</a>is sipping a
+            <a className="changing_text_name">{sip.user.first_name}</a> is sipping a
             <a className="changing_text" href={`/coffees/${sip.coffee.id}`}>
               {sip.coffee.name}
             </a>
@@ -87,6 +97,14 @@ const Sip = ({ sip }) => {
               </div>
             </div>
             <img className="user_uploaded_image"></img>
+            <div className="sip_comment_like_container">
+              <div className="sip_comment_button">
+                <button onClick={() => setClicked(!clicked)}>
+                  <i className="far fa-comment-alt" />Comment
+                </button>
+              </div>
+              <LikeButton sip={sip} />
+            </div>
             <div className="review_bottom_container">
               <div className="review_date">{newDate}</div>
               {(user.id === sip.user_id) && (
@@ -98,23 +116,17 @@ const Sip = ({ sip }) => {
                           <SipFormEdit
                             sip={sip}
                             coffee={sip.coffee}
-                            setShowModal= {setShowModal}/ >
+                            setShowModal= {setShowModal} />
                       </Modal>
                     )}
                 </div>
               )}
             </div>
-          </div>
-          <div className="sip_comment_like_container">
-            <div className="sip_comment_button">
-              <button onClick={() => setClicked(true)}>Comment</button>
+            <div>
               {commentBox}
             </div>
-            <div className="sip_like_button">
-              <LikeButton sip={sip} />
-            </div>
-            <div className="sip_comment_responses_container">
-              {commentsGiven}
+            <div>
+              {sip.comments && commentsGiven}
             </div>
           </div>
         </div>

@@ -9,12 +9,6 @@ import "./SipModal.css";
 
 const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     const user = useSelector(state => state.session.user)
-    const dispatch = useDispatch();
-    const history = useHistory();
-    const [newRating, setNewRating] = useState(0);
-    const [newReview, setNewReview] = useState("");
-    const [textLen, setTextLen] = useState(0);
-
     const {
         user_id,
         coffee_id,
@@ -22,6 +16,12 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
         rating,
         img_src
     } = sip;
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const [newRating, setNewRating] = useState(0);
+    const [newReview, setNewReview] = useState("");
+    const [textLen, setTextLen] = useState(review.length);
+
 
     useEffect(() => {
         setTextLen(255 - newReview.length)

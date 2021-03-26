@@ -27,7 +27,7 @@ const CommentForm = ({ setClicked, sip }) => {
         value={comment}
       />
       <div className="comment_button">
-        <button onClick={handleSubmit}>Submit Comment</button>
+        <button onClick={handleSubmit}>Post</button>
       </div>
     </div>
   );
