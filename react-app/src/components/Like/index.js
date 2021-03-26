@@ -7,13 +7,21 @@ const LikeButton = ({ sip }) => {
   const dispatch = useDispatch();
   const userLikesArray = useSelector((state) => state.userLikes.likes)
   const sipLikes = sip.likes
-  const [liked, setLiked] = useState(false)
+  const [liked, setLiked] = useState()
 
   useEffect(() => {
     getUserLike();
-  })
+  });
 
-  console.log(sipLikes);
+  useEffect(() => {
+    let checked = getUserLike();
+    if (checked) {
+      setLiked(true)
+    } else {
+      setLiked(false)
+    }
+  }, [userLikesArray])
+
   const getUserLike = () => {
     if (userLikesArray) {
       for (let i = 0; i < userLikesArray.length; i++) {
@@ -28,9 +36,6 @@ const LikeButton = ({ sip }) => {
       }
     }
   }
-
-
-
 
   let lk;
   if (liked) {

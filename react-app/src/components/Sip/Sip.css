@@ -150,3 +150,12 @@
     max-width: 100%;
     margin: 12px;
 }
+
+.sip_comment_like_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sip_comment_button {
+    
+}
