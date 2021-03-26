@@ -6,13 +6,12 @@ const load = (shop) => ({
 });
 
 
-export const getShopAndCoffees = (shopId) => async (dispatch) => {
+export const getShop = (shopId) => async (dispatch) => {
     const response = await fetch(`/api/shop/${shopId}/`);
     console.log("response", response)
     if (response.ok) {
-        const shopAndCoffees = await response.json();
-        console.log("shopAndCoffees", shopAndCoffees)
-        dispatch(load(shopAndCoffees));
+        const shop = await response.json();
+        dispatch(load(shop));
         return response;
     }
 };

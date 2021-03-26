@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import coffeehouseReducer from "../../store/coffeehouse";
-import { getShopAndCoffees } from "../../store/coffeeshop_details";
+import { getShop } from "../../store/coffeeshop_details";
 import "./Shop.css";
 
 const ShopDetails = () => {
@@ -13,15 +12,11 @@ const ShopDetails = () => {
         console.log(state.shop)
     });
 
-    const coffees = useSelector((state) => {
-        return state.shop?.shop?.coffees_by_shop
-    })
-
     useEffect(() => {
-        if (!shop || !coffees ) {
-            dispatch(getShopAndCoffees(params.id))
+        if (!shop) {
+            dispatch(getShop(params.id))
         }
-    }, [shop, coffees, dispatch])
+    }, [shop, dispatch])
 
    return (
        <>
