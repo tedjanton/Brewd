@@ -10,7 +10,7 @@ class Sip(db.Model):
     coffee_id = db.Column(db.Integer, db.ForeignKey(
         "coffees.id"), nullable=False)
     review = db.Column(db.String(250))
-    rating = db.Column(db.Integer)
+    rating = db.Column(db.Integer, default=0)
     img_src = db.Column(db.String)
     created_at = db.Column(db.Date)
 
@@ -49,6 +49,6 @@ class Sip(db.Model):
         }
 
     def get_rating(self):
-        if self.rating == None:
-            return []
+        # if self.rating == None:
+        #     return []
         return self.rating
