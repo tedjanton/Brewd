@@ -15,6 +15,10 @@ const Sip = ({ sip }) => {
   const [clicked, setClicked] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
+  const date = sip?.created_at.split(" ")
+  const dateArr = date.splice(0, 4);
+  const newDate = dateArr.join(" ");
+
   let commentBox;
   if (clicked) {
     commentBox = (
@@ -84,7 +88,7 @@ const Sip = ({ sip }) => {
             </div>
             <img className="user_uploaded_image"></img>
             <div className="review_bottom_container">
-              <div className="review_date">{sip.created_at}</div>
+              <div className="review_date">{newDate}</div>
               {(user.id === sip.user_id) && (
                 <div>
                   <button

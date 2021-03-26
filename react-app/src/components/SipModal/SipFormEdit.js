@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Ratings from "react-ratings-declarative";
 import { useHistory } from "react-router";
-import { createSip } from "../../store/coffee-detail";
+import { editSip, deleteSip } from "../../store/coffeehouse";
 import white_x from "../../site-images/white_x.png";
 import add_picture from "../../site-images/add_picture.png"
 import "./SipModal.css";
@@ -44,20 +44,22 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
         )
     }
 
-    const handleSubmit = () => {
+    const handleEdit = () => {
         const submission = {
+            id: sip.id,
             user_id: user.id,
             coffee_id: coffee.id,
             review: newReview,
             rating: newRating,
             img_src: "",
         }
-        dispatch(createSip(submission))
-        return history.push("/home")
+        dispatch(editSip(submission));
+        window.location.reload();
     }
 
     const handleDelete = () => {
-
+        dispatch(deleteSip(sip.id));
+        window.location.reload();
     }
 
     return (
@@ -118,7 +120,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
                     <div className="sip-form-location">{coffee?.shop?.name} in {coffee?.shop?.city}</div>
                 </div>
                 <div className="sip-form-button">
-                    <button onClick={handleSubmit}>Edit Sip</button>
+                    <button onClick={handleEdit}>Edit Sip</button>
                     <button onClick={handleDelete}>Delete Sip</button>
                 </div>
             </div>
