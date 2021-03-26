@@ -21,7 +21,7 @@ const Coffee = ({ coffee }) => {
                   <a href={`/coffees/${coffee.id}`}>{coffee.name}</a>
                 </p>
                 <p className="coffee_shop">
-                  <a href="/shops/:id">{coffee.shop.name}</a>
+                  <a href="/shop/:id">{coffee.shop.name}</a>
                 </p>
                 <p className="coffee_description">{coffee.description}</p>
               </div>
