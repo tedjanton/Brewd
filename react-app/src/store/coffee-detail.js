@@ -3,7 +3,8 @@ const LOAD = "coffee/load";
 const load = (coffee) => ({
     type: LOAD,
     coffee
-})
+});
+
 
 export const getCoffee = (coffeeId) => async (dispatch) => {
     const response = await fetch(`/api/coffees/${coffeeId}/`)
@@ -35,7 +36,6 @@ export const createSip = (sip) => async (dispatch) => {
             img_src
         })
     });
-
 }
 
 let initialState = {};
@@ -43,11 +43,10 @@ let initialState = {};
 const coffeeDetailReducer = (state = initialState, action) => {
     let newState;
     switch (action.type) {
-        case LOAD: {
+        case LOAD:
             newState = Object.assign({}, state);
             newState.coffee = action.coffee;
             return newState;
-        }
         default:
             return state;
     }

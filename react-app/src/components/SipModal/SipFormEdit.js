@@ -2,22 +2,30 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Ratings from "react-ratings-declarative";
 import { useHistory } from "react-router";
-import { createSip } from "../../store/coffee-detail";
+import { editSip, deleteSip } from "../../store/coffeehouse";
 import white_x from "../../site-images/white_x.png";
 import add_picture from "../../site-images/add_picture.png"
 import "./SipModal.css";
 
-const SipForm = ({ sip, coffee, setShowModal }) => {
+const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     const user = useSelector(state => state.session.user)
     const dispatch = useDispatch();
     const history = useHistory();
-    const [rating, setRating] = useState(0);
-    const [review, setReview] = useState("");
+    const [newRating, setNewRating] = useState(0);
+    const [newReview, setNewReview] = useState("");
     const [textLen, setTextLen] = useState(0);
 
+    const {
+        user_id,
+        coffee_id,
+        review,
+        rating,
+        img_src
+    } = sip;
+
     useEffect(() => {
-        setTextLen(255 - review.length)
-    }, [review, textLen])
+        setTextLen(255 - newReview.length)
+    }, [newReview, textLen])
 
     let ratingDisplay;
     if (rating === 0) {
@@ -30,22 +38,28 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
     } else {
         ratingDisplay = (
             <>
-                <p className="rating-top">{rating}</p>
+                <p className="rating-top">{newRating || rating}</p>
                 <p className="rating-bottom">STARS</p>
             </>
         )
     }
 
-    const handleSubmit = () => {
+    const handleEdit = () => {
         const submission = {
+            id: sip.id,
             user_id: user.id,
             coffee_id: coffee.id,
-            review,
-            rating,
+            review: newReview,
+            rating: newRating,
             img_src: "",
         }
-        dispatch(createSip(submission))
-        return history.push("/home")
+        dispatch(editSip(submission));
+        window.location.reload();
+    }
+
+    const handleDelete = () => {
+        dispatch(deleteSip(sip.id));
+        window.location.reload();
     }
 
     return (
@@ -62,9 +76,9 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
             <div className="sip-form-review-container">
                 <div className="sip-form-review-box">
                     <textarea
-                        onChange={(e) => setReview(e.target.value)}
+                        onChange={(e) => setNewReview(e.target.value)}
                         placeholder="What did you think?"
-                        value={review}
+                        value={newReview || review}
                     />
                     <span className="sip-form-char-count">{textLen}</span>
                 </div>
@@ -77,8 +91,8 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
             <div className="sip-form-rating-container">
                 <div className="sip-form-rating">
                     <Ratings
-                        rating={rating}
-                        changeRating={setRating}
+                        rating={newRating || rating}
+                        changeRating={setNewRating}
                         widgetRatedColors="#ffc935"
                         widgetEmptyColors="#8f8f8f"
                         widgetHoverColors="#ffc935"
@@ -106,11 +120,12 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
                     <div className="sip-form-location">{coffee?.shop?.name} in {coffee?.shop?.city}</div>
                 </div>
                 <div className="sip-form-button">
-                    <button onClick={handleSubmit}>Confirm</button>
+                    <button onClick={handleEdit}>Edit Sip</button>
+                    <button onClick={handleDelete}>Delete Sip</button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default SipForm;
+export default SipFormEdit;

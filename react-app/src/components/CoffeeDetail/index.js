@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Modal } from "../../context/Modal";
-import { getCoffee } from "../../store/coffee-detail";
 import SipForm from "../SipModal/SipForm";
+import { getCoffee } from "../../store/coffee-detail";
 import CommentForm from "../Comment/index";
 import IndividualCoffee from "../IndividualCoffee";
 import IndividualSip from "../IndividualSip";
@@ -41,7 +41,7 @@ const CoffeeDetail = () => {
                     <button onClick={() => setShowModal(true)} className="make_new_post"><i className="fas fa-coffee mug_icon"></i></button>
                     {showModal && (
                         <Modal onClose={() => setShowModal(false)}>
-                            <SipForm setShowModal={setShowModal} />
+                            <SipForm coffee={coffee} setShowModal={setShowModal} />
                         </Modal>
                     )}
                 </div>

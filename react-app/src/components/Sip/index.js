@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from "react";
-import "./Sip.css";
-import CommentForm from "../Comment/index"
 import Ratings from "react-ratings-declarative";
+import { Link } from "react-router-dom";
+import { Modal } from "../../context/Modal";
+import SipForm from "../SipModal/SipForm";
+import CommentForm from "../Comment/index"
 import LikeButton from "../Like/index";
 import user_icon from "../../site-images/user_icon.jpeg";
+import "./Sip.css";
+import { useSelector } from "react-redux";
+import SipFormEdit from "../SipModal/SipFormEdit";
 
 const Sip = ({ sip }) => {
+  const user = useSelector(state => state.session.user)
   const [clicked, setClicked] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const date = sip?.created_at.split(" ")
+  const dateArr = date.splice(0, 4);
+  const newDate = dateArr.join(" ");
 
   let commentBox;
   if (clicked) {
@@ -25,6 +36,7 @@ const Sip = ({ sip }) => {
   useEffect(() => {
 
   }, [sip])
+
 
   const commentsGiven = sip.comments
     .sort((a, b) => a.id < b.id ? 1 : -1)
@@ -76,8 +88,21 @@ const Sip = ({ sip }) => {
             </div>
             <img className="user_uploaded_image"></img>
             <div className="review_bottom_container">
-              <div className="review_date">{sip.created_at}</div>
-              <div className="open_sip_details">View Sip Details</div>
+              <div className="review_date">{newDate}</div>
+              {(user.id === sip.user_id) && (
+                <div>
+                  <button
+                    onClick={() => setShowModal(true)} className="open_sip_details">Edit/Delete Sip</button>
+                    {showModal && (
+                      <Modal onClose={() => setShowModal(false)}>
+                          <SipFormEdit
+                            sip={sip}
+                            coffee={sip.coffee}
+                            setShowModal= {setShowModal}/ >
+                      </Modal>
+                    )}
+                </div>
+              )}
             </div>
           </div>
           <div className="sip_comment_like_container">
