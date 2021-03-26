@@ -32,7 +32,7 @@
 * Feed of users "sip" activity
 * Nav bar
 
-## ```/shops/:id```
+## ```/shop/:id```
 * Display all of the shop's details
 * Displays number of coffees at that shop
 * Feed of user's "sip" activity

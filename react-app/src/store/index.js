@@ -6,6 +6,7 @@ import topRatedReducer from "./top_rated";
 import featuredReducer from "./featured";
 import coffeeDetailReducer from "./coffee-detail";
 import userLikesReducer from "./like";
+import shopDetailReducer from "./coffeeshop_details"
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   featured: featuredReducer,
   selected: coffeeDetailReducer,
   userLikes: userLikesReducer,
+  shop: shopDetailReducer,
 });
 
 let enhancer;

@@ -14,6 +14,7 @@ import TopRated from "./components/TopRated";
 import HomePage from "./components/HomePage";
 import CoffeeDetail from "./components/CoffeeDetail";
 import { useDispatch } from "react-redux";
+import ShopDetails from "./components/Shop";
 
 function App() {
   const dispatch = useDispatch()
@@ -68,6 +69,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/coffees/:id" exact={true} authenticated={authenticated}>
           <CoffeeDetail />
+        </ProtectedRoute>
+        <ProtectedRoute path="/shop/:id" exact={true} authenticated={authenticated}>
+          <ShopDetails />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>
