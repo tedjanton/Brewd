@@ -18,3 +18,12 @@ def add_like():
         return new_like.to_dict()
     else:
         return {"errors": "invalid like submission"}
+
+@like_routes.route("/<int:id>/", methods=["GET"])
+@login_required
+def delete_like(id):
+    like = Like.query.filter_by(id).delete()
+
+    db.session.delete(like)
+    db.session.commit()
+    return {"Success"}

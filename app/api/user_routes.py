@@ -13,14 +13,14 @@ def users():
     return {"users": [user.to_dict() for user in users]}
 
 
-@user_routes.route('/<int:id>')
+@user_routes.route('/<int:id>/')
 @login_required
 def user(id):
     user = User.query.get(id)
     return user.to_dict()
 
 
-@user_routes.route('/<int:id>/sips')
+@user_routes.route('/<int:id>/sips/')
 @login_required
 def user_sips(id):
     user_sips = Sip.query.filter(Sip.user_id == id).all()

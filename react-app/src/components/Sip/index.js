@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Sip.css";
 import CommentForm from "../Comment/index"
 import Ratings from "react-ratings-declarative";
@@ -6,6 +6,33 @@ import LikeButton from "../Like/index";
 import user_icon from "../../site-images/user_icon.jpeg";
 
 const Sip = ({ sip }) => {
+  const [clicked, setClicked] = useState(false);
+
+  let commentBox;
+  if (clicked) {
+    commentBox = (
+      <div className="sip-comment-box">
+        <CommentForm setClicked={setClicked} sip={sip} />
+      </div>
+    )
+  } else {
+    commentBox = (
+      <>
+      </>
+    )
+  }
+
+  useEffect(() => {
+
+  }, [sip])
+
+  const commentsGiven = sip.comments
+    .sort((a, b) => a.id < b.id ? 1 : -1)
+    .map((comment) =>
+        <div key={comment.id} className="sip_comment_response">
+          {comment.comment}
+        </div>
+    );
   
   if (sip) {
     return (
@@ -53,19 +80,15 @@ const Sip = ({ sip }) => {
               <div className="open_sip_details">View Sip Details</div>
             </div>
           </div>
-          <div className="sip_comments_container">
-            <CommentForm sip={sip} />
+          <div className="sip_comment_button">
+            <button onClick={() => setClicked(true)}>Comment</button>
+            {commentBox}
           </div>
-          <div className="sip_likes_container">
+          <div className="sip_like_button">
             <LikeButton sip={sip} />
           </div>
           <div className="sip_comment_responses_container">
-            {sip.comments &&
-              sip.comments.map((comment) => (
-                <div key={comment.comment.id} className="sip_comment_response">
-                  <div>{comment.comment}</div>
-                </div>
-              ))}
+            {commentsGiven}
           </div>
         </div>
         <div className="sip_logo_container" >

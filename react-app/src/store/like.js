@@ -13,3 +13,8 @@ export const addLike = (like) => async () => {
     return data;
   }
 };
+
+export const deleteLike = (userLikeId) => async () => {
+  const response = await fetch(`/api/likes/${userLikeId}/`);
+  return response.json();
+}

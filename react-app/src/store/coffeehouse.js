@@ -20,7 +20,7 @@ export const getSips = () => async (dispatch) => {
 };
 
 export const getUserSips = (userId) => async (dispatch) => {
-  const response = await fetch(`/api/users/${userId}/sips`, {
+  const response = await fetch(`/api/users/${userId}/sips/`, {
     headers: {
       "Content-Type": "application/json",
     },
