@@ -1,9 +1,19 @@
 .shop_details_page_container {
-
+    display: flex;
+    flex-direction: column;
+    background-color: white;
 }
 
 .shop_details_page_container_top {
-
+    margin: auto auto 10px 196px;
+    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%); 
+    width: 652px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+    padding: 24px;
 }
 
 .individual_shop_container {
@@ -14,5 +24,13 @@
 }
 
 .shop_details_page_container_bottom {
-    
+    margin: 10px auto auto 196px;
+    background-color: white;
+    padding: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%); 
+    width: 652px;
+    position: relative;
+    height: auto;
+    border-radius: 8px;
 }

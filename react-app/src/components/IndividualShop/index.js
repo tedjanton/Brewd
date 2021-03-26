@@ -30,7 +30,7 @@ function IndividualShop({ shop }) {
                         <Ratings.Widget />
                     </Ratings> */}
                   </div>
-                  {/* <div className="shop_total_ratings">{}</div> */}
+                  <div className="shop_total_ratings"></div>
                   <div className="shop_total_coffees">{shop.coffees.length} Coffees</div>
                   <div className="shop_brewd_approved"></div>
                 </div>
