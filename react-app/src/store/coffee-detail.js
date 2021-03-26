@@ -36,7 +36,6 @@ export const createSip = (sip) => async (dispatch) => {
         })
     });
 
-    console.log(response.json())
 }
 
 let initialState = {};

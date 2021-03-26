@@ -23,4 +23,4 @@ User authorization
 * ```GET /api/coffees/:id``` - get a single coffee's details
 
 ## Shops
-* ```GET /api/shops/:id``` - get shop details
+* ```GET /api/shop/:id``` - get shop details

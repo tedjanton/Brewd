@@ -29,27 +29,14 @@ const IndividualCoffee = ({ coffee }) => {
                 rating={coffee.avg_rating}
                 widgetDimensions="15px"
                 widgetSpacings="5px"
+                widgetRatedColors="orange"
+                widgetEmptyColors="grey"
               >
-                <Ratings.Widget
-                  widgetRatedColor="orange"
-                  widgetEmptyColors="grey"
-                />
-                <Ratings.Widget
-                  widgetRatedColor="orange"
-                  widgetEmptyColors="grey"
-                />
-                <Ratings.Widget
-                  widgetRatedColor="orange"
-                  widgetEmptyColors="grey"
-                />
-                <Ratings.Widget
-                  widgetRatedColor="orange"
-                  widgetEmptyColors="grey"
-                />
-                <Ratings.Widget
-                  widgetRatedColor="orange"
-                  widgetEmptyColors="grey"
-                />
+                <Ratings.Widget />
+                <Ratings.Widget />
+                <Ratings.Widget />
+                <Ratings.Widget />
+                <Ratings.Widget />
               </Ratings>
               <div className="coffee_rating_number_i">{coffee.avg_rating}</div>
               <div className="coffee_total_ratings_i">{coffee.all_ratings.length} ratings</div>
