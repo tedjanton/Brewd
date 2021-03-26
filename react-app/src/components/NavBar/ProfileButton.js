@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/session";
 import LogoutButton from "../../components/auth/LogoutButton"
-import user_icon from "../../site-images/user_icon.jpeg";
+import user_icon from "../../site-images/user_icon.png";
 import "./ProfileButton.css"
 
 

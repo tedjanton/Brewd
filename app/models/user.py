@@ -38,3 +38,4 @@ class User(db.Model, UserMixin):
       "last_name": self.last_name,
       "email": self.email
     }
+

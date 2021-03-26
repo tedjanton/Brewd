@@ -3,13 +3,13 @@ import "./IndividualSip.css"
 import CommentForm from "../Comment/index"
 import Ratings from "react-ratings-declarative";
 import LikeButton from "../Like/index";
-import user_icon from "../../site-images/user_icon.jpeg";
+import user_icon from "../../site-images/user_icon.png";
 
 
 const IndividualSip = ({ sip, coffee }) => {
-    
+
     if (sip) {
-       
+
         return (
         <div className="sip_i">
             <div className="user_icon_i" >

@@ -5,10 +5,6 @@
     margin-top:25px;
 }
 
-.menuContainer {
-   margin: auto;
-}
-
 .menu {
     margin-top:20px;
     position: absolute;
@@ -17,7 +13,7 @@
     width:175px;
     /* display :none; */
     color:white;
-} 
+}
 
 .menu div {
     padding-left: 10px;

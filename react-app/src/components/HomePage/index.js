@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getUserSips } from "../../store/coffeehouse";
 import { authenticate } from "../../store/session";
 import Sip from "../../components/Sip";
-import user_icon from "../../site-images/user_icon.jpeg";
+import user_icon from "../../site-images/user_icon.png";
 import "./HomePage.css";
 import { getUserLikes } from "../../store/like";
 

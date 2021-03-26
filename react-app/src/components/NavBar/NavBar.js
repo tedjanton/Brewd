@@ -17,21 +17,6 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
               BREWD
             </NavLink>
           </li>
-          {/* <li>
-            <NavLink to="/login" exact={true} activeClassName="active">
-              Login
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/signup" exact={true} activeClassName="active">
-              Sign Up
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/users" exact={true} activeClassName="active">
-              Users
-            </NavLink>
-          </li> */}
           <li>
             <NavLink className="link-other-page" to="/coffeehouse" exact={true} activeClassName="active">
               Coffee House
@@ -42,12 +27,6 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
               Top Rated
             </NavLink>
           </li>
-          {/* <li className="rightAlign">
-
-          </li> */}
-          {/* <li>
-            <LogoutButton setAuthenticated={setAuthenticated} />
-          </li> */}
         </ul>
         <ProfileButton className="profile-button-nav" setAuthenticated={setAuthenticated}/>
       </nav>

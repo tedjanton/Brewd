@@ -1,11 +1,13 @@
 
 .flex-container-navbar {
     display: flex;
-    padding: 0px 180px;
+    margin: 0 20.5%;
+    justify-content: space-between;
 }
 .flex-container-ul {
     display: flex;
     justify-items: flex-start;
+    align-items: center;
 }
 .yellowBar{
     height:8px;
@@ -16,7 +18,8 @@
     font-size: 38px;
     font-weight: 550;
     align-items: center;
-    height: 38px;
+
+    padding: 0;
 }
 
 .link-other-page {
@@ -24,9 +27,10 @@
     font-size: 16px;
 }
 .navContainer {
-    width:100%;
-    background-color:white;    
-    line-height:50px;
+    width: 100%;
+    background-color:white;
+    line-height: 50px;
+    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%);
 }
 
 nav {
@@ -55,9 +59,7 @@ nav ul li a {
     text-decoration: none;
     color: black;
     /* border :1px solid red; */
-    border-radius:4px; 
+    border-radius:4px;
     padding: 7px  15px;
     align-items: center;
 }
-
-
