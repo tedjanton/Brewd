@@ -64,6 +64,13 @@ const Sip = ({ sip }) => {
     )
   }
 
+  // let iconType;
+  // if (sip.coffee.type === "cold") {
+  //   iconType = (
+
+  //   )
+  // }
+
   if (sip) {
     return (
       <div className="sip">

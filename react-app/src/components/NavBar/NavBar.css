@@ -1,13 +1,16 @@
 
 .flex-container-navbar {
     display: flex;
-    margin: 0 20.5%;
+    margin: auto;
+    width: 1030px;
     justify-content: space-between;
+    align-items: center;
 }
 .flex-container-ul {
     display: flex;
     justify-items: flex-start;
     align-items: center;
+    padding: 0;
 }
 .yellowBar{
     height:8px;
@@ -62,4 +65,23 @@ nav ul li a {
     border-radius:4px;
     padding: 7px  15px;
     align-items: center;
+}
+
+.profile-search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 280px;
+    margin-right: 5px;
+}
+
+.search-bar-container input {
+    width: 190px;
+    border: none;
+    font-size: 18px;
+    height: 20px;
+}
+
+.search-bar-container {
+    color: rgb(201, 201, 201);
 }

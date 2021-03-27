@@ -36,8 +36,6 @@ function IndividualShop({ shop }) {
                 </div>
                 <div className="shop_description">{shop.description}</div>
               </div>
-
-
         )
     } else return (
         <>

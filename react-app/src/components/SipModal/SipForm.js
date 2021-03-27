@@ -45,6 +45,7 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
             img_src: "",
         }
         dispatch(createSip(submission))
+        window.location.reload();
         return history.push("/home")
     }
 

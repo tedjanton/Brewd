@@ -13,8 +13,8 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
         rating,
     } = sip;
     const dispatch = useDispatch();
-    const [newRating, setNewRating] = useState(0);
-    const [newReview, setNewReview] = useState("");
+    const [newRating, setNewRating] = useState(rating ? rating : null);
+    const [newReview, setNewReview] = useState(review ? review : "");
     const [textLen, setTextLen] = useState(review.length);
 
 
@@ -23,7 +23,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     }, [newReview, textLen])
 
     let ratingDisplay;
-    if (rating === 0) {
+    if (!rating) {
         ratingDisplay = (
             <>
                 <p className="rating-top">NO</p>
@@ -33,7 +33,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     } else {
         ratingDisplay = (
             <>
-                <p className="rating-top">{newRating || rating}</p>
+                <p className="rating-top">{newRating}</p>
                 <p className="rating-bottom">STARS</p>
             </>
         )
@@ -74,7 +74,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
                     <textarea
                         onChange={(e) => setNewReview(e.target.value)}
                         placeholder="What did you think?"
-                        value={newReview || review}
+                        value={newReview}
                     />
                     <span className="sip-form-char-count">{textLen}</span>
                 </div>
@@ -87,7 +87,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
             <div className="sip-form-rating-container">
                 <div className="sip-form-rating">
                     <Ratings
-                        rating={newRating || rating}
+                        rating={newRating}
                         changeRating={setNewRating}
                         widgetRatedColors="#ffc935"
                         widgetEmptyColors="#8f8f8f"
@@ -115,7 +115,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
                     <i className="fas fa-map-marker-alt" />
                     <div className="sip-form-location">{coffee?.shop?.name} in {coffee?.shop?.city}</div>
                 </div>
-                <div className="sip-form-button">
+                <div className="sip-form-buttons">
                     <button onClick={handleEdit}>Edit Sip</button>
                     <button onClick={handleDelete}>Delete Sip</button>
                 </div>

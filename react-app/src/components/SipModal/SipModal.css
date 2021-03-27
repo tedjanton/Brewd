@@ -41,7 +41,7 @@
     font-family: "Roboto", sans-serif;
     width: 400px;
     height: 75px;
-    
+    resize: none;
     font-size: 18px;
     padding: 8px;
     border: thin solid rgba(0, 0, 0, 0.1);
@@ -82,7 +82,8 @@
 }
 
 .sip-form-picture-container:hover,
-.sip-form-button button:hover {
+.sip-form-button button:hover,
+.sip-form-buttons button:hover {
     background-color: rgb(63, 63, 63);
 }
 
@@ -170,4 +171,22 @@
     border-radius: 5px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
+}
+
+.sip-form-buttons button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+    margin: 5px 10px;
+}
+
+.sip-form-buttons {
+    display: flex;
+    flex-direction: column;
 }
