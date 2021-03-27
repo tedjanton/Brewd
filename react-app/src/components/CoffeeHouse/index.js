@@ -14,19 +14,20 @@ const CoffeeHouse = ({ authenticated }) => {
   const user = useSelector(state => state.session.user)
 
   useEffect(() => {
-    dispatch(getSips());
-    dispatch(getUserLikes(user.id))
+    if (!sips) {
+      dispatch(getSips());
+      dispatch(getUserLikes(user.id))
+    }
+  }, [sips, dispatch]);
 
-  }, [sips, user, dispatch]);
-
-    return (
-      <div className="coffeehouse_container">
-        <div className="sip_container">
+  return (
+    <div className="coffeehouse_container">
+      <div className="sip_container">
           <div className="page_title">Recent Global Activity</div>
-              {sips?.map((sip) => (
-                <Sip key={sip.id} sip={sip} />
-            ))}
-        </div>
+            {sips?.map((sip) => (
+              <Sip key={sip.id} sip={sip} />
+          ))}
+      </div>
         <Featured />
       </div>
     )

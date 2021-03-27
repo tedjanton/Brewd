@@ -36,7 +36,6 @@ const Sip = ({ sip }) => {
   }
 
   useEffect(() => {
-
   }, [sip])
 
 
@@ -107,7 +106,7 @@ const Sip = ({ sip }) => {
             </div>
             <div className="review_bottom_container">
               <div className="review_date">{newDate}</div>
-              {(user?.id === sip.user_id) && (
+              {(user.id === sip.user_id) && (
                 <div>
                   <button
                     onClick={() => setShowModal(true)} className="open_sip_details">Edit/Delete Sip</button>
