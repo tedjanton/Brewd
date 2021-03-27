@@ -50,7 +50,7 @@ function ProfileButton({ setAuthenticated }) {
                     <NavLink to="/coffeehouse" exact={true}>Coffee Shop</NavLink>
                 </div>
                 <div onClick={closeMenu}>
-                    <NavLink to="/top_rated" exact={true}>Top Rated</NavLink>
+                    <NavLink to="/toprated" exact={true}>Top Rated</NavLink>
                 </div>
                 <div className="logout-button-nav">
                     <LogoutButton setAuthenticated={setAuthenticated} />

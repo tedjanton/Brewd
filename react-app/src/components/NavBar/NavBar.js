@@ -23,7 +23,7 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
             </NavLink>
           </li>
           <li>
-            <NavLink className="link-other-page" to="/top_rated" exact={true} activeClassName="active">
+            <NavLink className="link-other-page" to="/toprated" exact={true} activeClassName="active">
               Top Rated
             </NavLink>
           </li>

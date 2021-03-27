@@ -3,10 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/NavBar/NavBar";
-import ProfileButton from "./components/NavBar/ProfileButton"
 import ProtectedRoute from "./components/auth/ProtectedRoute";
-import UsersList from "./components/UsersList";
-import User from "./components/User";
 import Landing from "./components/Landing";
 import CoffeeHouse from "./components/CoffeeHouse";
 import { authenticate } from "./store/session";
@@ -15,6 +12,7 @@ import HomePage from "./components/HomePage";
 import CoffeeDetail from "./components/CoffeeDetail";
 import { useDispatch } from "react-redux";
 import ShopDetails from "./components/Shop";
+import { render } from "react-dom";
 
 function App() {
   const dispatch = useDispatch()
@@ -22,15 +20,15 @@ function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    (async () => {
+    const render = async () => {
       const user = await dispatch(authenticate());
-
       if (!user.errors) {
         setAuthenticated(true);
       }
       setLoaded(true);
-    })();
-  }, []);
+    };
+    render();
+  }, [dispatch]);
 
   if (!loaded) {
     return null;
@@ -58,12 +56,12 @@ function App() {
         <Route path="/" exact={true} authenticated={authenticated}>
           <Landing authenticated={authenticated} />
         </Route>
-        <Route path="/coffeehouse" authenticated={authenticated}>
+        <ProtectedRoute path="/coffeehouse" authenticated={authenticated}>
           <CoffeeHouse authenticated={authenticated}/>
-        </Route>
-        <Route path="/top_rated">
+        </ProtectedRoute>
+        <ProtectedRoute path="/toprated">
           <TopRated />
-        </Route>
+        </ProtectedRoute>
         <ProtectedRoute path="/home" exact={true} authenticated={authenticated}>
           <HomePage authenticated={authenticated}/>
         </ProtectedRoute>

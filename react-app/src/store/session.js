@@ -42,7 +42,6 @@ export const login = (email, password) => async (dispatch) => {
   });
 
   let user = await response.json();
-  console.log(user)
   if (!user.errors) {
     dispatch(getUser(user));
     return user;
@@ -88,7 +87,7 @@ export const signUp = (
   }
 };
 
-let initialState = { user: null };
+let initialState = {};
 
 const sessionReducer = (state = initialState, action) => {
   let newState;

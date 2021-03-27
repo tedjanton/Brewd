@@ -14,11 +14,14 @@ const CoffeeHouse = ({ authenticated }) => {
   const user = useSelector(state => state.session.user)
 
   useEffect(() => {
-    if (!sips) {
-      dispatch(getSips());
-      dispatch(getUserLikes(user.id))
-    }
-  }, [sips, dispatch]);
+    const render = async () => {
+      if (!sips) {
+        await dispatch(getSips());
+        await dispatch(getUserLikes(user.id))
+      }
+    };
+    render();
+  }, [sips, user, dispatch]);
 
   return (
     <div className="coffeehouse_container">

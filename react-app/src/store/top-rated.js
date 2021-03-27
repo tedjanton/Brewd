@@ -1,4 +1,4 @@
-const GET_TOP_RATED = "/top_rated/getTopRated";
+const GET_TOP_RATED = "/toprated/getTopRated";
 
 const getTopRated = (coffees) => ({
   type: GET_TOP_RATED,
@@ -6,7 +6,7 @@ const getTopRated = (coffees) => ({
 });
 
 export const topRated = () => async (dispatch) => {
-  const response = await fetch("api/top_rated/", {
+  const response = await fetch("api/toprated/", {
     headers: {
       "Content-Type": "application/json",
     },

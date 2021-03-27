@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
-import { topRated } from "../../store/top_rated";
+import { topRated } from "../../store/top-rated";
 import "./TopRated.css";
 import Coffee from "../Coffee";
 import Featured from "../Featured";
