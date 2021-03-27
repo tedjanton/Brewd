@@ -14,9 +14,8 @@ function TopRatedPage() {
   });
 
   useEffect(() => {
-    if (!coffees) {
-      dispatch(topRated());
-    }
+    dispatch(topRated());
+
   }, [coffees, dispatch]);
 
   return (
