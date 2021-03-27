@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Ratings from "react-ratings-declarative";
 import { Modal } from "../../context/Modal";
 import CommentForm from "../Comment/index"
@@ -12,6 +12,7 @@ const Sip = ({ sip }) => {
   const user = useSelector(state => state.session.user)
   const [clicked, setClicked] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const commentsGiven = !!sip.comments.length;
 
   const date = sip?.created_at.split(" ")
   const dateArr = date.splice(0, 4);
@@ -23,7 +24,8 @@ const Sip = ({ sip }) => {
       <div className="sip-comment-box">
         <CommentForm
           setClicked={setClicked}
-          sip={sip} />
+          sip={sip}
+        />
       </div>
     )
   } else {
@@ -33,25 +35,34 @@ const Sip = ({ sip }) => {
     )
   }
 
-  useEffect(() => {
-  }, [sip])
-
-
-  const commentsGiven = sip.comments
-    .sort((a, b) => a.id < b.id ? 1 : -1)
-    .map((comment) =>
-        <div className="sip_comment_responses_container" key={comment.id}>
-          <div className="sip_comment_response_pic">
-            <img src={user_icon} alt=""/>
-          </div>
-          <div className="sip_comment_response_name">
-            {`${comment.user.first_name} ${comment.user.last_name}:`}
-          </div>
-          <div  className="sip_comment_response">
-            {comment.comment}
-          </div>
-        </div>
-    );
+  let commentsList;
+  if (commentsGiven) {
+    commentsList = (
+      <>
+        {sip.comments
+        .sort((a, b) => a.id < b.id ? 1 : -1)
+        .map((comment) =>
+            <div className="sip_comment_responses_container" key={comment.id}>
+              <div className="sip_comment_response_pic">
+                <img src={user_icon} alt=""/>
+              </div>
+              <div className="sip_comment_response_name">
+                {`${comment.user.first_name} ${comment.user.last_name}:`}
+              </div>
+              <div  className="sip_comment_response">
+                {comment.comment}
+              </div>
+            </div>
+          )
+        }
+      </>
+    )
+  } else {
+    commentsList = (
+      <>
+      </>
+    )
+  }
 
   if (sip) {
     return (
@@ -123,7 +134,7 @@ const Sip = ({ sip }) => {
               {commentBox}
             </div>
             <div>
-              {sip.comments && commentsGiven}
+              {commentsList}
             </div>
           </div>
         </div>

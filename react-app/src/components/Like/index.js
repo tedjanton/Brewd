@@ -7,6 +7,7 @@ const LikeButton = ({ sip }) => {
   const dispatch = useDispatch();
   const userLikesArray = useSelector((state) => state.userLikes.likes)
   const [count, setCount] = useState(sip.likes.length);
+  
   const liked = !!userLikesArray?.filter(like => like.sip_id === sip.id).length
 
   let lk;

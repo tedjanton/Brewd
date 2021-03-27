@@ -5,29 +5,22 @@ import { Modal } from "../../context/Modal";
 import SipForm from "../SipModal/SipForm";
 import { getCoffee } from "../../store/coffee-detail";
 import IndividualCoffee from "../IndividualCoffee";
-import IndividualSip from "../IndividualSip";
-import { getSips } from "../../store/coffeehouse";
+import Sip from "../Sip";
+import { getCoffeeSips } from "../../store/coffeehouse";
 import "./CoffeeDetail.css";
 
 const CoffeeDetail = () => {
-  const params = useParams();
-  const dispatch = useDispatch();
-  const [showModal, setShowModal] = useState();
-
-  const coffee = useSelector((state) => {
-    return state.selected?.coffee?.currentCoffee;
-  });
-
-  const sips = coffee?.sips;
+    const params = useParams();
+    const dispatch = useDispatch();
+    const [showModal, setShowModal] = useState();
+    const coffeeSips = useSelector(state => state.coffeehouse?.sips?.coffeeSips);
+    const coffee = useSelector((state) => state.selected?.coffee?.currentCoffee);
 
     useEffect(() => {
-        if (!coffee) {
-            dispatch(getCoffee(params.id))
-        }
-        if (!sips) {
-            dispatch(getSips())
-        }
-    }, [coffee, sips, dispatch, params])
+        dispatch(getCoffee(params.id))
+        dispatch(getCoffeeSips(params.id));
+
+    }, [])
 
     return (
         <div className="coffee_details_page_container">
@@ -47,12 +40,11 @@ const CoffeeDetail = () => {
             </div>
             <div className="coffee_details_page_container_bottom">
                 <div>
-                    {sips?.map((sip) => (
-                        <IndividualSip key={sip.id} sip={sip} coffee={coffee} />
+                    {coffeeSips?.map((sip) => (
+                        <Sip key={sip.id} sip={sip} coffee={coffee} />
                     ))}
                 </div>
             </div>
-
         </div>
     )
 }
