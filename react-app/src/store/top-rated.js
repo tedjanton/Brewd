@@ -13,7 +13,6 @@ export const topRated = () => async (dispatch) => {
   });
   if (response.ok) {
     const coffees = await response.json();
-    console.log("hi!!!!", coffees.top_rated);
     dispatch(getTopRated(coffees));
     return response;
   }
@@ -39,7 +38,6 @@ const topRatedReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_TOP_RATED:
       const highestRated = onlyTopRated(action.payload);
-      console.log("highest_rated", highestRated);
       newState = Object.assign({}, state);
       newState.coffees = highestRated;
       return newState;

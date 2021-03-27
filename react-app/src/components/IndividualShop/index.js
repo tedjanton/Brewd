@@ -6,7 +6,7 @@ function IndividualShop({ shop }) {
         return (
              <div className="shop_content_container">
                 <div className="shop_item_container">
-                  <img className="shop_logo_img" src={shop.logo_src} />
+                  <img className="shop_logo_img" src={shop.logo_src} alt=""/>
                   <div className="shop_details">
                     <p className="shop_name">
                       {shop.name}
@@ -36,8 +36,8 @@ function IndividualShop({ shop }) {
                 </div>
                 <div className="shop_description">{shop.description}</div>
               </div>
-    
-    
+
+
         )
     } else return (
         <>

@@ -87,15 +87,15 @@ export const signUp = (
   }
 };
 
-let initialState = {};
+let initialState = { user: null };
 
 const sessionReducer = (state = initialState, action) => {
   let newState;
   switch (action.type) {
     case GET_USER:
-      newState = Object.assign({}, state);
-      newState.user = action.user;
-      return newState;
+      // newState = Object.assign({}, state);
+      // newState.user = action.user;
+      return { ...state, user: action.user };
     case CREATE_USER:
       newState = Object.assign({}, state);
       newState.user = action.user;

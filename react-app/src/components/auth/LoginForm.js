@@ -25,8 +25,8 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 
   const signInDemoUser = async (e) => {
     e.preventDefault();
+    await dispatch(login("demo@lition.com", "password"))
     setAuthenticated(true);
-    dispatch(login("demo@lition.com", "password"))
   }
 
   const updateEmail = (e) => {
@@ -38,7 +38,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   };
 
   if (authenticated) {
-    return <Redirect to="/" />;
+    return <Redirect to="/home" />;
   }
 
   return (

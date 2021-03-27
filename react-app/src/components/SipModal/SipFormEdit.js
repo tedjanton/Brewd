@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Ratings from "react-ratings-declarative";
-import { useHistory } from "react-router";
 import { editSip, deleteSip } from "../../store/coffeehouse";
 import white_x from "../../site-images/white_x.png";
 import add_picture from "../../site-images/add_picture.png"
@@ -10,14 +9,10 @@ import "./SipModal.css";
 const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     const user = useSelector(state => state.session.user)
     const {
-        user_id,
-        coffee_id,
         review,
         rating,
-        img_src
     } = sip;
     const dispatch = useDispatch();
-    const history = useHistory();
     const [newRating, setNewRating] = useState(0);
     const [newReview, setNewReview] = useState("");
     const [textLen, setTextLen] = useState(review.length);
@@ -70,7 +65,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
                     onClick={() => setShowModal(false)}
                     className="sip-form-title-close"
                 >
-                    <img src={white_x}/>
+                    <img src={white_x} alt=""/>
                 </div>
             </div>
             <div className="sip-form-review-container">
@@ -84,7 +79,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
                 </div>
                 <div className="sip-form-picture-container">
                     <div className="sip-form-picture">
-                        <img src={add_picture}/>
+                        <img src={add_picture} alt=""/>
                     </div>
                 </div>
             </div>

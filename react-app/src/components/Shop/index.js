@@ -18,7 +18,7 @@ const ShopDetails = () => {
         if (!shop) {
             dispatch(getShop(params.id))
         }
-    }, [shop, dispatch])
+    }, [shop, dispatch, params])
 
    return (
        <>

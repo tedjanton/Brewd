@@ -1,30 +1,23 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getUserSips } from "../../store/coffeehouse";
-import { authenticate } from "../../store/session";
 import Sip from "../../components/Sip";
 import user_icon from "../../site-images/user_icon.png";
 import "./HomePage.css";
 import { getUserLikes } from "../../store/like";
-import { render } from "react-dom";
 
 
-const HomePage = ({ authenticated }) => {
+const HomePage = () => {
     const dispatch = useDispatch();
-    const sips = useSelector(state => state.coffeehouse?.sips?.user_sips);
+    const sips = useSelector(state => state.coffeehouse.sips?.user_sips);
     const user = useSelector(state => state.session.user);
 
     const unique = new Set(sips?.map(sip => sip.coffee_id));
 
     useEffect(() => {
-        const render = async () => {
-            if (user) {
-                await dispatch(getUserSips(user.id))
-                await dispatch(getUserLikes(user.id))
-            }
-        };
-        render()
-    }, [user, dispatch])
+        dispatch(getUserSips(user.id))
+        dispatch(getUserLikes(user.id))
+    }, [dispatch, user])
 
     return (
         <div className="home-container">
@@ -39,7 +32,7 @@ const HomePage = ({ authenticated }) => {
             </div>
             <div className="home-user-container">
                 <div className="home-user-icon">
-                    <img src={user_icon} />
+                    <img src={user_icon} alt=""/>
                 </div>
                 <div className="home-user-name">
                     <p>{`${user?.first_name} ${user?.last_name}`}</p>

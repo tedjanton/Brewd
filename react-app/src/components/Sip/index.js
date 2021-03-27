@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Ratings from "react-ratings-declarative";
-import { Link } from "react-router-dom";
 import { Modal } from "../../context/Modal";
-import SipForm from "../SipModal/SipForm";
 import CommentForm from "../Comment/index"
 import LikeButton from "../Like/index";
 import user_icon from "../../site-images/user_icon.png";
@@ -44,7 +42,7 @@ const Sip = ({ sip }) => {
     .map((comment) =>
         <div className="sip_comment_responses_container" key={comment.id}>
           <div className="sip_comment_response_pic">
-            <img src={user_icon} />
+            <img src={user_icon} alt=""/>
           </div>
           <div className="sip_comment_response_name">
             {`${comment.user.first_name} ${comment.user.last_name}:`}
@@ -59,17 +57,17 @@ const Sip = ({ sip }) => {
     return (
       <div className="sip">
         <div className="user_icon" >
-                <img src={user_icon} />
+                <img src={user_icon} alt=""/>
             </div>
         <div className="user_input_container">
-          <p className="text">
-            <a className="changing_text_name">{sip.user.first_name}</a> is sipping a
+          <div className="text">
+            <p className="changing_text_name">{sip.user.first_name}</p> is sipping a
             <a className="changing_text" href={`/coffees/${sip.coffee.id}`}>
               {sip.coffee.name}
             </a>
             at
             <a className="changing_text" href={`/shop/${sip.coffee.shop_id}`}>{sip.coffee.shop.name}</a>
-          </p>
+          </div>
           <div className="review_container">
             <div className="inner_container">
               <div className="review_text">{sip.review}</div>
@@ -95,7 +93,7 @@ const Sip = ({ sip }) => {
                 </div>
               </div>
             </div>
-            <img className="user_uploaded_image"></img>
+            <img className="user_uploaded_image" alt=""></img>
             <div className="sip_comment_like_container">
               <div className="sip_comment_button">
                 <button onClick={() => setClicked(!clicked)}>
@@ -130,7 +128,7 @@ const Sip = ({ sip }) => {
           </div>
         </div>
         <div className="sip_logo_container" >
-          <img className="sip_logo" src={sip.coffee.shop.logo_src} />
+          <img className="sip_logo" src={sip.coffee.shop.logo_src} alt=""/>
         </div>
       </div>
     );

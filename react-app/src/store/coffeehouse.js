@@ -79,9 +79,9 @@ export const deleteSip = (sipId) => async (dispatch) => {
 
   const deletedSip = await response.json();
   if (response.ok) {
-    dispatch(remove(deleteSip));
+    dispatch(remove(deletedSip));
   }
-  return deleteSip;
+  return deletedSip;
 
 }
 

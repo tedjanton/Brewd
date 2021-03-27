@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { authenticate } from "./store/session";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/NavBar/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import Landing from "./components/Landing";
 import CoffeeHouse from "./components/CoffeeHouse";
-import { authenticate } from "./store/session";
 import TopRated from "./components/TopRated";
 import HomePage from "./components/HomePage";
 import CoffeeDetail from "./components/CoffeeDetail";
-import { useDispatch } from "react-redux";
 import ShopDetails from "./components/Shop";
-import { render } from "react-dom";
 
 function App() {
   const dispatch = useDispatch()
@@ -20,14 +19,14 @@ function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const render = async () => {
+    const func = async () => {
       const user = await dispatch(authenticate());
       if (!user.errors) {
         setAuthenticated(true);
       }
       setLoaded(true);
     };
-    render();
+    func();
   }, [dispatch]);
 
   if (!loaded) {
@@ -59,7 +58,7 @@ function App() {
         <ProtectedRoute path="/coffeehouse" authenticated={authenticated}>
           <CoffeeHouse authenticated={authenticated}/>
         </ProtectedRoute>
-        <ProtectedRoute path="/toprated">
+        <ProtectedRoute path="/toprated" authenticated={authenticated}>
           <TopRated />
         </ProtectedRoute>
         <ProtectedRoute path="/home" exact={true} authenticated={authenticated}>

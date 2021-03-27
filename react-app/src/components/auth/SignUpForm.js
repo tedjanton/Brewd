@@ -70,6 +70,11 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
               <p className="coffeeshop_message_text_2">Getting on Brewd: Shop Guide</p>
             </div>
             <div className="message1">All fields below are required.</div>
+            <div className="login-errors">
+            {errors.map((error) => (
+              <div key={error}>{error}</div>
+            ))}
+            </div>
             <div className="message2">Avoid using common words and include a mix of letters and numbers.</div>
             <div className="username_container">
               <i className="fas fa-user user_icon"></i>

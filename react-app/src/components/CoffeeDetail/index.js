@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { Modal } from "../../context/Modal";
 import SipForm from "../SipModal/SipForm";
 import { getCoffee } from "../../store/coffee-detail";
-import CommentForm from "../Comment/index";
 import IndividualCoffee from "../IndividualCoffee";
 import IndividualSip from "../IndividualSip";
 import { getSips } from "../../store/coffeehouse";
@@ -28,7 +27,7 @@ const CoffeeDetail = () => {
         if (!sips) {
             dispatch(getSips())
         }
-    }, [coffee, sips, dispatch])
+    }, [coffee, sips, dispatch, params])
 
     return (
         <div className="coffee_details_page_container">

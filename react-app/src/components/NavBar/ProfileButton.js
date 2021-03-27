@@ -1,15 +1,11 @@
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import React, {useState, useEffect} from 'react';
-import { useDispatch } from "react-redux";
-import { logout } from "../../store/session";
 import LogoutButton from "../../components/auth/LogoutButton"
 import user_icon from "../../site-images/user_icon.png";
 import "./ProfileButton.css"
 
 
 function ProfileButton({ setAuthenticated }) {
-    const dispatch = useDispatch();
-    const history = useHistory();
     const [showMenu, setShowMenu]= useState(false);
 
     const closeMenu = () => {
@@ -31,11 +27,6 @@ function ProfileButton({ setAuthenticated }) {
 
         return () => document.removeEventListener("mouseEnter", closeMenu);
     }, [showMenu]);
-
-    // const handleLogout = () => {
-    //     dispatch(logout());
-    //     return history.push("/");
-    // }
 
 
     return (

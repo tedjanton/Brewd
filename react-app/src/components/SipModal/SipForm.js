@@ -56,7 +56,7 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
                     onClick={() => setShowModal(false)}
                     className="sip-form-title-close"
                 >
-                    <img src={white_x}/>
+                    <img src={white_x} alt=""/>
                 </div>
             </div>
             <div className="sip-form-review-container">
@@ -70,7 +70,7 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
                 </div>
                 <div className="sip-form-picture-container">
                     <div className="sip-form-picture">
-                        <img src={add_picture}/>
+                        <img src={add_picture} alt=""/>
                     </div>
                 </div>
             </div>
