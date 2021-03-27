@@ -16,8 +16,8 @@ class Sip(db.Model):
 
     user = db.relationship("User", back_populates="sips")
     coffee = db.relationship("Coffee", back_populates="sips")
-    comments = db.relationship("Comment", back_populates="sip")
-    likes = db.relationship("Like", back_populates="sip")
+    comments = db.relationship("Comment", back_populates="sip", cascade="all, delete-orphan")
+    likes = db.relationship("Like", back_populates="sip", cascade="all, delete-orphan")
 
     def to_dict(self):
         return {
@@ -52,3 +52,10 @@ class Sip(db.Model):
         # if self.rating == None:
         #     return []
         return self.rating
+
+
+    def get_comments_likes(self):
+        return {
+            "comments": [comment.to_dict() for comment in self.comments],
+            "likes": [like.to_dict() for like in self.likes]
+        }

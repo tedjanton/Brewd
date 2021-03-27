@@ -67,7 +67,7 @@ function App() {
         <ProtectedRoute path="/coffees/:id" exact={true} authenticated={authenticated}>
           <CoffeeDetail />
         </ProtectedRoute>
-        <ProtectedRoute path="/shop/:id" exact={true} authenticated={authenticated}>
+        <ProtectedRoute path="/shops/:id" exact={true} authenticated={authenticated}>
           <ShopDetails />
         </ProtectedRoute>
       </Switch>

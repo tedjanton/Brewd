@@ -14,14 +14,10 @@ const CoffeeHouse = ({ authenticated }) => {
   const user = useSelector(state => state.session.user)
 
   useEffect(() => {
-    const render = async () => {
-      if (!sips) {
-        await dispatch(getSips());
-        await dispatch(getUserLikes(user.id))
-      }
-    };
-    render();
-  }, [sips, user, dispatch]);
+    dispatch(getSips());
+    dispatch(getUserLikes(user.id))
+
+  }, [dispatch, user]);
 
   return (
     <div className="coffeehouse_container">
@@ -35,6 +31,5 @@ const CoffeeHouse = ({ authenticated }) => {
       </div>
     )
 }
-
 
 export default CoffeeHouse;

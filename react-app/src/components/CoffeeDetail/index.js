@@ -20,7 +20,7 @@ const CoffeeDetail = () => {
         dispatch(getCoffee(params.id))
         dispatch(getCoffeeSips(params.id));
 
-    }, [])
+    }, [dispatch, params])
 
     return (
         <div className="coffee_details_page_container">

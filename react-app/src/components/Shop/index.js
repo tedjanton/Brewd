@@ -12,12 +12,9 @@ const ShopDetails = () => {
     const shop = useSelector((state) => {
         return state.shop?.shop?.individual_shop
     });
-    console.log("SHOP", shop)
 
     useEffect(() => {
-        if (!shop) {
-            dispatch(getShop(params.id))
-        }
+        dispatch(getShop(params.id))
     }, [shop, dispatch, params])
 
    return (

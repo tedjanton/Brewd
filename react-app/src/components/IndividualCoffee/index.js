@@ -15,7 +15,7 @@ const IndividualCoffee = ({ coffee }) => {
                   {coffee.name}
                 </p>
                 <p className="coffee_shop_i">
-                  <a href="/shops/:id">{coffee.shop.name}</a>
+                  <a href={`/shops/${coffee.shop.id}`}>{coffee.shop.name}</a>
                 </p>
               </div>
             </div>

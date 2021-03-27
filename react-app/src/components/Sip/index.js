@@ -72,12 +72,17 @@ const Sip = ({ sip }) => {
             </div>
         <div className="user_input_container">
           <div className="text">
-            <p className="changing_text_name">{sip.user.first_name}</p> is sipping a
-            <a className="changing_text" href={`/coffees/${sip.coffee.id}`}>
-              {sip.coffee.name}
-            </a>
-            at
-            <a className="changing_text" href={`/shop/${sip.coffee.shop_id}`}>{sip.coffee.shop.name}</a>
+            <p>
+              <span className="changing_text_name">{sip.user.first_name}</span>
+              is sipping a
+              <a className="changing_text" href={`/coffees/${sip.coffee.id}`}>
+                {sip.coffee.name}
+              </a>
+              at
+              <a className="changing_text" href={`/shop/${sip.coffee.shop_id}`}>
+                {sip.coffee.shop.name}
+              </a>
+            </p>
           </div>
           <div className="review_container">
             <div className="inner_container">
@@ -100,7 +105,7 @@ const Sip = ({ sip }) => {
                 </div>
                 <div className="type">
                   <i className="fas fa-mug-hot icon" />
-                  {sip.coffee.type}
+                  {sip.coffee.type.toLowerCase()}
                 </div>
               </div>
             </div>

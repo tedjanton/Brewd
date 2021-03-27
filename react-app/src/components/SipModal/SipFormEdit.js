@@ -53,6 +53,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     }
 
     const handleDelete = () => {
+        window.alert("Are you sure you want to delete this sip?")
         dispatch(deleteSip(sip.id));
         window.location.reload();
     }
