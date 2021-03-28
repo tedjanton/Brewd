@@ -91,7 +91,7 @@ def seed_shops():
                   city="Austin",
                   state="Texas",
                   zip_code=78701,
-                  logo_src="https://halcyonathome.square.site/uploads/b/71a53da0-7067-11ea-b314-e1400c853f79/Copy%20of%20HAL_rgb_tag.jpg")
+                  logo_src="/static/shop-logos/halcyone.png")
 
     shop11 = Shop(name="Jo's Coffee",
                   description="Stumptown coffee, baked goods & more from a colorful kiosk with outdoor seating & iconic graffiti.",
@@ -136,7 +136,7 @@ def seed_shops():
                   city="Ann Arbor",
                   state="Michigan",
                   zip_code=48108,
-                  logo_src="https://www.zingermanscoffee.com/app/themes/zingermanscoffee17/images/logo_green.svg")
+                  logo_src="/static/shop-logos/zingermanscoffee.png")
 
     shop16 = Shop(name="RoosRoast Liberty",
                   description="Chill, comfy hangout featuring coffee, cold brew & espresso, plus breakfast bites & pastries.",
@@ -154,7 +154,7 @@ def seed_shops():
                   city="Philadelphia",
                   state="Pennsylvania",
                   zip_code=19107,
-                  logo_src="https://cdn.shopify.com/s/files/1/2565/6836/files/elixrcoffeeroastersblue_x150@2x.png?v=1511318250")
+                  logo_src="/static/shop-logos/elixr.png")
 
     shop18 = Shop(name="ReAnimator Coffee",
                   description="Local micro coffee roasters share brews & expertise in a snug, chic hangout with hardwood floors.",

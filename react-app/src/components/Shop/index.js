@@ -15,7 +15,7 @@ const ShopDetails = () => {
 
     useEffect(() => {
         dispatch(getShop(params.id))
-    }, [shop, dispatch, params])
+    }, [params, dispatch])
 
    return (
        <>
@@ -24,9 +24,6 @@ const ShopDetails = () => {
                     <div className="individual_shop_container">
                         <IndividualShop shop={shop} />
                     </div>
-                </div>
-                <div className="shop_details_page_container_bottom">
-
                 </div>
             </div>
        </>

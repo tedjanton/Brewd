@@ -64,6 +64,21 @@ const Sip = ({ sip }) => {
     )
   }
 
+  let displayIcon;
+  if (sip.coffee.type.toLowerCase() === "hot") {
+    displayIcon = (
+      <>
+        <i className="fas fa-mug-hot icon" />
+      </>
+    )
+  } else {
+    displayIcon = (
+      <>
+        <i className="far fa-snowflake icon-cold" />
+      </>
+    )
+  }
+
 
   if (sip) {
     return (
@@ -105,7 +120,7 @@ const Sip = ({ sip }) => {
                 </Ratings>
                 </div>
                 <div className="type">
-                  <i className="fas fa-mug-hot icon" />
+                  {displayIcon}
                   {sip.coffee.type.toLowerCase()}
                 </div>
               </div>

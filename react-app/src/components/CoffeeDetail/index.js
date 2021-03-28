@@ -40,12 +40,12 @@ const CoffeeDetail = () => {
                     )}
                 </div>
             </div>
-            <div className="coffee_details_page_container_bottom">
-                <div>
-                    {coffeeSips?.map((sip) => (
+            <div>
+                {coffeeSips?.map((sip) => (
+                    <div className="coffee_details_page_container_bottom">
                         <Sip key={sip.id} sip={sip} coffee={coffee} />
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </div>
     )

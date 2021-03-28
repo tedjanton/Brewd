@@ -21,7 +21,7 @@ const IndividualCoffee = ({ coffee }) => {
             </div>
             <div className="coffee_spec_container_i">
               <div className="coffee_caffeine_i">{coffee.caffeine} mg</div>
-              <div className="coffee_type_i">{coffee.type}</div>
+              <div className="coffee_type_i">{coffee.type.toLowerCase()}</div>
               <div className="coffee_rating_display_container">
                 <Ratings
                   className="coffee_rating_display"
