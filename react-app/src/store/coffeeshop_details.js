@@ -8,7 +8,7 @@ const load = (shop) => ({
 
 export const getShop = (shopId) => async (dispatch) => {
     const response = await fetch(`/api/shop/${shopId}/`);
-    console.log("response", response)
+
     if (response.ok) {
         const shop = await response.json();
         dispatch(load(shop));
@@ -26,7 +26,7 @@ const shopDetailReducer = (state = initialState, action) => {
             newState = Object.assign({}, state);
             newState.shop = action.payload;
             return newState;
-        } 
+        }
         default:
             return state;
     }
