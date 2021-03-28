@@ -1,98 +1,129 @@
-# Flask React Project
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-This is the backend for the Flask React project.
+[Click here to view Brewd live on the web!](https://brewd-app.herokuapp.com/)
+<br>
+</br>
 
-## Getting started
 
-1. Clone this repository (only this branch)
+### Built With
 
-   ```bash
-   git clone https://github.com/appacademy-starters/python-project-starter.git
+* [JavaScript]()
+* [Python]()
+* [React]()
+* [Redux]()
+* [Flask]()
+* [SQLAlchemy]()
+* [Docker]()
+* [CSS]()
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+Here is everything we need you to do to get started with Brewd.
+
+  * npm
+  ```sh
+  npm install npm@latest -g
+  ```
+  * pipenv
+  ```
+  pipenv install 
+  ```
+  
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/tedjanton/Brewd
    ```
+2. Install NPM packages in the React App
+   ```sh
+   npm install
+   ```
+3. Install Dependencies
+   ```bash
+   pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
+   ```
+      
+4. Add a '.env' with your environment variables to the root of your local directory
 
-2. Install dependencies
-
-      ```bash
-      pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
-      ```
-
-3. Create a **.env** file based on the example with proper settings for your
-   development environment
-4. Setup your PostgreSQL user, password and database and make sure it matches your **.env** file
-
-5. Get into your pipenv, migrate your database, seed your database, and run your flask app
-
+5. Create a postgreSQL user
+    ```sh
+    CREATE USERS <<your username>> WITH PASSWORD <<your password>> CREATEDB
+    ```
+6. Create your database
+    ```sh
+   CREATE DATABASE <<database name>> WITH OWNER <<your username>>
+    ```
+7. Start a pipenv virtual environment
    ```bash
    pipenv shell
    ```
-
-   ```bash
+8. Migrate and seed your database
+    ```sh
+    flask db migrate
+    ```
+    ```bash
    flask db upgrade
    ```
-
    ```bash
    flask seed all
    ```
-
    ```bash
    flask run
    ```
-
-6. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
-
-***
-*IMPORTANT!*
-   If you add any python dependencies to your pipfiles, you'll need to regenerate your requirements.txt before deployment.
-   You can do this by running:
-
+9. Start your local development server in the React App
    ```bash
-   pipenv lock -r > requirements.txt
+   npm start
    ```
+## Obstacles
 
-*ALSO IMPORTANT!*
-   psycopg2-binary MUST remain a dev dependency because you can't install it on apline-linux.
-   There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
-***
+### SQLAlchemy Querying
 
-## Deploy to Heroku
+We ran into issues when trying to query our database because of interdependent relationships. We had to define specific relationships between tables, and create new methods that allowed us to return information pertaining to multiple tables without running into major conflicts. 
 
-1. Create a new project on Heroku
-2. Under Resources click "Find more add-ons" and add the add on called "Heroku Postgres"
-3. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
-4. Run
 
-   ```bash
-   heroku login
-   ```
+### Likes
 
-5. Login to the heroku container registry
+We had issues with React updating and rendering the state of a like without refreshing our entire page. Through hours of debugging and collaboration, we realized we overcomplicated the issue from the start. 
 
-   ```bash
-   heroku container:login
-   ```
 
-6. Update the `REACT_APP_BASE_URL` variable in the Dockerfile.
-   This should be the full URL of your Heroku app: i.e. "https://flask-react-aa.herokuapp.com"
-7. Push your docker container to heroku from the root directory of your project.
-   This will build the dockerfile and push the image to your heroku container registry
+<!-- ROADMAP -->
+## Roadmap
 
-   ```bash
-   heroku container:push web -a {NAME_OF_HEROKU_APP}
-   ```
+See the [open issues](https://github.com/tedjanton/Brewd/issues) for a list of proposed features (and known issues).
 
-8. Release your docker container to heroku
 
-   ```bash
-   heroku container:release web -a {NAME_OF_HEROKU_APP}
-   ```
 
-9. set up your database:
+<!-- CONTRIBUTING -->
+## Contributing
 
-   ```bash
-   heroku run -a {NAME_OF_HEROKU_APP} flask db upgrade
-   heroku run -a {NAME_OF_HEROKU_APP} flask seed all
-   ```
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-10. Under Settings find "Config Vars" and add any additional/secret .env variables.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-11. profit
+
+
+<!-- CONTACT -->
+## Contact & Acknowledgements
+
+* Ted Anton - [LinkedIn](https://www.linkedin.com/in/ted-anton/) - [GitHub](https://github.com/tedjanton)
+* Olivia Young - [LinkedIn](https://www.linkedin.com/in/olivia-young-2437ba1b9/) - [GitHub](https://github.com/olivianicole)
+* Lauren Chambers - [LinkedIn] (https://www.linkedin.com/in/lauren-chambers94/) - [Github] (https://github.com/laurenchambers)
+* Rajiv Hudek - [LinkedIn] (https://www.linkedin.com/in/raj-hudek-026b051b1/) - [Github] (https://github.com/LifeJunkieRaj)
+
+Project Link: [https://github.com/tedjanton/Brewd](https://github.com/tedjanton/Brewd)
+
+
+<!-- ACKNOWLEDGEMENTS -->
