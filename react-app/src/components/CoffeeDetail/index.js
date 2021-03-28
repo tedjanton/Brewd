@@ -7,20 +7,22 @@ import { getCoffee } from "../../store/coffee-detail";
 import IndividualCoffee from "../IndividualCoffee";
 import Sip from "../Sip";
 import { getCoffeeSips } from "../../store/coffeehouse";
+import { getUserLikes } from "../../store/like";
 import "./CoffeeDetail.css";
 
 const CoffeeDetail = () => {
     const params = useParams();
     const dispatch = useDispatch();
     const [showModal, setShowModal] = useState();
+    const user = useSelector(state => state.session.user)
     const coffeeSips = useSelector(state => state.coffeehouse?.sips?.coffeeSips);
     const coffee = useSelector((state) => state.selected?.coffee?.currentCoffee);
 
     useEffect(() => {
         dispatch(getCoffee(params.id))
         dispatch(getCoffeeSips(params.id));
-
-    }, [dispatch, params])
+        dispatch(getUserLikes(user.id))
+    }, [dispatch, params, user])
 
     return (
         <div className="coffee_details_page_container">
