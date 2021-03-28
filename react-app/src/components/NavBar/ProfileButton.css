@@ -6,7 +6,7 @@
 }
 
 .menu {
-    margin-top:20px;
+    margin-top: 45px;
     position: absolute;
     z-index: 100;
     background-color:rgb(59, 59, 59);
@@ -16,7 +16,10 @@
 }
 
 .menu div {
-    padding-left: 10px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
     border-bottom: 1px solid black;
     color:white;
 }
@@ -37,7 +40,7 @@ a {
 .logout-button-nav button {
     text-decoration:none;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     background-color: rgb(59, 59, 59);
     height: auto;
