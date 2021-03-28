@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getShop } from "../../store/coffeeshop_details";
 import IndividualShop from "../IndividualShop";
+import Coffee from "../Coffee";
 import "./Shop.css";
 
 const ShopDetails = () => {
@@ -15,7 +16,7 @@ const ShopDetails = () => {
 
     useEffect(() => {
         dispatch(getShop(params.id))
-    }, [shop, dispatch, params])
+    }, [params, dispatch])
 
    return (
        <>
@@ -25,8 +26,10 @@ const ShopDetails = () => {
                         <IndividualShop shop={shop} />
                     </div>
                 </div>
-                <div className="shop_details_page_container_bottom">
-
+                <div className="shop_coffees_container">
+                    {shop?.coffees?.map(coffee => (
+                        <Coffee key={coffee.id} coffee={coffee} shop={shop}/>
+                    ))}
                 </div>
             </div>
        </>

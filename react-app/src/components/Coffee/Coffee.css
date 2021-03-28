@@ -5,7 +5,7 @@
 .box {
   width: 100%;
   /* margin-bottom: 10px; */
- 
+
 }
 
 .content {
@@ -28,13 +28,12 @@
 
 .top_rated_blurb {
   position: relative;
-  margin-bottom: 15px;
+  margin: 11px 0 15px 10px;
   padding-left: 24px;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
   background-color:white;
   padding-top: 15px;
-  margin-top: 11px;
 }
 
 .coffee_item {
@@ -92,7 +91,7 @@
   outline: 0;
   font-size: 100%;
   background: transparent;
- 
+
 }
 
 .coffee_spec_container {

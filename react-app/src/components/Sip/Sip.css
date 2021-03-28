@@ -255,3 +255,9 @@
     font-weight: 200;
     color: rgb(80, 80, 80);
 }
+
+.icon-cold {
+    color: rgb(0, 132, 255);
+    margin-right: 5px;
+    align-self: center;
+}

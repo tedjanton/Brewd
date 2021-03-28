@@ -91,7 +91,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1em;
-    height: 60px;   
+    height: 60px;
 }
 
 .shop_brewd_approved {
@@ -114,4 +114,9 @@
     width: 500px;
     height: auto;
     overflow: wrap;
+}
+
+.shop_brewd_approved {
+    font-size: 28px;
+    color: #ffbb00;
 }

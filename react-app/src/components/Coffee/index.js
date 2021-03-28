@@ -2,7 +2,7 @@ import React from "react";
 import "./Coffee.css";
 import Ratings from "react-ratings-declarative";
 
-const Coffee = ({ coffee }) => {
+const Coffee = ({ coffee, shop }) => {
 
   if (coffee) {
     return (
@@ -16,7 +16,7 @@ const Coffee = ({ coffee }) => {
                   <a href={`/coffees/${coffee.id}`}>{coffee.name}</a>
                 </p>
                 <p className="coffee_shop">
-                  <a href={`/shops/${coffee.shop.id}`}>{coffee.shop.name}</a>
+                  <a href={`/shops/${coffee.shop ? coffee.shop.id : ""}`}>{coffee.shop ? coffee.shop.name : shop.name}</a>
                 </p>
                 <p className="coffee_description">{coffee.description}</p>
               </div>
