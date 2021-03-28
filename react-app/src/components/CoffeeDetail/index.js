@@ -32,7 +32,11 @@ const CoffeeDetail = () => {
                 </div>
                 <div className="cd_middle_container">
                     <p className="coffee_description_i">{coffee?.description}</p>
-                    <button onClick={() => setShowModal(true)} className="make_new_post"><i className="fas fa-coffee mug_icon"></i></button>
+                    <button
+                        onClick={() => setShowModal(true)}
+                        className="make_new_post">
+                        <i className="fas fa-coffee mug_icon" />
+                    </button>
                     {showModal && (
                         <Modal onClose={() => setShowModal(false)}>
                             <SipForm coffee={coffee} setShowModal={setShowModal} />
@@ -42,7 +46,7 @@ const CoffeeDetail = () => {
             </div>
             <div>
                 {coffeeSips?.map((sip) => (
-                    <div className="coffee_details_page_container_bottom">
+                    <div key={sip.id} className="coffee_details_page_container_bottom">
                         <Sip key={sip.id} sip={sip} coffee={coffee} />
                     </div>
                 ))}
