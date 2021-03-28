@@ -80,7 +80,7 @@ const Sip = ({ sip }) => {
                 {sip.coffee.name}
               </a>
               at
-              <a className="changing_text" href={`/shop/${sip.coffee.shop_id}`}>
+              <a className="changing_text" href={`/shops/${sip.coffee.shop_id}`}>
                 {sip.coffee.shop.name}
               </a>
             </p>
