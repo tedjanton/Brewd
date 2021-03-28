@@ -25,7 +25,7 @@ export const createSip = (sip) => async (dispatch) => {
         img_src
     } = sip;
 
-    const response = await fetch("/api/coffees/add-sip/", {
+    await fetch("/api/coffees/add-sip/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

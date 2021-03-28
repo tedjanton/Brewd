@@ -7,21 +7,21 @@ def seed_coffees():
                      description="An ancient Indian Elixir. Almond Milk, Honey, Turmeric, Cinnamon, Ginger, Ashwagandha, Black Pepper, Espresso (Double Shot)",
                      caffeine=203,
                      type="hot",
-                     img_src="https://brewd.s3.amazonaws.com/coffee-pics/01-golden-mylk-latte.jpeg")
+                     img_src="/static/coffee-pics/01-golden-mylk-latte.jpeg")
 
     coffee2 = Coffee(shop_id=1,
                      name="Cold Brew + Hazelnut Truffle",
                      description="Cold Brew Coffee, Cacao, Frozen Bananas, House made Toasted Hazelnut Milk, Coconut Caramel, Vanilla, Sea Salt, Maple Syrup.",
                      caffeine=231,
                      type="cold",
-                     img_src="https://brewd.s3.amazonaws.com/coffee-pics/02-cold-brew-hazelnult-truffle.jpeg")
+                     img_src="/static/coffee-pics/02-cold-brew-hazelnult-truffle.jpeg")
 
     coffee3 = Coffee(shop_id=1,
                      name="Pistachio + Rose Latte",
                      description="Inspired by the Turkish Delight. Made with house made Pistachio Milk, Rose Syrup, Espresso (double shot)",
                      caffeine=167,
                      type="hot",
-                     img_src="https://brewd.s3.amazonaws.com/coffee-pics/03-pistachio-rose-latte.jpeg")
+                     img_src="/static/coffee-pics/03-pistachio-rose-latte.jpeg")
 
     # Metric
     coffee4 = Coffee(shop_id=2,
@@ -29,21 +29,21 @@ def seed_coffees():
                      description="Simple, yet tasty and rich.",
                      caffeine=170,
                      type="hot",
-                     img_src="https://brewd.s3.amazonaws.com/coffee-pics/04-cappucino.jpeg")
+                     img_src="/static/coffee-pics/04-cappucino.jpeg")
 
     coffee5 = Coffee(shop_id=2,
                      name="Maple + Maca + Pecan",
                      description="House made Pecan Milk, Maple Syrup, Maca, Espresso (Double Shot)",
                      caffeine=210,
                      type="hot",
-                     img_src="https://brewd.s3.amazonaws.com/coffee-pics/05-maple-maca-pecan.jpeg")
+                     img_src="/static/coffee-pics/05-maple-maca-pecan.jpeg")
 
     coffee6 = Coffee(shop_id=2,
                      name="Hazelnut Horchata Latte",
                      description="House made Toasted Hazelnut Milk, Rice Milk, Coconut Milk, Vanilla, Cinnamon, Maple Syrup, Espresso (Double Shot)",
                      caffeine=212,
                      type="hot",
-                     img_src="https://brewd.s3.amazonaws.com/coffee-pics/06-hazelnut-horchata-latte.jpeg")
+                     img_src="/static/coffee-pics/06-hazelnut-horchata-latte.jpeg")
 
     # Four Letter Word
     coffee7 = Coffee(shop_id=3,
@@ -51,21 +51,21 @@ def seed_coffees():
                      description="We add freshly steamed milk and cinnamon dolce-flavored syrup to our classic espresso, topped with sweetened whipped cream and a cinnamon dolce topping to bring you specialness in a treat.",
                      caffeine=95,
                      type="hot",
-                     img_src="https://brewd.s3.amazonaws.com/coffee-pics/07-cinnamon-dolce-latte.jpeg")
+                     img_src="/static/coffee-pics/07-cinnamon-dolce-latte.jpeg")
 
     coffee8 = Coffee(shop_id=3,
                      name="Caramel Macchiato",
                      description="Freshly steamed milk with vanilla-flavored syrup marked with espresso and topped with a caramel drizzle for an oh-so-sweet finish.",
                      caffeine=104,
                      type="hot",
-                     img_src="https://brewd.s3.amazonaws.com/coffee-pics/08-caramel-macchiato.jpeg")
+                     img_src="/static/coffee-pics/08-caramel-macchiato.jpeg")
 
     coffee9 = Coffee(shop_id=3,
                      name="Irish Cream Nitro Cold Brew",
                      description="This on-tap holiday drink awakens the merry: a velvety-smooth blend of Starbucks® Nitro Cold Brew with Irish cream syrup, topped with vanilla sweet cream cold foam and cocoa.",
                      caffeine=232,
                      type="cold",
-                     img_src="https://brewd.s3.amazonaws.com/coffee-pics/09-irish-cream-nitro-cold-brew.jpeg")
+                     img_src="/static/coffee-pics/09-irish-cream-nitro-cold-brew.jpeg")
 
     # Sip & Savor
     coffee10 = Coffee(shop_id=4,
@@ -73,21 +73,21 @@ def seed_coffees():
                       description="Chocolate sauce, banana syrup, 2 shots of espresso, steamed milk with whip cream.",
                       caffeine=62,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/10-banana-mocha.jpeg")
+                      img_src="/static/coffee-pics/10-banana-mocha.jpeg")
 
     coffee11 = Coffee(shop_id=4,
                       name="Caramel Nut Shake",
                       description="Caramel sauce, caramel, and hazelnut syrup, 2 scoops of ice cream, a dash of milk, a cup of ice, 2 shots of espresso all blended and topped with whip cream.",
                       caffeine=84,
                       type="cold",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/11-caramel-nut-shake.jpeg")
+                      img_src="/static/coffee-pics/11-caramel-nut-shake.jpeg")
 
     coffee12 = Coffee(shop_id=4,
                       name="Tuxedo Mocha",
                       description="Dark and white chocolate sauce, coconut syrup, 2 shots of intense espresso and steamed milk with whip cream.",
                       caffeine=102,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/12-tuxedo-mocha.jpeg")
+                      img_src="/static/coffee-pics/12-tuxedo-mocha.jpeg")
 
     # The Wormhole
     coffee13 = Coffee(shop_id=5,
@@ -95,21 +95,21 @@ def seed_coffees():
                       description="Created with locally sourced honey and two shots of espresso.",
                       caffeine=188,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/13-honey-bear-latte.jpeg")
+                      img_src="/static/coffee-pics/13-honey-bear-latte.jpeg")
 
     coffee14 = Coffee(shop_id=5,
                       name="Peanut Butter Koopa-Troopa",
                       description="Made with peanut mousse and local chocolate.",
                       caffeine=57,
                       type="cold",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/14-peanut-butter-koopa-troopa.jpeg")
+                      img_src="/static/coffee-pics/14-peanut-butter-koopa-troopa.jpeg")
 
     coffee15 = Coffee(shop_id=5,
                       name="Homemade Vanilla Bean",
                       description="The House Special. A simple vanilla latte dusted with vanilla bean seeds.",
                       caffeine=103,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/15-homemade-vanilla-bean.jpeg")
+                      img_src="/static/coffee-pics/15-homemade-vanilla-bean.jpeg")
 
     # Caffé Streets
     coffee16 = Coffee(shop_id=6,
@@ -117,21 +117,21 @@ def seed_coffees():
                       description="An espresso with a dash of frothy steamed milk.",
                       caffeine=150,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/16-macchiato.jpeg")
+                      img_src="/static/coffee-pics/16-macchiato.jpeg")
 
     coffee17 = Coffee(shop_id=6,
                       name="Espresso",
                       description="Our smooth signature Espresso Roast with rich flavor and caramelly sweetness is at the very heart of everything we do.",
                       caffeine=130,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/17-espresso.jpeg")
+                      img_src="/static/coffee-pics/17-espresso.jpeg")
 
     coffee18 = Coffee(shop_id=6,
                       name="Whipped Mocha Delight",
                       description="We blend mocha sauce and mocha chips with coffee, milk and ice, then top it off with whipped cream and a mocha drizzle to bring you endless java joy.",
                       caffeine=93,
                       type="cold",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/18-whipped-mocha-delight.jpeg")
+                      img_src="/static/coffee-pics/18-whipped-mocha-delight.jpeg")
 
     # alfred
     coffee19 = Coffee(name='Iced Vanilla Latte',
@@ -427,21 +427,21 @@ def seed_coffees():
                       description="Banhez Mezcal, Red Eye Eye, Espresso, Vanilla, and Cream.",
                       caffeine=203,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/americano_lounge_feeln_good.jpg")
+                      img_src="/static/coffee-pics/americano_lounge_feeln_good.jpg")
 
     coffee59 = Coffee(shop_id=19,
                       name="Espresso Martini",
                       description="Wheatley Vodka, Red Eye Eye, Espresso, and Vanilla.",
                       caffeine=210,
                       type="cold",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/americano_lounge_espresso_martini.jpg")
+                      img_src="/static/coffee-pics/americano_lounge_espresso_martini.jpg")
 
     coffee60 = Coffee(shop_id=19,
                       name="Bohemia After Dark",
                       description="Wheatley vodka, Libre Mind Chocolate, Giffard Menthepastille, Fernet and Cream.",
                       caffeine=180,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/americano_lounge_bohemia_after_dark.jpg")
+                      img_src="/static/coffee-pics/americano_lounge_bohemia_after_dark.jpg")
 
     # 8th & Roast
     coffee61 = Coffee(shop_id=20,
@@ -449,21 +449,21 @@ def seed_coffees():
                       description="Simple, yet tasty and rich.",
                       caffeine=180,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/8thandRoast_drip_coffee.jpg")
+                      img_src="/static/coffee-pics/8thandRoast_drip_coffee.jpg")
 
     coffee62 = Coffee(shop_id=20,
                       name="Dulce De Leche Latte",
                       description="House made latte infused with Dulce De Leche flavored organic syrup.",
                       caffeine=170,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/8thandRoast_dulce_de_leche_latte.jpg")
+                      img_src="/static/coffee-pics/8thandRoast_dulce_de_leche_latte.jpg")
 
     coffee63 = Coffee(shop_id=20,
                       name="Flash Chilled Nitro",
                       description="House made dripped chilled instantly with our unique nitro machine",
                       caffeine=212,
                       type="cold",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/8thandRoast_flash_chilled_nitro.jpg")
+                      img_src="/static/coffee-pics/8thandRoast_flash_chilled_nitro.jpg")
 
     # Ugly Mugs
     coffee64 = Coffee(shop_id=21,
@@ -471,21 +471,21 @@ def seed_coffees():
                       description="Honey, Vanilla, & Cinnamon Latte.",
                       caffeine=190,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/ugly_mugs_hoodie.jpg")
+                      img_src="/static/coffee-pics/ugly_mugs_hoodie.jpg")
 
     coffee65 = Coffee(shop_id=21,
                       name="Bingster",
                       description="Latte with sweetened condensed milk.",
                       caffeine=182,
                       type="cold",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/ugly_mugs_bingster.jpg")
+                      img_src="/static/coffee-pics/ugly_mugs_bingster.jpg")
 
     coffee66 = Coffee(shop_id=21,
                       name="Lavender Latte",
                       description="Made with housemade lavender syrup.",
                       caffeine=192,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/ugly_mugs_lavender_latte.jpg")
+                      img_src="/static/coffee-pics/ugly_mugs_lavender_latte.jpg")
 
     # Buddy Brew Coffee
     coffee67 = Coffee(shop_id=22,
@@ -493,21 +493,21 @@ def seed_coffees():
                       description="So screwed up, it just might be the cup of joe you were looking to fix your broken day.",
                       caffeine=220,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/buddy_brew_coffee_buddy_brew_screw.jpg")
+                      img_src="/static/coffee-pics/buddy_brew_coffee_buddy_brew_screw.jpg")
 
     coffee68 = Coffee(shop_id=22,
                       name="Cortado",
                       description='Cortado (from the Spanish cortar, known as "Tallat" in Catalan, "Pingo" or "Garoto" in Portugal and "noisette" in France) is an espresso "cut" with a small amount of warm milk to reduce the acidity. The ratio of coffee to milk is between 1:1 - 1:2, and the milk is added after the espresso',
                       caffeine=220,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/buddy_brew_coffee_cortado.jpg")
+                      img_src="/static/coffee-pics/buddy_brew_coffee_cortado.jpg")
 
     coffee69 = Coffee(shop_id=22,
                       name="Cold Brew Float",
                       description="Our delicious house coffee steeped for 24 hours and then served over a refreshing cup of ice",
                       caffeine=190,
                       type="cold",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/bennetts_fresh_roast_cold_brew.jpg")
+                      img_src="/static/coffee-pics/bennetts_fresh_roast_cold_brew.jpg")
 
     # Bennett's Fresh Roast
     coffee70 = Coffee(shop_id=23,
@@ -515,21 +515,21 @@ def seed_coffees():
                       description="We all love those delicious Biscoff Cookies. The Biscoff Latte is a Bennett's Latte with the special addition of Biscoff Butter, whipped cream and a crumbled Biscoff Cookie on top",
                       caffeine=188,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/bennetts_fresh_roast_biscoff_latte.jpg")
+                      img_src="/static/coffee-pics/bennetts_fresh_roast_biscoff_latte.jpg")
 
     coffee71 = Coffee(shop_id=23,
                       name="Bennett's Colombian Cup In-House",
                       description="Served in a Bennett's Fresh Roast Mug, this in-shop fresh roasted coffee is brewed in bold, mild, or decaf.",
                       caffeine=190,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/bennetts_fresh_roast_colombian_in-house_brew.jpg")
+                      img_src="/static/coffee-pics/bennetts_fresh_roast_colombian_in-house_brew.jpg")
 
     coffee72 = Coffee(shop_id=23,
                       name="Bennet's Cold Brew",
                       description="Made in house and kept ice cold from start to finish, Bennett's Cold Brew steeps for up to 18 hours to bring out the smoothness of Cold Brew with all the flavor of Bennett's Fresh Roasted Coffee.",
                       caffeine=220,
                       type="cold",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/bennetts_fresh_roast_cold_brew.jpg")
+                      img_src="/static/coffee-pics/bennetts_fresh_roast_cold_brew.jpg")
 
     # Canes Corner and Coffee Store
     coffee73 = Coffee(shop_id=24,
@@ -537,21 +537,21 @@ def seed_coffees():
                       description="An espresso with a dash of frothy steamed coconut milk.",
                       caffeine=150,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/canes_corner_and_coffee_store_coconut_macchiato.jpg")
+                      img_src="/static/coffee-pics/canes_corner_and_coffee_store_coconut_macchiato.jpg")
 
     coffee74 = Coffee(shop_id=24,
                       name="Rasberry White Mocha",
                       description="An espresso with a dash of frothy steamed milk and rasberry topping.",
                       caffeine=130,
                       type="hot",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/canes_corner_and_coffee_store_rasberry_white_mocha.jpg")
+                      img_src="/static/coffee-pics/canes_corner_and_coffee_store_rasberry_white_mocha.jpg")
 
     coffee75 = Coffee(shop_id=24,
                       name="Peanut Butter Mocha",
                       description="We blend mocha sauce and chocolate mocha chips with coffee, milk and ice, then top it off with whipped cream and a peanut butter drizzle to bring you endless java joy.",
                       caffeine=93,
                       type="cold",
-                      img_src="https://brewd.s3.amazonaws.com/coffee-pics/canes_corner_and_coffee_store_peanut_butter_mocha.jpg")
+                      img_src="/static/coffee-pics/canes_corner_and_coffee_store_peanut_butter_mocha.jpg")
 
     db.session.add(coffee1)
     db.session.add(coffee2)
@@ -628,11 +628,9 @@ def seed_coffees():
     db.session.add(coffee74)
     db.session.add(coffee75)
 
-
-
     db.session.commit()
 
 
 def undo_coffees():
-    db.session.execute('TRUNCATE coffees;')
+    db.session.execute('TRUNCATE coffees CASCADE;')
     db.session.commit()

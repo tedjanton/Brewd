@@ -1,6 +1,5 @@
 const ADD = "/likes/add_like";
 const GET_LIKES = "/likes/get_likes";
-const GET_USER_LIKE = "/likes/get_user_like";
 const REMOVE = "/likes/remove_like";
 
 const add = (like) => ({

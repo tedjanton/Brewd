@@ -1,13 +1,8 @@
 import React from "react";
 import "./Coffee.css";
 import Ratings from "react-ratings-declarative";
-import ratings from "react-ratings-declarative/build/ratings";
 
 const Coffee = ({ coffee }) => {
-  const sips = coffee?.sips;
-  const rating = sips?.map((sip) => sip.rating);
-
-  const ratings_array = coffee?.all_ratings;
 
   if (coffee) {
     return (
@@ -15,7 +10,7 @@ const Coffee = ({ coffee }) => {
         <div className="box">
           <div className="content">
             <div className="coffee_item">
-              <img className="coffee_pic" src={coffee.img_src} />
+              <img className="coffee_pic" src={coffee.img_src} alt=""/>
               <div className="coffee_details">
                 <p className="coffee_name">
                   <a href={`/coffees/${coffee.id}`}>{coffee.name}</a>
@@ -45,7 +40,6 @@ const Coffee = ({ coffee }) => {
                 <Ratings.Widget />
                 <Ratings.Widget />
               </Ratings>
-              {/* <div className="coffee_rating_display">⭐️⭐️⭐️⭐️⭐️</div> */}
               <div className="coffee_rating_number">{coffee.avg_rating}</div>
               <div className="coffee_total_ratings">
                 {coffee.all_ratings.length} Ratings

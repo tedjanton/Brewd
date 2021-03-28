@@ -117,8 +117,7 @@
 .coffee_rating_number_i {
     width: 20%;
     border-right: 1px solid #e9e9e9;
-    border-left: 1px solid #e9e9e9;
-    padding: 12px;
+    padding: 12px 30px 12px 12px;
     color: #999;
     display: flex;
     align-items: center;
@@ -137,4 +136,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.coffee_rating_display_container {
+    display: flex;
+    padding: 0 12px;
 }

@@ -44,6 +44,20 @@ export const getUserSips = (userId) => async (dispatch) => {
   }
 };
 
+export const getCoffeeSips = (coffeeId) => async (dispatch) => {
+  const response = await fetch(`/api/coffees/${coffeeId}/sips/`, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const coffeeSips = await response.json();
+  if (response.ok) {
+    dispatch(load(coffeeSips));
+  }
+  return coffeeSips;
+};
+
 export const editSip = (sip) => async (dispatch) => {
   const {
       id,
@@ -79,9 +93,9 @@ export const deleteSip = (sipId) => async (dispatch) => {
 
   const deletedSip = await response.json();
   if (response.ok) {
-    dispatch(remove(deleteSip));
+    dispatch(remove(deletedSip));
   }
-  return deleteSip;
+  return deletedSip;
 
 }
 

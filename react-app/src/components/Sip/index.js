@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Ratings from "react-ratings-declarative";
-import { Link } from "react-router-dom";
 import { Modal } from "../../context/Modal";
-import SipForm from "../SipModal/SipForm";
 import CommentForm from "../Comment/index"
 import LikeButton from "../Like/index";
 import user_icon from "../../site-images/user_icon.png";
@@ -14,6 +12,7 @@ const Sip = ({ sip }) => {
   const user = useSelector(state => state.session.user)
   const [clicked, setClicked] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const commentsGiven = !!sip.comments.length;
 
   const date = sip?.created_at.split(" ")
   const dateArr = date.splice(0, 4);
@@ -25,7 +24,8 @@ const Sip = ({ sip }) => {
       <div className="sip-comment-box">
         <CommentForm
           setClicked={setClicked}
-          sip={sip} />
+          sip={sip}
+        />
       </div>
     )
   } else {
@@ -35,41 +35,56 @@ const Sip = ({ sip }) => {
     )
   }
 
-  useEffect(() => {
-  }, [sip])
+  let commentsList;
+  if (commentsGiven) {
+    commentsList = (
+      <>
+        {sip.comments
+        .sort((a, b) => a.id < b.id ? 1 : -1)
+        .map((comment) =>
+            <div className="sip_comment_responses_container" key={comment.id}>
+              <div className="sip_comment_response_pic">
+                <img src={user_icon} alt=""/>
+              </div>
+              <div className="sip_comment_response_name">
+                {`${comment.user.first_name} ${comment.user.last_name}:`}
+              </div>
+              <div  className="sip_comment_response">
+                {comment.comment}
+              </div>
+            </div>
+          )
+        }
+      </>
+    )
+  } else {
+    commentsList = (
+      <>
+      </>
+    )
+  }
 
-
-  const commentsGiven = sip.comments
-    .sort((a, b) => a.id < b.id ? 1 : -1)
-    .map((comment) =>
-        <div className="sip_comment_responses_container" key={comment.id}>
-          <div className="sip_comment_response_pic">
-            <img src={user_icon} />
-          </div>
-          <div className="sip_comment_response_name">
-            {`${comment.user.first_name} ${comment.user.last_name}:`}
-          </div>
-          <div  className="sip_comment_response">
-            {comment.comment}
-          </div>
-        </div>
-    );
 
   if (sip) {
     return (
       <div className="sip">
         <div className="user_icon" >
-                <img src={user_icon} />
+                <img src={user_icon} alt=""/>
             </div>
         <div className="user_input_container">
-          <p className="text">
-            <a className="changing_text_name">{sip.user.first_name}</a> is sipping a
-            <a className="changing_text" href={`/coffees/${sip.coffee.id}`}>
-              {sip.coffee.name}
-            </a>
-            at
-            <a className="changing_text" href={`/shop/${sip.coffee.shop_id}`}>{sip.coffee.shop.name}</a>
-          </p>
+          <div className="text">
+            <p>
+              <span className="changing_text_name">{sip.user.first_name}</span>
+              is sipping a
+              <a className="changing_text" href={`/coffees/${sip.coffee.id}`}>
+                {sip.coffee.name}
+              </a>
+              at
+              <a className="changing_text" href={`/shop/${sip.coffee.shop_id}`}>
+                {sip.coffee.shop.name}
+              </a>
+            </p>
+          </div>
           <div className="review_container">
             <div className="inner_container">
               <div className="review_text">{sip.review}</div>
@@ -91,11 +106,11 @@ const Sip = ({ sip }) => {
                 </div>
                 <div className="type">
                   <i className="fas fa-mug-hot icon" />
-                  {sip.coffee.type}
+                  {sip.coffee.type.toLowerCase()}
                 </div>
               </div>
             </div>
-            <img className="user_uploaded_image"></img>
+            <img className="user_uploaded_image" alt=""></img>
             <div className="sip_comment_like_container">
               <div className="sip_comment_button">
                 <button onClick={() => setClicked(!clicked)}>
@@ -106,7 +121,7 @@ const Sip = ({ sip }) => {
             </div>
             <div className="review_bottom_container">
               <div className="review_date">{newDate}</div>
-              {(user.id === sip.user_id) && (
+              {(user?.id === sip.user_id) && (
                 <div>
                   <button
                     onClick={() => setShowModal(true)} className="open_sip_details">Edit/Delete Sip</button>
@@ -125,12 +140,12 @@ const Sip = ({ sip }) => {
               {commentBox}
             </div>
             <div>
-              {sip.comments && commentsGiven}
+              {commentsList}
             </div>
           </div>
         </div>
         <div className="sip_logo_container" >
-          <img className="sip_logo" src={sip.coffee.shop.logo_src} />
+          <img className="sip_logo" src={sip.coffee.shop.logo_src} alt=""/>
         </div>
       </div>
     );

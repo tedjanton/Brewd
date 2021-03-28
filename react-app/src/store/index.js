@@ -2,7 +2,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import sessionReducer from "./session";
 import coffeehouseReducer from "./coffeehouse";
-import topRatedReducer from "./top_rated";
+import topRatedReducer from "./top-rated";
 import featuredReducer from "./featured";
 import coffeeDetailReducer from "./coffee-detail";
 import userLikesReducer from "./like";

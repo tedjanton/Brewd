@@ -9,7 +9,7 @@ def seed_shops():
                  city="Chicago",
                  state="Illinois",
                  zip_code=60625,
-                 logo_src="https://brewd.s3.amazonaws.com/shop-logos/oromo_cafe_logo.jpeg")
+                 logo_src="/static/shop-logos/oromo_cafe_logo.jpeg")
 
     shop2 = Shop(name="Metric Coffee Co.",
                  description="Dreamed into existence by Caffe Streets owner Darko Arandjelovic and former Intelligentsia roasting manager Xavier Alexander, Metric Coffee is undeniably cool. The modern, public-facing shop and back-room roasting facility are housed on a lesser-trafficked stretch of Fulton Street, making it the perfect destination for a lazy Saturday morning. Grab a cup or sign up for a tour, where you'll get an inside look at the Chicago-born business's fascinating operation.",
@@ -18,7 +18,7 @@ def seed_shops():
                  city="Chicago",
                  state="Illinois",
                  zip_code=60612,
-                 logo_src="https://brewd.s3.amazonaws.com/shop-logos/metric-coffee.png")
+                 logo_src="/static/shop-logos/metric-coffee.png")
 
     shop3 = Shop(name="Four Letter Word Coffee",
                  description="Don't expect to find pumpkin-spice anything at this tiny but specialized coffee shop in Logan Square. Branching off from its roastery in Back of the Yards (and another in Istanbul), Four Letter Word Coffee offers drip, pour-over, espresso, Turkish-style, cold coffee and tea. Pair your cup o' Joe with a pastry from Cellar Door Provisions and have a seat in the exquisitely decorated space.",
@@ -27,7 +27,7 @@ def seed_shops():
                  city="Chicago",
                  state="Illinois",
                  zip_code=60647,
-                 logo_src="https://brewd.s3.amazonaws.com/shop-logos/four-letter-word.png")
+                 logo_src="/static/shop-logos/four-letter-word.png")
 
     shop4 = Shop(name="Sip & Savor",
                  description="Boasting three locations on the South Side of Chicago, Sip & Savor is a coffee empire in the making. Founder Trez Pugh, III has long been committed to empowering his community by creating new jobs and offering space for people to come together. He does just that with Sip & Savor, which centers around fair-trade beans to boot. Get your coffee straight or spring for something a bit more indulgent, like the Bull Frog Mocha, with chocolate sauce, peppermint syrup, espresso and whipped cream.",
@@ -36,7 +36,7 @@ def seed_shops():
                  city="Chicago",
                  state="Illinois",
                  zip_code=60615,
-                 logo_src="https://brewd.s3.amazonaws.com/shop-logos/sip-savor.png")
+                 logo_src="/static/shop-logos/sip-savor.png")
 
     shop5 = Shop(name="The Wormhole",
                  description="To get Wicker Park excited about another coffee shop, you’d have to do something pretty crazy. Like, say, install a DeLorean in the front of the store. Okay, Wormhole, you win. So now that this time-travel–themed coffee shop has the neighborhood’s attention, what else is going on here? Some very serious baristas, who use beans from a variety of cult roasters and who cold-brew the strongest iced coffee that’s ever graced our parched, caffeine-starved lips.",
@@ -45,7 +45,7 @@ def seed_shops():
                  city="Chicago",
                  state="Illinois",
                  zip_code=60622,
-                 logo_src="https://brewd.s3.amazonaws.com/shop-logos/the-wormhole.jpeg")
+                 logo_src="/static/shop-logos/the-wormhole.jpeg")
 
     shop6 = Shop(name="Caffé Streets",
                  description="Proving that not every coffee shop must take its inspiration from Seattle in the ’90s, Caffé Streets has the look of a European coffee bar and the coffee expertise to match. The staff is comfortable talking beans (the selection of which changes weekly) and brewing styles, such as pour-over, Chemex and siphon. Housemade pastries are also available, including scones and croissants.",
@@ -54,7 +54,7 @@ def seed_shops():
                  city="Chicago",
                  state="Illinois",
                  zip_code=60622,
-                 logo_src="https://brewd.s3.amazonaws.com/shop-logos/caffee-streets.jpeg")
+                 logo_src="/static/shop-logos/caffee-streets.jpeg")
 
 # SHOPS lauren
     shop7 = Shop(name="Alfred",
@@ -172,7 +172,7 @@ def seed_shops():
                   city="Nashville",
                   state="Tennessee",
                   zip_code=37203,
-                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/americano_lounge.png")
+                  logo_src="/static/shop-logos/americano_lounge.png")
 
     shop20 = Shop(name="8th & Roast",
                   description="After seeing success from their first coffee shop, 8th & Roast opened their second location on Charlotte Avenue in 2018. The West Nashville location is much bigger and more modern, but maintains the energy Nashvillians have grown to love. For a more intimate outing, venture to the original location on 8th Avenue South across from Zanies Comedy Club. The inside is warm and cozy with community tables, bar seating, and a calm atmosphere",
@@ -181,7 +181,7 @@ def seed_shops():
                   city="Nashville",
                   state="Tennessee",
                   zip_code=37204,
-                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/8thandRoast.jpg")
+                  logo_src="/static/shop-logos/8thandRoast.jpg")
 
     shop21 = Shop(name="Ugly Mugs",
                   description="Cheers to drinking out of ugly mugs! Ugly Mugs in East Nashville offers a clean, friendly vibe along with really unattractive coffee mugs that you might expect to see on the clearance rack at Goodwill. The ugly mugs add a fun flavor that you won’t find anywhere else. There are a variety of seating options, from couches to a window bar.",
@@ -190,7 +190,7 @@ def seed_shops():
                   city="Nashville",
                   state="Tennessee",
                   zip_code=37206,
-                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/ugly_mugs.jpg")
+                  logo_src="/static/shop-logos/ugly_mugs.jpg")
 
     shop22 = Shop(name="Buddy Brew Coffee",
                   description="Buddy Brew Coffee has the rustic charm of a hole-in-the-wall coffee shop with the urban aesthetics of a New American-style brewery. As a speciality craft roaster, Buddy Brew promises coffee that challenges the status quo. Its coffee beans are sourced from hand-selected farmers from around the globe when they are at peak flavor. The highly skilled and passionate baristas at Buddy Brew can turn any cup of coffee into art, living up to the shop’s motto: 'Brew good, do good.'",
@@ -199,7 +199,7 @@ def seed_shops():
                   city="Tampa",
                   state="Florida",
                   zip_code=33606,
-                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/buddy_brew_coffee.jpg")
+                  logo_src="/static/shop-logos/buddy_brew_coffee.jpg")
 
     shop23 = Shop(name="Bennett's Fresh Roast",
                   description="We roast nearly 800 pounds of coffee a month, fry up 15,000 from-scratch hand-cut donuts monthly and serve breakfast and lunch to thousands of hungry guests. We’re humbled every time a customer walks in the door and we promise we’ll never take a single one of you for granted. If you are ever dissatisfied with anything you buy from Bennett’s Fresh Roast, without so much as a wink, we simply won’t charge you. If you return something you are dissatisfied with, we’ll gladly refund your money. We don’t care when you bought it. As a wholly owned single family business, we believe that old fashioned good service, honesty, integrity and the desire to back up our products are the true hallmarks of our success.  ",
@@ -208,7 +208,7 @@ def seed_shops():
                   city="Fort Myers",
                   state="Florida",
                   zip_code=33901,
-                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/bennetts_fresh_roast.jpg")
+                  logo_src="/static/shop-logos/bennetts_fresh_roast.jpg")
 
     shop24 = Shop(name="Canes Cafe and Corner Store",
                   description="Canes Café and Corner Store offers a unique coffee house environment like no other. This Italian–Australian infused café simulates the experience of an Italian café while offering traditional Australian baked goods. Our hot pies are ready to grab and go or enjoy them in our sit in window. We have everything from espresso-based coffee drinks to fresh fruit smoothies. Complete your coffee with a toasted bagel or gourmet donut. Located in the heart of Palm Harbor, FL with access to the Pinellas trail.",
@@ -217,7 +217,7 @@ def seed_shops():
                   city="Palm Harbor",
                   state="Florida",
                   zip_code=34683,
-                  logo_src="https://brewd.s3.amazonaws.com/shop-logos/canes_corner_and_coffee_store.jpg")
+                  logo_src="/static/shop-logos/canes_corner_and_coffee_store.jpg")
 
 
 
@@ -250,5 +250,5 @@ def seed_shops():
 
 
 def undo_shops():
-    db.session.execute('TRUNCATE shops;')
+    db.session.execute('TRUNCATE shops CASCADE;')
     db.session.commit()

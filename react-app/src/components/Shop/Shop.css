@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     background-color: white;
+    align-items: center;
 }
 
 .shop_details_page_container_top {
-    margin: auto auto 10px 196px;
-    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%); 
+    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%);
     width: 652px;
     border-radius: 8px;
     display: flex;
@@ -14,6 +14,7 @@
     justify-content: space-around;
     height: auto;
     padding: 24px;
+    margin-top: 26px;
 }
 
 .individual_shop_container {
@@ -28,7 +29,7 @@
     background-color: white;
     padding: 24px;
     font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%); 
+    box-shadow: 0 1px 1px rgb(0 22 36 / 8%), 0 1px 3px rgb(0 22 36 / 16%);
     width: 652px;
     position: relative;
     height: auto;

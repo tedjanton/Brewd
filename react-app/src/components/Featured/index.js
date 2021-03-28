@@ -19,7 +19,7 @@ const Featured = () => {
             <div className="featured_title">Featured Coffees</div>
             {coffees?.map((coffee) => (
                 <div key={coffee.id} className="featured_coffee">
-                    <img className="featured_coffee_img" src={coffee.img_src}/>
+                    <img className="featured_coffee_img" src={coffee.img_src} alt=""/>
                     <div className="featured_text_container">
                         <Link to={`/coffees/${coffee.id}`} className="featured_coffee_name">{coffee.name}</Link>
                         <p className="featured_coffee_shop">{coffee.shop.name}</p>

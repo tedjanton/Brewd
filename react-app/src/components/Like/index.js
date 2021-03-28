@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addLike, deleteLike } from "../../store/like";
 
@@ -7,6 +7,7 @@ const LikeButton = ({ sip }) => {
   const dispatch = useDispatch();
   const userLikesArray = useSelector((state) => state.userLikes.likes)
   const [count, setCount] = useState(sip.likes.length);
+  
   const liked = !!userLikesArray?.filter(like => like.sip_id === sip.id).length
 
   let lk;

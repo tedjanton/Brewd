@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Ratings from "react-ratings-declarative";
-import { useHistory } from "react-router";
 import { editSip, deleteSip } from "../../store/coffeehouse";
 import white_x from "../../site-images/white_x.png";
 import add_picture from "../../site-images/add_picture.png"
@@ -10,16 +9,12 @@ import "./SipModal.css";
 const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     const user = useSelector(state => state.session.user)
     const {
-        user_id,
-        coffee_id,
         review,
         rating,
-        img_src
     } = sip;
     const dispatch = useDispatch();
-    const history = useHistory();
-    const [newRating, setNewRating] = useState(0);
-    const [newReview, setNewReview] = useState("");
+    const [newRating, setNewRating] = useState(rating ? rating : null);
+    const [newReview, setNewReview] = useState(review ? review : "");
     const [textLen, setTextLen] = useState(review.length);
 
 
@@ -28,7 +23,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     }, [newReview, textLen])
 
     let ratingDisplay;
-    if (rating === 0) {
+    if (!rating) {
         ratingDisplay = (
             <>
                 <p className="rating-top">NO</p>
@@ -38,7 +33,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     } else {
         ratingDisplay = (
             <>
-                <p className="rating-top">{newRating || rating}</p>
+                <p className="rating-top">{newRating}</p>
                 <p className="rating-bottom">STARS</p>
             </>
         )
@@ -58,6 +53,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     }
 
     const handleDelete = () => {
+        window.alert("Are you sure you want to delete this sip?")
         dispatch(deleteSip(sip.id));
         window.location.reload();
     }
@@ -70,7 +66,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
                     onClick={() => setShowModal(false)}
                     className="sip-form-title-close"
                 >
-                    <img src={white_x}/>
+                    <img src={white_x} alt=""/>
                 </div>
             </div>
             <div className="sip-form-review-container">
@@ -78,20 +74,20 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
                     <textarea
                         onChange={(e) => setNewReview(e.target.value)}
                         placeholder="What did you think?"
-                        value={newReview || review}
+                        value={newReview}
                     />
                     <span className="sip-form-char-count">{textLen}</span>
                 </div>
                 <div className="sip-form-picture-container">
                     <div className="sip-form-picture">
-                        <img src={add_picture}/>
+                        <img src={add_picture} alt=""/>
                     </div>
                 </div>
             </div>
             <div className="sip-form-rating-container">
                 <div className="sip-form-rating">
                     <Ratings
-                        rating={newRating || rating}
+                        rating={newRating}
                         changeRating={setNewRating}
                         widgetRatedColors="#ffc935"
                         widgetEmptyColors="#8f8f8f"
@@ -119,7 +115,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
                     <i className="fas fa-map-marker-alt" />
                     <div className="sip-form-location">{coffee?.shop?.name} in {coffee?.shop?.city}</div>
                 </div>
-                <div className="sip-form-button">
+                <div className="sip-form-buttons">
                     <button onClick={handleEdit}>Edit Sip</button>
                     <button onClick={handleDelete}>Delete Sip</button>
                 </div>

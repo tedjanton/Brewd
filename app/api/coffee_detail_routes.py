@@ -16,6 +16,14 @@ def coffee(id):
     return {"currentCoffee": coffee.to_dict()}
 
 
+@coffee_detail_routes.route("/<int:id>/sips/")
+@login_required
+def coffee_sips(id):
+    coffee_sips = Sip.query.filter(Sip.coffee_id == id).order_by(Sip.created_at.desc()).all()
+
+    return {"coffeeSips": [sip.to_dict() for sip in coffee_sips]}
+
+
 @coffee_detail_routes.route("/add-sip/", methods=["POST"])
 @login_required
 def add_sip():
@@ -36,5 +44,3 @@ def add_sip():
         return new_sip.to_dict()
     else:
         return {"errors": "invalid submission"}
-
-

@@ -13,16 +13,16 @@ const IndividualSip = ({ sip, coffee }) => {
         return (
         <div className="sip_i">
             <div className="user_icon_i" >
-                <img src={user_icon} />
+                <img src={user_icon} alt=""/>
             </div>
             <div className="user_input_container_i">
             <p className="text_i">
-                <a className="changing_text_i">{sip.user.first_name}</a>is sipping a
+                <p className="changing_text_i">{sip.user.first_name}</p>is sipping a
                 <a className="changing_text_i" href={`/coffees/${coffee.id}`}>
                 {coffee.name}
                 </a>
                 at
-                <a className="changing_text_i">{coffee.shop.name}</a>
+                <p className="changing_text_i">{coffee.shop.name}</p>
             </p>
             <div className="review_container_i">
                 <div className="inner_container_i">
@@ -49,7 +49,7 @@ const IndividualSip = ({ sip, coffee }) => {
                     </div>
                 </div>
                 </div>
-                <img className="user_uploaded_image_i"></img>
+                <img className="user_uploaded_image_i" alt=""></img>
                 <div className="review_bottom_container_i">
                 <div className="review_date_i">{sip.created_at}</div>
                 <div className="open_sip_details_i">View Sip Details</div>
@@ -71,7 +71,7 @@ const IndividualSip = ({ sip, coffee }) => {
             </div>
             </div>
             <div className="sip_logo_container" >
-            <img className="sip_logo" src={coffee.shop.logo_src} />
+            <img className="sip_logo" src={coffee.shop.logo_src} alt=""/>
             </div>
         </div>
         );

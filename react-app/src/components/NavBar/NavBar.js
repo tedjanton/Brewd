@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import LogoutButton from "../auth/LogoutButton";
 import "./NavBar.css"
 import ProfileButton from "./ProfileButton"
 
@@ -23,12 +22,18 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
             </NavLink>
           </li>
           <li>
-            <NavLink className="link-other-page" to="/top_rated" exact={true} activeClassName="active">
+            <NavLink className="link-other-page" to="/toprated" exact={true} activeClassName="active">
               Top Rated
             </NavLink>
           </li>
         </ul>
-        <ProfileButton className="profile-button-nav" setAuthenticated={setAuthenticated}/>
+        <div className="profile-search-container">
+          <ProfileButton className="profile-button-nav" setAuthenticated={setAuthenticated}/>
+          <div className="search-bar-container">
+            <input placeholder="Find a coffee or cafe..." />
+            <i className="fas fa-search" />
+          </div>
+        </div>
       </nav>
 
       </div>

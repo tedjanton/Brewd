@@ -283,21 +283,21 @@ def seed_sips():
                 review="If you like coconut, you'll love this macchiato!",
                 rating=5,
                 img_src="",
-                created_at=(datetime(2021, 12, 23)))
+                created_at=(datetime(2020, 12, 23)))
 
     sip40 = Sip(user_id=11,
                 coffee_id=72,
                 review="I'm a regular here at Bennet's and this is my regular beverage.  I'd wager it's one of the best cold brews in town.",
                 rating=5,
                 img_src="",
-                created_at=(datetime(2021, 7, 10)))
+                created_at=(datetime(2020, 7, 10)))
 
     sip41 = Sip(user_id=8,
                 coffee_id=71,
                 review="The perfect version of a water-downed American drip coffee.",
                 rating=2,
                 img_src="",
-                created_at=(datetime(2021, 9, 1)))
+                created_at=(datetime(2020, 9, 1)))
 
     sip42 = Sip(user_id=5,
                 coffee_id=70,
@@ -332,7 +332,7 @@ def seed_sips():
                 review="Lavender belongs in a garden or in candles, not in coffee!!!",
                 rating=1,
                 img_src="",
-                created_at=(datetime(2021, 4, 27)))
+                created_at=(datetime(2020, 4, 27)))
 
     sip47 = Sip(user_id=14,
                 coffee_id=65,
