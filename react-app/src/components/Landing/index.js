@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect, useHistory } from "react-router-dom";
+import phones from "../../site-images/phones.png";
 import "./Landing.css";
 
 const Landing = ({ authenticated }) => {
@@ -39,7 +40,7 @@ const Landing = ({ authenticated }) => {
                     </div>
                     <div className="landing-container-right">
                         <div className="landing-mobile-img">
-                            <img src="https://untappd.akamaized.net/assets/custom/homepage/images/masthead-img-main.png" alt=""/>
+                            <img src={phones} alt=""/>
                         </div>
                     </div>
                 </div>
