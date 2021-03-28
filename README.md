@@ -3,6 +3,8 @@
 
 [Click here to view Brewd live on the web!](https://brewd-app.herokuapp.com/)
 <br>
+   <img src="./screenshots/splash.png"/>
+   <img src="./screenshots/coffeehouse.png"/>
 </br>
 
 
