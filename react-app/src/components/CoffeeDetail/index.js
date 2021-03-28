@@ -44,12 +44,12 @@ const CoffeeDetail = () => {
                     )}
                 </div>
             </div>
-            <div>
-                {coffeeSips?.map((sip) => (
-                    <div key={sip.id} className="coffee_details_page_container_bottom">
-                        <Sip key={sip.id} sip={sip} coffee={coffee} />
-                    </div>
-                ))}
+            <div className="coffee_details_page_bottom">
+            {coffeeSips?.map((sip) => (
+                <div key={sip.id} className="coffee_details_page_container_bottom">
+                    <Sip key={sip.id} sip={sip} coffee={coffee} />
+                </div>
+            ))}
             </div>
         </div>
     )
