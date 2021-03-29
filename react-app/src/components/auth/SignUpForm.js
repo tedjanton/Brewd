@@ -145,7 +145,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
           </div>
           <Recaptcha />
           <p className="above_button_phrase">You must be a dedicated coffee drinker in your country to join Brewd. By Clicking Create Account, you agree to love coffee forever.</p>
-          <button type="submit" className="form_button">Account</button>
+          <button type="submit" className="form_button">Create Account</button>
         </form>
       </div>
     </div>

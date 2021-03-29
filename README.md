@@ -1,6 +1,5 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
 [Click here to view Brewd live on the web!](https://brewd-app.herokuapp.com/)
 <br>
    <img src="./screenshots/splash.png"/>
@@ -36,9 +35,9 @@ Here is everything we need you to do to get started with Brewd.
   ```
   * pipenv
   ```
-  pipenv install 
+  pipenv install
   ```
-  
+
 ### Installation
 
 1. Clone the repo
@@ -53,7 +52,7 @@ Here is everything we need you to do to get started with Brewd.
    ```bash
    pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
    ```
-      
+
 4. Add a '.env' with your environment variables to the root of your local directory
 
 5. Create a postgreSQL user
@@ -89,12 +88,12 @@ Here is everything we need you to do to get started with Brewd.
 
 ### SQLAlchemy Querying
 
-We ran into issues when trying to query our database because of interdependent relationships. We had to define specific relationships between tables, and create new methods that allowed us to return information pertaining to multiple tables without running into major conflicts. 
+We ran into issues when trying to query our database because of interdependent relationships. We had to define specific relationships between tables, and create new methods that allowed us to return information pertaining to multiple tables without running into major conflicts.
 
 
 ### Likes
 
-We had issues with React updating and rendering the state of a like without refreshing our entire page. Through hours of debugging and collaboration, we realized we overcomplicated the issue from the start. 
+We had issues with React updating and rendering the state of a like without refreshing our entire page. Through hours of debugging and collaboration, we realized we overcomplicated the issue from the start.
 
 
 <!-- ROADMAP -->
