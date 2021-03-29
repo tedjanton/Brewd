@@ -22,7 +22,8 @@
     padding: 24px 16px;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
+    height: auto;
 }
 
 .site_title {

@@ -80,11 +80,12 @@ export const signUp = (
       password,
     }),
   });
+  let data = await response.json();
   if (response.ok) {
-    let data = await response.json();
     dispatch(createUser(data));
-    return response;
+    return data;
   }
+  return data;
 };
 
 let initialState = { user: null };

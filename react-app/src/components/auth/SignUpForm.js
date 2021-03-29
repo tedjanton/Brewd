@@ -64,17 +64,17 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
           <div className="saying_container">
             <p className="site_saying">S I P</p><p className="site_saying">S O C I A L L Y</p>
           </div>
+          <div className="login-errors">
+                {errors.map((error) => (
+                  <div key={error}>{error}</div>
+                ))}
+          </div>
           <div className="inputs_container">
             <div className="coffeeshop_message">
               <p className="coffeeshop_message_text_1">Are you a coffee shop that would like to get added to Brewd and be able to claim and manage your shop's page? Coming soon: </p>
               <p className="coffeeshop_message_text_2">Getting on Brewd: Shop Guide</p>
             </div>
             <div className="message1">All fields below are required.</div>
-            <div className="login-errors">
-            {errors.map((error) => (
-              <div key={error}>{error}</div>
-            ))}
-            </div>
             <div className="message2">Avoid using common words and include a mix of letters and numbers.</div>
             <div className="username_container">
               <i className="fas fa-user user_icon"></i>
@@ -116,7 +116,8 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
                 value={email}
                 placeholder="Email Address"
                 className="email_input"
-                ></input>
+                >
+              </input>
             </div>
             <div className="password_container">
               <i className="fas fa-lock password_icon"></i>

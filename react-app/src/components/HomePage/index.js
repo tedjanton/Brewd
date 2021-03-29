@@ -5,6 +5,7 @@ import Sip from "../../components/Sip";
 import user_icon from "../../site-images/user_icon.png";
 import "./HomePage.css";
 import { getUserLikes } from "../../store/like";
+import { authenticate } from "../../store/session";
 
 
 const HomePage = () => {
@@ -15,6 +16,9 @@ const HomePage = () => {
     const unique = new Set(sips?.map(sip => sip.coffee_id));
 
     useEffect(() => {
+        if (!user) {
+            dispatch(authenticate())
+        }
         dispatch(getUserSips(user.id))
         dispatch(getUserLikes(user.id))
     }, [dispatch, user])
