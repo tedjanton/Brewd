@@ -1,3 +1,53 @@
+<br />
+<p align="center">
+  <a href="https://github.com/tedjanton/Brewd">
+    <img src="react-app/src/site-images/coffee-solid.png" alt="Logo" width="80" height="80" style="">
+  </a>
+
+  <h3 align="center">Brewd - Drink Socially</h3>
+
+  <p align="center">
+    BREWD is a coffee-drinker's community based on the popular beer-aficionado social site UNTAPPED. Coffee-lovers are able to browse recent coffee "sip" activity, view top-rated coffees to sip, and shop locations. Once you find a coffee that you love...or hate...while browsing, users can create, then edit or delete, their own sips of coffee. Users can also add comments on or like other user's sips, making social interaction a key component of the Brewd community.
+    <br />
+    <a href="https://github.com/tedjanton/Brewd/wiki"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://brewd-app.herokuapp.com/">View Site</a>
+    ·
+    <a href="https://github.com/tedjanton/Brewd/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/tedjanton/Brewd/issues">Request Feature</a>
+  </p>
+</p>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 [Click here to view Brewd live on the web!](https://brewd-app.herokuapp.com/)
@@ -88,7 +138,7 @@ Here is everything we need you to do to get started with Brewd.
 
 ### SQLAlchemy Querying
 
-We ran into issues when trying to query our database because of interdependent relationships. We had to define specific relationships between tables, and create new methods that allowed us to return information pertaining to multiple tables without running into major conflicts.
+Because of how we built our lean database, we needed to create unique ways to query data due to interdependent relationships. We defined the necessary relationships between tables and created new methods that allowed us to return information pertaining to multiple tables without running into major conflicts.
 
 
 ### Likes
@@ -121,8 +171,8 @@ Contributions are what make the open source community such an amazing place to b
 
 * Ted Anton - [LinkedIn](https://www.linkedin.com/in/ted-anton/) - [GitHub](https://github.com/tedjanton)
 * Olivia Young - [LinkedIn](https://www.linkedin.com/in/olivia-young-2437ba1b9/) - [GitHub](https://github.com/olivianicole)
-* Lauren Chambers - [LinkedIn] (https://www.linkedin.com/in/lauren-chambers94/) - [Github] (https://github.com/laurenchambers)
-* Rajiv Hudek - [LinkedIn] (https://www.linkedin.com/in/raj-hudek-026b051b1/) - [Github] (https://github.com/LifeJunkieRaj)
+* Lauren Chambers - [LinkedIn](https://www.linkedin.com/in/lauren-chambers94/) - [Github](https://github.com/laurenchambers)
+* Rajiv Hudek - [LinkedIn](https://www.linkedin.com/in/raj-hudek-026b051b1/) - [Github](https://github.com/LifeJunkieRaj)
 
 Project Link: [https://github.com/tedjanton/Brewd](https://github.com/tedjanton/Brewd)
 
