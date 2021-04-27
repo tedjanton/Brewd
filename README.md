@@ -4,7 +4,7 @@
     <img src="react-app/src/site-images/coffee-solid.png" alt="Logo" width="80" height="80" style="">
   </a>
 
-  <h3 align="center">Brewd - Drink Socially</h3>
+  <h3 align="center">BREWD - Drink Socially</h3>
 
   <p align="center">
     BREWD is a coffee-drinker's community based on the popular beer-aficionado social site UNTAPPED. Coffee-lovers are able to browse recent coffee "sip" activity, view top-rated coffees to sip, and shop locations. Once you find a coffee that you love...or hate...while browsing, users can create, then edit or delete, their own sips of coffee. Users can also add comments on or like other user's sips, making social interaction a key component of the Brewd community.
