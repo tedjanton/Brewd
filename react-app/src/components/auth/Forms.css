@@ -31,7 +31,8 @@
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px 46px;
-    color: rgba(0, 0, 0, 0.75)
+    color: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
 }
 
 .saying_container {
@@ -109,7 +110,7 @@
 .form_button {
     height: 44px;
     width: 300px;
-    margin: 0px auto;
+    margin: 10px auto 15px auto;
     padding: 12px 0px;
     font-size: 18px;
     font-weight: 600px;
@@ -117,5 +118,4 @@
     background-color: #020202;
     border: 1px solid #545863;
     border-radius: 4px;
-    margin-bottom: 15px;
 }

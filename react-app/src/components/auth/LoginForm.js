@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
-import { Redirect, Link } from "react-router-dom";
+import { Redirect, Link, useHistory } from "react-router-dom";
 import { login } from "../../store/session";
 import Recaptcha from "./Recaptcha";
 import "./LoginForm.css";
@@ -9,17 +9,25 @@ import "./Forms.css";
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [recaptcha, setRecaptcha] = useState(false);
+  const [recaptchaErr, setRecaptchaErr] = useState('');
 
   const onLogin = async (e) => {
     e.preventDefault();
-    const user = await dispatch(login(email, password));
-    if (!user.errors) {
-      setAuthenticated(true);
+    if (!recaptcha) {
+      setRecaptchaErr("Please confirm you're not a robot!");
     } else {
-      setErrors(user.errors);
+      setRecaptchaErr("");
+      const user = await dispatch(login(email, password));
+      if (!user.errors) {
+        setAuthenticated(true);
+      } else {
+        setErrors(user.errors);
+      }
     }
   };
 
@@ -45,7 +53,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     <div className="form_container">
       <div className="form_white_background">
         <form  className="form" onSubmit={onLogin}>
-          <div className="site_title">BREWD</div>
+          <div onClick={() => history.push("/")} className="site_title">BREWD</div>
           <div className="saying_container">
             <p className="site_saying">S I P</p><p className="site_saying">S O C I A L L Y</p>
           </div>
@@ -88,7 +96,10 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               className="password_input"
             />
           </div>
-          <Recaptcha />
+          <Recaptcha recaptcha={recaptcha} setRecaptcha={setRecaptcha} />
+            {recaptchaErr && (
+              <div className="recaptcha-errors">{recaptchaErr}</div>
+            )}
           <button type="submit" className="form_button">Sign In</button>
               <button className="demo_user_login_text">Sign in as demo?</button>
               <div className="signup_link_container">

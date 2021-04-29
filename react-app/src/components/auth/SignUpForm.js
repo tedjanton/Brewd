@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { signUp } from "../../store/session";
 import { useDispatch } from "react-redux";
 import Recaptcha from "./Recaptcha"
-import "./SignUpForm.css"
+import "./SignUpForm.css";
+
 const SignUpForm = ({ authenticated, setAuthenticated }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [username, setUsername] = useState("");
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");
@@ -13,17 +15,24 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
   const [errors, setErrors] = useState([]);
+  const [recaptcha, setRecaptcha] = useState(false);
+  const [recaptchaErr, setRecaptchaErr] = useState('');
 
   const onSignUp = async (e) => {
     e.preventDefault();
-    if (password === repeatPassword) {
-      const user = await dispatch(
-        signUp(username, first_name, last_name, email, password)
-      );
-      if (!user.errors) {
-        setAuthenticated(true);
-      } else {
-        setErrors(user.errors)
+    if (!recaptcha) {
+      setRecaptchaErr("Please confirm you're not a robot!")
+    } else {
+      setRecaptchaErr("")
+      if (password === repeatPassword) {
+        const user = await dispatch(
+          signUp(username, first_name, last_name, email, password)
+        );
+        if (!user.errors) {
+          setAuthenticated(true);
+        } else {
+          setErrors(user.errors)
+        }
       }
     }
   };
@@ -60,7 +69,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
     <div className="form_container">
       <div className="form_white_background">
         <form className="form" onSubmit={onSignUp}>
-          <div className="site_title">BREWD</div>
+          <div onClick={() => history.push("/")}className="site_title">BREWD</div>
           <div className="saying_container">
             <p className="site_saying">S I P</p><p className="site_saying">S O C I A L L Y</p>
           </div>
@@ -85,26 +94,6 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
                 value={username}
                 placeholder="Username"
                 className="username_input"
-                ></input>
-            </div>
-            <div className="firstname_container">
-              <input
-                type="text"
-                name="firstName"
-                onChange={updateFirstName}
-                value={first_name}
-                placeholder="First Name"
-                className="firstname_input"
-                ></input>
-            </div>
-            <div className="lastname_container">
-              <input
-                type="text"
-                name="lastName"
-                onChange={updateLastName}
-                value={last_name}
-                placeholder="Last Name"
-                className="lastname_input"
                 ></input>
             </div>
             <div className="email_container">
@@ -142,8 +131,31 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
                 className="repeatedpassword_input"
                 ></input>
             </div>
+            <div className="firstname_container">
+              <input
+                type="text"
+                name="firstName"
+                onChange={updateFirstName}
+                value={first_name}
+                placeholder="First Name"
+                className="firstname_input"
+                ></input>
+            </div>
+            <div className="lastname_container">
+              <input
+                type="text"
+                name="lastName"
+                onChange={updateLastName}
+                value={last_name}
+                placeholder="Last Name"
+                className="lastname_input"
+                ></input>
+            </div>
           </div>
-          <Recaptcha />
+          <Recaptcha recaptcha={recaptcha} setRecaptcha={setRecaptcha} />
+            {recaptchaErr && (
+              <div className="recaptcha-errors">{recaptchaErr}</div>
+            )}
           <p className="above_button_phrase">You must be a dedicated coffee drinker in your country to join Brewd. By Clicking Create Account, you agree to love coffee forever.</p>
           <button type="submit" className="form_button">Create Account</button>
         </form>

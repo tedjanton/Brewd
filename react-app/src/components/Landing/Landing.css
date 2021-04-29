@@ -22,6 +22,7 @@
     margin: 1em 1.4em 1em .3em;
     padding: 15px 26px;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .landing-button-div:hover {

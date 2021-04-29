@@ -75,6 +75,7 @@
     color: #8a4500;
 }
 
-.login-errors {
+.login-errors,
+.recaptcha-errors {
     color: red;
 }
