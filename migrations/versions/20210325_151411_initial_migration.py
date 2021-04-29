@@ -81,6 +81,11 @@ def upgrade():
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
+    op.create_table('images',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('url', sa.String(), nullable=False),
+    sa.PrimaryKeyConstraint('id')
+    )
     # ### end Alembic commands ###
 
 
@@ -92,4 +97,5 @@ def downgrade():
     op.drop_table('coffees')
     op.drop_table('users')
     op.drop_table('shops')
+    op.drop_table('images')
     # ### end Alembic commands ###

@@ -14,6 +14,7 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
     const [rating, setRating] = useState(0);
     const [review, setReview] = useState("");
     const [textLen, setTextLen] = useState(0);
+    const [imgSrc, setImgSrc] = useState("");
 
     useEffect(() => {
         setTextLen(255 - review.length)
@@ -36,13 +37,29 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
         )
     }
 
+       const updateImage = async (e) => {
+        const image = e.target.files[0];
+        const formData = new FormData();
+        formData.append("image", image);
+        const response = await fetch("/api/coffees/image/", {
+            method: "POST",
+            body: formData,
+        });
+        if (response.ok) {
+            const image = await response.json();
+            await setImgSrc(image.url)
+        } else {
+            console.log("Upload Error")
+        }
+    }
+
     const handleSubmit = () => {
         const submission = {
             user_id: user.id,
             coffee_id: coffee.id,
             review,
             rating,
-            img_src: "",
+            img_src: imgSrc,
         }
         dispatch(createSip(submission))
         window.location.reload();
@@ -71,7 +88,14 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
                 </div>
                 <div className="sip-form-picture-container">
                     <div className="sip-form-picture">
-                        <img src={add_picture} alt=""/>
+                        {/* <img src={add_picture} alt=""/> */}
+                        <input  
+                        type="file"
+                        accept='image/*'
+                        onChange={(e) => updateImage(e)}
+                        className="sip-form-pic-upload"
+                        // style={{ border: "none" }}
+                        />
                     </div>
                 </div>
             </div>
