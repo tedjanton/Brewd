@@ -24,7 +24,6 @@
 
 ### 5. User Profile Page
 * Users have a dedicated profile page that displays:
-    * Short bio
     * User details
     * Feed of coffee "sip" activity
 
