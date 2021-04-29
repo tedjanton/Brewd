@@ -125,7 +125,7 @@ const Sip = ({ sip }) => {
                 </div>
               </div>
             </div>
-            <img className="user_uploaded_image" alt=""></img>
+            {sip.img_src && <img className="user_uploaded_image" src={sip.img_src }alt=""></img>}
             <div className="sip_comment_like_container">
               <div className="sip_comment_button">
                 <button onClick={() => setClicked(!clicked)}>
