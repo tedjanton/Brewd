@@ -14,40 +14,40 @@ const AboutModal = () => {
         <div className="dev-container" id="dev-1">
           <img src={tedanton} alt="Ted Anton" />
           <p>Ted Anton</p>
-            <a href='https://github.com/tedjanton'>
+            <a href='https://github.com/tedjanton' target="_blank">
               <i className="fab fa-github" />
             </a>
-            <a href="https://www.linkedin.com/in/ted-anton/">
+            <a href="https://www.linkedin.com/in/ted-anton/" target="_blank">
               <i className="fab fa-linkedin" />
             </a>
         </div>
         <div className="dev-container" id="dev-2">
           <img src={oliviayoung} alt="Olivia Young" />
           <p>Olivia Young</p>
-            <a href='https://github.com/olivianicole'>
+            <a href='https://github.com/olivianicole' target="_blank">
               <i className="fab fa-github" />
             </a>
-            <a href="https://www.linkedin.com/in/olivia-young-2437ba1b9/">
+            <a href="https://www.linkedin.com/in/olivia-young-2437ba1b9/" target="_blank">
               <i className="fab fa-linkedin" />
             </a>
         </div>
         <div className="dev-container" id="dev-3">
           <img src={laurenchambers} alt="Lauren Chambers" />
           <p>Lauren Chambers</p>
-            <a href='https://github.com/laurenchambers'>
+            <a href='https://github.com/laurenchambers' target="_blank">
               <i className="fab fa-github" />
             </a>
-            <a href="https://www.linkedin.com/in/lauren-chambers94/">
+            <a href="https://www.linkedin.com/in/lauren-chambers94/" target="_blank">
               <i className="fab fa-linkedin" />
             </a>
         </div>
         <div className="dev-container" id="dev-4">
           <img src={rajhudek} alt="Raj Hudek" />
           <p>Raj Hudek</p>
-            <a href='https://github.com/LifeJunkieRaj'>
+            <a href='https://github.com/LifeJunkieRaj' target="_blank">
               <i className="fab fa-github" />
             </a>
-            <a href="https://www.linkedin.com/in/raj-hudek-026b051b1/">
+            <a href="https://www.linkedin.com/in/raj-hudek-026b051b1/" target="_blank">
               <i className="fab fa-linkedin" />
             </a>
         </div>
