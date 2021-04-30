@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import AboutModal from "../AboutModal";
+import { Modal } from "../../context/Modal";
 import "./NavBar.css"
 import ProfileButton from "./ProfileButton"
 
 const NavBar = ({ authenticated, setAuthenticated }) => {
+  const [showModal, setShowModal] = useState(false);
+
   let sessionLinks;
   if (authenticated) {
     sessionLinks = (
@@ -26,7 +30,15 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
               Top Rated
             </NavLink>
           </li>
+          <li className="about-link" onClick={() => setShowModal(true)}>
+            <p>About Us</p>
+          </li>
         </ul>
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)}>
+            <AboutModal />
+          </Modal>
+        )}
         <div className="profile-search-container">
           <ProfileButton className="profile-button-nav" setAuthenticated={setAuthenticated}/>
           <div className="search-bar-container">

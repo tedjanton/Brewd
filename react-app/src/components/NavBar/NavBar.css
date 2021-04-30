@@ -87,3 +87,8 @@ nav ul li a {
 .search-bar-container {
     color: rgb(201, 201, 201);
 }
+
+.about-link {
+    padding: 7px 15px;
+    cursor: pointer;
+}

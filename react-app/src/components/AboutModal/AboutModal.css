@@ -1,0 +1,51 @@
+.about-modal {
+  margin: 10px;
+}
+
+.about-modal h1 {
+  margin: 20px;
+}
+
+.all-devs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 30px;
+  background-color:rgb(238, 238, 238);
+}
+
+.dev-container {
+  width: 200px;
+  padding: 20px;
+}
+
+.dev-container p {
+  font-size: 16px;
+  font-weight: 500;
+
+}
+
+.dev-container img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  /* margin: 10px; */
+}
+
+.fa-github,
+.fa-linkedin {
+  color: rgb(85, 85, 85);
+  font-size: 25px;
+  margin: 5px 10px;
+  color: #8a4500c2;
+}
+
+#dev-1,
+#dev-3 {
+  border-right: thin solid rgb(207, 207, 207);
+}
+
+#dev-1,
+#dev-2 {
+  border-bottom: thin solid rgb(207, 207, 207);
+}
