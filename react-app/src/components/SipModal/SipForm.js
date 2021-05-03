@@ -88,13 +88,14 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
                 </div>
                 <div className="sip-form-picture-container">
                     <div className="sip-form-picture">
-                        {/* <img src={add_picture} alt=""/> */}
+                        <label className="sip-form-pic-upload" for="pic-upload">
+                                <img src={add_picture} alt=""/>
+                        </label>
                         <input  
                         type="file"
                         accept='image/*'
                         onChange={(e) => updateImage(e)}
-                        className="sip-form-pic-upload"
-                        // style={{ border: "none" }}
+                        id="pic-upload"
                         />
                     </div>
                 </div>

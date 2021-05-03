@@ -76,11 +76,27 @@
     margin-bottom: 5px;
 }
 
-.sip-form-picture img {
-    height: 50px;
-    padding: 10px 0 0 0;
+
+
+input[type="file"] {
+    position: absolute;
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+    height: 90px;
+    width: 90px;
+    display: flex;
 }
 
+.sip-form-pic-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sip-form-pic-upload img {
+    height: 65px;
+    width: 65px;
+}
 .sip-form-picture-container:hover,
 .sip-form-button button:hover,
 .sip-form-buttons button:hover {
@@ -189,8 +205,4 @@
 .sip-form-buttons {
     display: flex;
     flex-direction: column;
-}
-
-#file-upload-button {
-    border: none;
 }
