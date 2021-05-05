@@ -8,12 +8,8 @@ import "./SipModal.css";
 
 const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     const user = useSelector(state => state.session.user)
-    const {
-        review,
-        rating
-    } = sip;
-    console.log(sip)
     const dispatch = useDispatch();
+    const { review, rating } = sip;
     const [newRating, setNewRating] = useState(rating ? rating : null);
     const [newReview, setNewReview] = useState(review ? review : "");
     const [newImgSrc, setNewImgSrc] = useState ("");
@@ -56,22 +52,23 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
             console.log("Upload Error")
         }
     }
-    const handleEdit = () => {
+
+    const handleEdit = async () => {
         const submission = {
             id: sip.id,
             user_id: user.id,
             coffee_id: coffee.id,
             review: newReview,
             rating: newRating,
-            img_src: newImgSrc,
+            img_src: newImgSrc ? newImgSrc : sip.img_src,
         }
-        dispatch(editSip(submission));
+        await dispatch(editSip(submission));
         window.location.reload();
     }
 
-    const handleDelete = () => {
+    const handleDelete = async () => {
         window.alert("Are you sure you want to delete this sip?")
-        dispatch(deleteSip(sip.id));
+        await dispatch(deleteSip(sip.id));
         window.location.reload();
     }
 
@@ -98,9 +95,9 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
                 <div className="sip-form-picture-container">
                     <div className="sip-form-picture">
                         <label className="sip-form-pic-upload" htmlFor="pic-upload">
-                                <img src={add_picture} alt=""/>
+                            <img src={add_picture} alt=""/>
                         </label>
-                        <input  
+                        <input
                         type="file"
                         accept='image/*'
                         onChange={(e) => updateImage(e)}

@@ -1,5 +1,5 @@
 const LOAD = "/coffeehouse/load";
-const EDIT = "sip/edit_sip";
+// const EDIT = "sip/edit_sip";
 const REMOVE = "sip/delete_sip";
 
 const load = (sips) => ({
@@ -7,10 +7,10 @@ const load = (sips) => ({
   payload: sips,
 });
 
-const edit = (sip) => ({
-  type: EDIT,
-  sip
-});
+// const edit = (sip) => ({
+//   type: EDIT,
+//   sip
+// });
 
 const remove = (sip) => ({
   type: REMOVE,
@@ -82,9 +82,9 @@ export const editSip = (sip) => async (dispatch) => {
   });
 
   const editedSip = response.json();
-  if (response.ok) {
-      dispatch(edit(editedSip));
-  }
+  // if (response.ok) {
+  //     dispatch(edit(editedSip));
+  // }
   return editedSip;
 };
 
@@ -108,11 +108,11 @@ const coffeehouseReducer = (state = initialState, action) => {
       newState = Object.assign({}, state);
       newState.sips = action.payload;
       return newState;
-    case EDIT:
-      newState = Object.assign({}, state);
-      newState.sips = [...newState, action.sip];
-      return newState;
-      case REMOVE:
+    // case EDIT:
+    //   newState = Object.assign({}, state);
+    //   newState.sips = {...newState, sips: action.sip};
+    //   return newState;
+    case REMOVE:
         newState = Object.assign({}, state)
         newState.sips = newState.sips.filter(sip => sip.id !== action.sip.id)
         return newState;
