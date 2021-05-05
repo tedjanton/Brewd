@@ -10,11 +10,13 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     const user = useSelector(state => state.session.user)
     const {
         review,
-        rating,
+        rating
     } = sip;
+    console.log(sip)
     const dispatch = useDispatch();
     const [newRating, setNewRating] = useState(rating ? rating : null);
     const [newReview, setNewReview] = useState(review ? review : "");
+    const [newImgSrc, setNewImgSrc] = useState ("");
     const [textLen, setTextLen] = useState(review.length);
 
 
@@ -38,7 +40,22 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
             </>
         )
     }
-
+    const updateImage = async (e) => {
+        const image = e.target.files[0];
+        const formData = new FormData();
+        formData.append("image", image);
+        const response = await fetch("/api/coffees/image/", {
+            method: "POST",
+            body: formData,
+        });
+        if (response.ok) {
+            const image = await response.json();
+            await setNewImgSrc(image.url)
+            console.log(image.url)
+        } else {
+            console.log("Upload Error")
+        }
+    }
     const handleEdit = () => {
         const submission = {
             id: sip.id,
@@ -46,7 +63,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
             coffee_id: coffee.id,
             review: newReview,
             rating: newRating,
-            img_src: "",
+            img_src: newImgSrc,
         }
         dispatch(editSip(submission));
         window.location.reload();
@@ -80,7 +97,15 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
                 </div>
                 <div className="sip-form-picture-container">
                     <div className="sip-form-picture">
-                        <img src={add_picture} alt=""/>
+                        <label className="sip-form-pic-upload" htmlFor="pic-upload">
+                                <img src={add_picture} alt=""/>
+                        </label>
+                        <input  
+                        type="file"
+                        accept='image/*'
+                        onChange={(e) => updateImage(e)}
+                        id="pic-upload"
+                        />
                     </div>
                 </div>
             </div>
