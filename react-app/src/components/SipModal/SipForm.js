@@ -39,6 +39,7 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
 
        const updateImage = async (e) => {
         const image = e.target.files[0];
+        console.log(e.target.files)
         const formData = new FormData();
         formData.append("image", image);
         const response = await fetch("/api/coffees/image/", {
@@ -88,13 +89,14 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
                 </div>
                 <div className="sip-form-picture-container">
                     <div className="sip-form-picture">
-                        {/* <img src={add_picture} alt=""/> */}
+                        <label className="sip-form-pic-upload" htmlFor="pic-upload">
+                                <img src={add_picture} alt=""/>
+                        </label>
                         <input  
                         type="file"
                         accept='image/*'
                         onChange={(e) => updateImage(e)}
-                        className="sip-form-pic-upload"
-                        // style={{ border: "none" }}
+                        id="pic-upload"
                         />
                     </div>
                 </div>

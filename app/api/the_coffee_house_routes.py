@@ -20,6 +20,7 @@ def edit_sip(id):
     sip = Sip.query.get(id)
     sip.review = req["review"]
     sip.rating = req["rating"]
+    sip.img_src = req["img_src"]
     db.session.commit()
     return sip.to_dict()
 
