@@ -13,6 +13,7 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
     const [newRating, setNewRating] = useState(rating ? rating : null);
     const [newReview, setNewReview] = useState(review ? review : "");
     const [newImgSrc, setNewImgSrc] = useState ("");
+    const [updated, setUpdated] = useState(false);
     const [textLen, setTextLen] = useState(review.length);
 
 
@@ -47,8 +48,10 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
         if (response.ok) {
             const image = await response.json();
             await setNewImgSrc(image.url)
+            setUpdated(true);
         } else {
             console.log("Upload Error")
+            setUpdated(false);
         }
     }
 
@@ -94,7 +97,11 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
                 <div className="sip-form-picture-container">
                     <div className="sip-form-picture">
                         <label className="sip-form-pic-upload" htmlFor="pic-upload">
-                            <img src={add_picture} alt=""/>
+                            {updated ? (
+                                <i className="fas fa-check-circle" />
+                                ) : (
+                                <img src={add_picture} alt=""/>
+                            )}
                         </label>
                         <input
                         type="file"
