@@ -47,7 +47,6 @@ const SipFormEdit = ({ sip, coffee, setShowModal }) => {
         if (response.ok) {
             const image = await response.json();
             await setNewImgSrc(image.url)
-            console.log(image.url)
         } else {
             console.log("Upload Error")
         }
