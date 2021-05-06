@@ -14,6 +14,7 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
     const [rating, setRating] = useState(0);
     const [review, setReview] = useState("");
     const [textLen, setTextLen] = useState(0);
+    const [updated, setUpdated] = useState(false);
     const [imgSrc, setImgSrc] = useState("");
 
     useEffect(() => {
@@ -37,9 +38,8 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
         )
     }
 
-       const updateImage = async (e) => {
+    const updateImage = async (e) => {
         const image = e.target.files[0];
-        console.log(e.target.files)
         const formData = new FormData();
         formData.append("image", image);
         const response = await fetch("/api/coffees/image/", {
@@ -48,9 +48,11 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
         });
         if (response.ok) {
             const image = await response.json();
-            await setImgSrc(image.url)
+            await setImgSrc(image.url);
+            setUpdated(true);
         } else {
-            console.log("Upload Error")
+            console.log("Upload Error");
+            setUpdated(false);
         }
     }
 
@@ -90,9 +92,13 @@ const SipForm = ({ sip, coffee, setShowModal }) => {
                 <div className="sip-form-picture-container">
                     <div className="sip-form-picture">
                         <label className="sip-form-pic-upload" htmlFor="pic-upload">
+                            {updated ? (
+                                <i className="fas fa-check-circle" />
+                                ) : (
                                 <img src={add_picture} alt=""/>
+                            )}
                         </label>
-                        <input  
+                        <input
                         type="file"
                         accept='image/*'
                         onChange={(e) => updateImage(e)}
