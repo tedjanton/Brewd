@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { topRated } from "../../store/top-rated";
@@ -8,13 +8,16 @@ import Featured from "../Featured";
 
 function TopRatedPage() {
   const dispatch = useDispatch();
-  const coffees = useSelector((state) => {
-    return state.topRated?.coffees;
-  });
+  const coffees = useSelector((state) => state.topRated?.coffees);
+  const [loading, setIsLoading] = useState(true);
 
+  const getTopRated = async () => {
+    await dispatch(topRated());
+    setIsLoading(false);
+  }
   useEffect(() => {
-    dispatch(topRated());
-
+    getTopRated();
+    // eslint-disable-next-line
   }, [dispatch]);
 
   return (
@@ -26,9 +29,17 @@ function TopRatedPage() {
             This list shows the top coffees based on the average user ratings.
             Have fun exploring, and be sure to rate your favorite coffees!
           </h2>
-          {coffees?.map((coffee) => (
-            <Coffee key={coffee.id} coffee={coffee} />
-          ))}
+          {loading ? (
+            <div className="loader">
+              <div className="loader-spinner"></div>
+            </div>
+          ) : (
+            <>
+            {coffees?.map((coffee) => (
+              <Coffee key={coffee.id} coffee={coffee} />
+            ))}
+            </>
+          )}
         </div>
         <Featured />
       </div>
