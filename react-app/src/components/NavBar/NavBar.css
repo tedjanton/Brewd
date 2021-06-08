@@ -84,6 +84,10 @@ nav ul li a {
     height: 20px;
 }
 
+.search-bar-container input:disabled {
+    background-color: white;
+}
+
 .search-bar-container {
     color: rgb(201, 201, 201);
 }

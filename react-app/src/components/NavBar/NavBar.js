@@ -42,7 +42,7 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
         <div className="profile-search-container">
           <ProfileButton className="profile-button-nav" setAuthenticated={setAuthenticated}/>
           <div className="search-bar-container">
-            <input placeholder="Find a coffee or cafe..." />
+            <input disabled="true" placeholder="Find a coffee or cafe..." />
             <i className="fas fa-search" />
           </div>
         </div>
