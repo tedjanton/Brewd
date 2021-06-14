@@ -31,9 +31,9 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     }
   };
 
-  const signInDemoUser = async (e) => {
+  const signInDemoUser = (e) => {
     e.preventDefault();
-    await dispatch(login("demo@lition.com", "password"))
+    dispatch(login("demo@lition.com", "password"))
     setAuthenticated(true);
   }
 
