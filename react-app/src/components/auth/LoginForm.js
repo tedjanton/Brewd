@@ -101,7 +101,10 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               <div className="recaptcha-errors">{recaptchaErr}</div>
             )}
           <button type="submit" className="form_button">Sign In</button>
-              <button className="demo_user_login_text">Sign in as demo?</button>
+              <button
+                onClick={signInDemoUser}
+                className="demo_user_login_text">Sign in as demo?
+              </button>
               <div className="signup_link_container">
                 <p className="signup_link_text">New around here?</p>
                 <Link to="/signup" className="signup_page_link">Sign up!</Link>

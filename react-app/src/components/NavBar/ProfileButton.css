@@ -13,12 +13,14 @@
     width:175px;
     /* display :none; */
     color:white;
+    display: flex;
+    flex-direction: column;
 }
 
-.menu div {
-    padding-left: 15px;
+.menu a {
+    /* padding-left: 15px;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 5px; */
     font-size: 18px;
     border-bottom: 1px solid black;
     color:white;
@@ -35,14 +37,16 @@ a {
 
 .dropdown-item {
     color: white;
+    padding: 5px 10px;
+    width: 175px;
 }
 
-.logout-button-nav button {
+.logout-button-nav {
     text-decoration:none;
     color: white;
     font-size: 18px;
     border: none;
     background-color: rgb(59, 59, 59);
-    height: auto;
-    width: auto;
+    padding: 20px 10px;
+    text-align: left;
 }

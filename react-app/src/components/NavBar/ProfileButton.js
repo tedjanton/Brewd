@@ -10,12 +10,12 @@ function ProfileButton({ setAuthenticated }) {
 
     const closeMenu = () => {
         setShowMenu(false);
-      };
+    };
 
     const openMenu = () => {
-        if(showMenu){
+        if (showMenu) {
             setShowMenu(false);
-        }else{
+        } else {
             setShowMenu(true);
         }
     };
@@ -33,19 +33,11 @@ function ProfileButton({ setAuthenticated }) {
         <div className="menuContainer">
             <img className="profileImg" src={user_icon} alt="" onClick={openMenu} />
             {showMenu && (
-            <div className="menu">
-                <div onClick={closeMenu}>
-                    <NavLink  to="/"exact={true} className="dropdown-item">Profile</NavLink>
-                </div>
-                <div onClick={closeMenu}>
-                    <NavLink to="/coffeehouse" exact={true}>Coffee Shop</NavLink>
-                </div>
-                <div onClick={closeMenu}>
-                    <NavLink to="/toprated" exact={true}>Top Rated</NavLink>
-                </div>
-                <div className="logout-button-nav">
-                    <LogoutButton setAuthenticated={setAuthenticated} />
-                </div>
+            <div onClick={closeMenu} className="menu">
+                <NavLink  to="/"exact={true} className="dropdown-item">Profile</NavLink>
+                <NavLink to="/coffeehouse" exact={true} className="dropdown-item">Coffee Shop</NavLink>
+                <NavLink to="/toprated" exact={true} className="dropdown-item">Top Rated</NavLink>
+                <LogoutButton setAuthenticated={setAuthenticated} />
             </div> ) }
         </div>
 
